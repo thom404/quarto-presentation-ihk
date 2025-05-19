@@ -1,0 +1,14 @@
+title: Erweiterung einer REST-API
+subtitle: Für die Webanwendung Holistic Project Tracking um eine Announcement-Funktion
+name: Thomas Abel
+lang: de
+date: today
+date-format: "DD. MM. YYYY"
+format:
+  inwt-presentation-revealjs:
+          footer: "{{< meta title >}} | {{< meta date >}} | © {{< meta name >}}"
+toc: true
+toc-depth: 1
+# toc-color: 'black' 
+toc-title: Agenda
+# number-sections: true

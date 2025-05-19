@@ -1,0 +1,13 @@
+<!--
+HTML used for the presentation title slide.
+https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/revealjs/pandoc/title-slide.html
+https://quarto.org/docs/journals/templates.html#revealjs-partials
+//--!>
+
+<section id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
+  <h1 class="title">$title$</h1>
+$if(subtitle)$
+  <p class="subtitle">$subtitle$</p>
+$endif$
+<img src="./images/holistic_logo_row.png" alt="Title Slide Image">
+</section>

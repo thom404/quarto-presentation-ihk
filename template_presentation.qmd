@@ -1,0 +1,186 @@
+# Info
+
+## About Quarto
+
+-   [Hier](https://quarto.org/docs/guide/) findet ihr die Quarto Dokumentation.
+-   In Quarto funktioniert gängige `markdown` Syntax.
+
+# Key Features
+
+## Spalten Layout
+
+::: columns
+::: {.column width="50%"}
+-   Erste Spalte
+:::
+
+::: {.column width="50%"}
+-   Zweite Spalte
+
+![](./images/holistic_logo.png)
+:::
+:::
+
+## Textgröße {.smaller}
+
+-   `.smaller` erzeugt eine Folie mit Inhalten in kleinerer Schriftgröße
+
+## Formeln
+
+Für Formeln dient `$` als inline, `$$` als blockweises Begrenzungszeichen.
+
+-   Inline: $s²=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\hat{\mu})²$
+-   Blockformel zentriert: $$s²=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\hat{\mu})²$$
+
+## Fußnoten
+
+-   Einbindung von Fußnoten erfolgt über `^[]`, also z.B. so[^1].
+
+[^1]: [https://quarto.org/docs/authoring/footnotes-and-citations.html](https://quarto.org/docs/authoring/footnotes-and-citations.html)
+
+## Schrittweises Einblenden
+
+### Listen
+
+Via `incremental` Keyword...
+
+::: incremental
+-   ...funktioniert mit ...
+-   ... jeder Liste
+:::
+
+Kann auch global im `yaml` Header gesetzt werden via `incremental: true`.
+
+### Pause
+
+Alternativ kann via `. . .` (Leerzeichen zwischen den `.`) eine Pause zwischen Elementen erzeugt werden.
+
+## Callouts
+
+::: callout-note
+## Anmerkung
+
+Der Einfluss des Verkehrs ist zu schwach.
+:::
+
+::: callout-warning
+## Problem
+
+Der Einfluss des Verkehrs ist zu schwach.
+:::
+
+::: callout-caution
+## Warnung
+
+Der Einfluss des Verkehrs ist zu schwach.
+:::
+
+## Code-Chunks
+
+-   Sprache in `{}` zu Anfang des Chunks definieren
+-   [Execution Options](https://quarto.org/docs/computations/execution-options.html) via `#|` wählen
+
+```{r}
+#| echo: true
+i=1+1
+print(i)
+```
+
+## Code schrittweise einblenden {auto-animate="true"}
+
+```{r}
+#| echo: true
+# library(ggplot2)
+# library(plotly)
+```
+
+## Code schrittweise einblenden {auto-animate="true"}
+
+...mit `{auto-animate="true"}`
+
+```{r}
+#| echo: true
+# library(ggplot2)
+# library(plotly)
+# plot <- ggplot(mpg, aes(cty, displ)) +
+  # geom_point(aes(color=cyl))
+```
+
+## Plots
+
+```{r}
+# library(ggplot2)
+# library(plotly)
+# ggplotly(plot)
+```
+
+## Flowcharts: Mermaid
+
+-   Flowcharts können mit [mermaid.js](https://mermaid.js.org/syntax/flowchart.html) erstellt werden.
+-   Dieser mermaid.js [Online-Editor](https://mermaid.live/edit) hilft beim Erstellen.
+
+```{mermaid}
+flowchart LR
+  A[Data] --> B[ETL]
+  B[ETL] --> C[Output]
+  C[Output]
+```
+
+## Vortragsnotizen
+
+::: notes
+-   Vortragsnotizen nur für Vortragende sichtbar!
+:::
+
+-   Im Quarto Dokument können Notizen so eingefügt werden, sodass sie nur für Vortragende im Speakermode zu sehen sind (= Keyboard-Shortcut `s`) via:
+
+::: cell-output-stdout
+```         
+::: notes
+- Vortragsnotizen nur für Vortragende sichtbar!
+:::
+```
+:::
+
+## {background-color="#a0c3d2"}
+::: columns
+::: {.column width="62%"}
+<div class="image-container image1-container">
+![](./images/INWT_podcast_promo.png){.image1}
+</div>
+:::
+::: {.column width="11%"}
+:::
+::: {.column width="27%"}
+<div class="image-container image2-container">
+![](./images/INWT_podcast_qr_code.png){.image2 width="75%"}
+</div>
+:::
+:::
+
+## {background-color="#002A48" .smaller .last-slide}  
+
+::: columns
+
+:::{.column width="45%" .smaller}
+![](./images/INWT_Logo-mit-Claim-RGB_M.png){.image3 width="75%"}
+
+<div class="bottom-left">
+**Danke für Ihre Aufmerksamkeit**  
+<br>
+INWT Statistics GmbH \
++49 (0)30 12082310 \    
+www.inwt-statistics.de \
+info@inwt-statistics.de    
+</div>
+:::
+
+:::{.column width="5%"}
+:::
+
+:::{.column width="50%"}
+![](./images/INWT_data_factory.png){.image4} 
+:::
+
+:::
+
