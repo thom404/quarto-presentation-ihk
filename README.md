@@ -1,7 +1,7 @@
 # INWT - Presentation Template
 
 This quarto format will help you create presentations (reveal js) in the style 
-of the [INWT](https://www.inwt-statistics.de/) corporate design.
+of the given template
 
 ## Installing
 

@@ -12,3 +12,5 @@ toc-depth: 1
 # toc-color: 'black' 
 toc-title: Agenda
 # number-sections: true
+editor:
+  render-on-save: true
