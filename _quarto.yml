@@ -7,10 +7,10 @@ date-format: "DD. MM. YYYY"
 format:
   inwt-presentation-revealjs:
           footer: "{{< meta title >}} | {{< meta date >}} | © {{< meta name >}}"
-toc: true
+toc: false
 toc-depth: 1
 # toc-color: 'black' 
-toc-title: Agenda
+# toc-title: Agenda
 # number-sections: true
 editor:
   render-on-save: true
