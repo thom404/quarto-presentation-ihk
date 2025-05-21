@@ -20,14 +20,14 @@ $presentation-heading-color: $txtgrey !default;
 }
 
 //// Layout
-$presentation-block-margin: 12px !default;
+// $presentation-block-margin: 12px !default;
 
 // fonts
 $presentation-font-size-root: 2rem !default;
 
-// $font-family-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-// $font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New" !default;
-// $font-size-base: 1rem !default;
+$font-family-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New" !default;
+$font-size-base: 1rem !default;
 
 // $bgwhite:        #002A48 !default;
 // $midblue:         #055272 !default;
