@@ -9,5 +9,24 @@ https://quarto.org/docs/journals/templates.html#revealjs-partials
 $if(subtitle)$
   <p class="subtitle">$subtitle$</p>
 $endif$
-<img src="./images/holistic_logo_row.png" alt="Title Slide Image">
+<div class="authors">
+  $if(name)$
+   <div class="azubi">
+    <p>Auszubildender:</p>
+    <p class="name">$name$</p>
+   </div>
+  $endif$
+  $if(company)$
+  <div class="company">
+    <p>Ausbildungsbetrieb:</p>
+    <img class="company-logo" src="$company-logo$" alt="Title Slide Image">
+  </div>
+  $endif$
+</div>
+$if(ihk-header)$
+<div class="ihk">
+  <p class="ihk-header">$ihk-header$</p>
+  <img class="ihk-logo" src="$ihk-logo$" alt="IHK Logo">
+</div>
+$endif$
 </section>

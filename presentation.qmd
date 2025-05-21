@@ -1,31 +1,207 @@
-# Agenda {background-image="./images/toc.svg"}
-<!-- :::: {.columns} -->
-<!-- ::: {.column width="40%" .incremental} -->
+# Ablauf {.orange auto-animate=true}
+:::: {.columns}
+::: {.column width="30%"}
+:::
+::: {.column width="60%"}
+![](./images/toc.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+## {auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
 1. Vorstellung
-    1. Prüfling
-    1. Betrieb
 1. Einführung in das Projekt
-1. Analyse
-1. Entwurf
-1. Implementierung
+1. Analysephase
+1. Entwurfsphase
+1. Implementierungsphase
 1. Fazit
-<!-- ::: -->
-<!-- ::: {.column} -->
-<!-- ::: -->
-<!-- :::: -->
+:::
+::: {.column width="50%"}
+![](./images/toc.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+::: footer
+Ablauf
+:::
 
-# Vorstellung
-## Prüfling
+# Vorstellung {.orange auto-animate=true}
+:::: columns
+::: {.column width="30%"}
+:::
+::: {.column width="60%"}
+![](./images/vorstellung.svg){.image1 width="100%"}
+:::
+::: {.column width="10%"}
+:::
+::::
 
-# Vorstellung 
-## Betrieb
+## Auszubildender {auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
+- Geboren am 02.10.1990 in Bückeburg
+- Ausbildung seit 01.08.2021
+:::
+::: {.column width="50%"}
+![](./images/aboutMe.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
 
-# Einführung in das Projekt
 
-# Analyse
+::: footer
+Vorstellung
+:::
 
-# Entwurf
+## Betrieb {auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
+- xx Mitarbeiter
+- Standort xxx
+- Dienstleistungen
+- ...
+:::
+::: {.column width="50%"}
+![](./images/meetTheTeam.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
 
-# Implementierung
+::: footer
+Vorstellung
+:::
 
-# Fazit
+# Einführung in das Projekt {.orange auto-animate=true}
+:::: {.columns}
+::: {.column width="30%" .incremental}
+:::
+::: {.column width="60%"}
+![](./images/einfuehrung.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+## {auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
+:::
+::: {.column width="50%"}
+![](./images/einfuehrung.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+::: footer
+Einführung
+:::
+
+# Analysephase {.orange auto-animate=true}
+:::: {.columns}
+::: {.column width="30%" .incremental}
+:::
+::: {.column width="60%"}
+![](./images/analyse.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+## {auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
+:::
+::: {.column width="50%"}
+![](./images/analyse.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+::: footer
+Analysephase
+:::
+
+# Entwurfsphase {.orange auto-animate=true}
+:::: {.columns}
+::: {.column width="30%" .incremental}
+:::
+::: {.column width="60%"}
+![](./images/prototype.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+## {auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
+:::
+::: {.column width="50%"}
+![](./images/prototype.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+::: footer
+Entwurfsphase
+:::
+
+# Implementierungsphase {.orange auto-animate=true}
+:::: {.columns}
+::: {.column width="30%" .incremental}
+:::
+::: {.column width="60%"}
+![](./images/implement.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+## {auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
+:::
+::: {.column width="50%"}
+![](./images/implement.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+::: footer
+Implementierungsphase
+:::
+
+# Fazit {.orange auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
+:::
+::: {.column width="50%"}
+![](./images/fazit.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+## {auto-animate=true}
+:::: {.columns}
+::: {.column width="40%" .incremental}
+:::
+::: {.column width="50%"}
+![](./images/fazit.svg)
+:::
+::: {.column width="10%"}
+:::
+::::
+
+::: footer
+Fazit
+:::
