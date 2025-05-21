@@ -113,6 +113,10 @@ $presentation-font-size-root: 2rem !default;
 //   // font-size: var(--r-heading2-size);
 // }
 
+.reveal .slides img {
+  max-height: 85vh;
+}
+
 
 // menu button - top left
 .reveal .slide-menu-button {
