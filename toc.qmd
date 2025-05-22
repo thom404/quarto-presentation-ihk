@@ -1,0 +1,33 @@
+# Ablauf ![](./images/toc.svg) {auto-animate=true}
+
+## {.orange auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%" .incremental}
+
+1. Vorstellung
+1. Einführung in das Projekt
+1. Analysephase
+1. Entwurfsphase
+1. Implementierungsphase
+1. Fazit
+
+:::
+
+:::{.column width="10%"}
+:::
+
+::: {.column width="40%"}
+
+![](./images/toc.svg)
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::::

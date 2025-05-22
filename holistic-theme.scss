@@ -15,90 +15,18 @@ $link-color: $holisticorange !default;
 
 //// Headings
 $presentation-heading-color: $txtgrey !default;
+
+// colorize h1 and h2 if .orange
 .reveal .slides h1, .reveal .slides .orange h2 {
   color: $holisticorange
 }
 
-// img[src$=".svg"] {
-//   max-width: 100%;
-//   height: auto;
-//   display: block;
-//   margin: auto;
-// }
-// .orange h1, .orange h2 {
-//   color: $holisticorange !important;
-// }
-
-//// Layout
-// $presentation-block-margin: 12px !default;
-
-// fonts
-// $presentation-font-size-root: 2rem !default;
 
 $font-family-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New" !default;
-// $font-size-base: 1rem !default;
-
-// $bgwhite:        #002A48 !default;
-// $midblue:         #055272 !default;
-// $lightblue:       #5E849F !default;
-
-// $darksagegreen:   #6F9591 !default;
-// $lightsagegreen:  #8ABAB5 !default;
-
-// $rustred:         #D67752 !default;
-// $txtgrey:          #F5A75E !default;
-// $powderpink:      #F6E9E4 !default;
-
-// .reveal {
-//   font-size: 1.5*$font-size-base!important;
-// }
-// $code-block-font-size: 0.75em; // 0.55em is default
-
-// code
-// $code-color: $rustred;
-
-// links
-// $link-hover-color: $lightsagegreen;
-// $link-color: $darksagegreen;
-
-// note
-// div.callout-note.callout {
-  // border-left-color: $lightblue!important;
-// }
-// div.callout-note.callout-style-default .callout-title {
-//   background-color: lighten($lightblue, 10%)!important;
-// }
-
-// // warning
-// div.callout-warning.callout {
-//   border-left-color: $rustred!important;
-// }
-// div.callout-warning.callout-style-default .callout-title {
-//   background-color: lighten($rustred, 10%)!important;
-// }
-
-// caution
-// div.callout-caution.callout {
-//   border-left-color: $txtgrey!important;
-// }
-// div.callout-caution.callout-style-default .callout-title {
-//   background-color: lighten($txtgrey, 10%)!important;
-// }
-
-// tip
-// div.callout-tip.callout {
-//   border-left-color: $lightsagegreen!important;
-// }
-// div.callout-tip.callout-style-default .callout-title {
-//   background-color: lighten($lightsagegreen, 10%)!important;
-// }
 
 
-// .reveal .slide-menu-button {
-//   top: 1vh;
-// }
-
+//// title-slide partial
 // presentation header
 #title-slide {
   display: flex !important;
@@ -108,7 +36,6 @@ $font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "L
   // width: 90vw;
   justify-content: center;
 }
-
 #title-slide .ihk {
   order: 1;
   display: flex;
@@ -122,19 +49,16 @@ $font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "L
   width: 100%;
   height: 100px
 }
-
 #title-slide .ihk-header {
   color: $txtgrey!important;
   font-size: 1em;
   padding-right: 10px;
 }
-
 #title-slide .ihk-logo {
   opacity: .6;
   max-height: 2em;
   width: auto;
 }
-
 #title-slide .title {
   order: 3;
   // font-size: 3em;
@@ -142,7 +66,6 @@ $font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "L
   margin-bottom: 1em;
   font-size: 60px;
 }
-
 #title-slide .subtitle {
   // font-size: 1.5em;
   order: 4;
@@ -152,8 +75,6 @@ $font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "L
   margin-bottom: 1em;
   font-size: 48px;
 }
-
-
 #title-slide .authors {
   order: 5;
   width: 100%;
@@ -165,7 +86,6 @@ $font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "L
   font-weight: bold;
   padding-bottom: 1em;
 }
-
 #title-slide .authors > div {
   display: flex;
   flex-direction: column;
@@ -174,19 +94,47 @@ $font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "L
   width: 100%;
   height: 100%;
 }
-
 #title-slide .authors img {
   width: 100%;
   height: 1.5em;
   width: auto;
 }
-
-
-
 #title-slide .name {
   font-weight: normal;
 }
-
 #title-slide .company-logo {
   height: 10vh
+}
+
+//// toc-slide partial
+// flexbox
+.toc{
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+// Title color
+.toc h2.orange {
+  color: $holisticorange;
+  margin-bottom: .5em;
+}
+// hide bullet points & display numbers
+nav[role="doc-toc"] ul {
+  list-style: none;
+  counter-reset: section-counter;
+  padding-left: 0;
+}
+nav[role="doc-toc"] ul li {
+  counter-increment: section-counter;
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+nav[role="doc-toc"] ul li::before {
+  content: counter(section-counter) ". ";
+  position: absolute;
+  left: 0;
+  color: $holisticorange;
 }

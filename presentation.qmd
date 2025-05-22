@@ -1,38 +1,8 @@
-# Ablauf ![](./images/toc.svg) {auto-animate=true}
 
-## {.orange auto-animate=true}
 
-:::: {.columns}
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="40%" .incremental}
-
-1. Vorstellung
-1. Einführung in das Projekt
-1. Analysephase
-1. Entwurfsphase
-1. Implementierungsphase
-1. Fazit
-
-:::
-
-:::{.column width="10%"}
-:::
-
-::: {.column width="40%"}
-
-![](./images/toc.svg)
-
-:::
-
-::: {.column width="5%"}
-:::
-
-::::
-
-# Vorstellung ![](./images/vorstellung.svg) {auto-animate=true}
+# Vorstellung {auto-animate=true}
+![](./images/vorstellung.svg)
 
 ## Auszubildender {auto-animate=true}
 :::: {.columns}
@@ -53,10 +23,6 @@
 :::
 
 ::::
-
-<!-- ::: footer
-Vorstellung
-::: -->
 
 ## Ausbildungsbetrieb {auto-animate=true}
 
@@ -91,42 +57,74 @@ Vorstellung
     - Email Migration
 :::
 
-# Projekteinführung ![](./images/einfuehrung.svg) {auto-animate=true} 
-
-<!-- :::: {.columns}
-::: {.column width="30%" .incremental}
-:::
-::: {.column width="60%"}
+# Projekteinführung {auto-animate=true} 
 ![](./images/einfuehrung.svg)
+
+## Was ist HPT? {auto-animate=true}
+:::: {.columns}
+::: {.column width="50%" .incremental}
+- Holistic Project Tracking
+- Webanwendung für internes Projektmanagement
 :::
-::: {.column width="10%"}
+
+::: {.column width="50%"}
+:::{.r-stack}
+![](./images/einfuehrung.svg){.fragment .fade-out}
+
+![](./images/hpt-fe/HPT_Main.png){.fragment}
 :::
-:::: -->
+:::
+
+::::
+
+## {auto-animate=true}
+:::: {.columns}
+::: {.column width="100%"}
+![](./images/hpt-fe/HPT_Main.png){}
+:::
+::::
+
+::: {.notes}
+- Projekte
+    - Projektbezogene Informationen
+    - Projekthistorie
+- Aquise
+- Präsentationsmodus
+    - Kommentare hinterlassen
+:::
+
+## Die neue Funktion {auto-animate=true}
+:::: {.columns}
+::: {.column width="50%" .incremental}
+- Ankündigungen
+    - erstellen
+    - einsehen
+- zentrale Ablage
+:::
+
+::: {.column width="50%"}
+:::{.r-stack}
+![](./images/hpt-fe/HPT_Main.png){}
+:::
+:::
+
+::::
+
+# Analyse {auto-animate=true}
+![](./images/analyse.svg)
 
 ## {auto-animate=true}
 :::: {.columns}
 ::: {.column width="40%" .incremental}
 :::
 ::: {.column width="50%"}
-![](./images/einfuehrung.svg)
-:::
-::: {.column width="10%"}
-:::
-::::
-::: footer
-Einführung
-:::
-
-# Analyse ![](./images/analyse.svg) {auto-animate=true}
-<!-- :::: {.columns}
-::: {.column width="30%" .incremental}
-:::
-::: {.column width="60%"}
 ![](./images/analyse.svg)
 :::
 ::: {.column width="10%"}
 :::
-:::: -->
+::::
+
+
 
 ## {auto-animate=true}
 :::: {.columns}
@@ -143,7 +141,8 @@ Einführung
 Analysephase
 ::: -->
 
-# Entwurf ![](./images/prototype.svg) {auto-animate=true}
+# Entwurf {auto-animate=true}
+![](./images/prototype.svg) 
 <!-- :::: {.columns}
 ::: {.column width="30%" .incremental}
 :::
@@ -165,7 +164,8 @@ Analysephase
 :::
 ::::
 
-# Implementierung ![](./images/implement.svg) {auto-animate=true}
+# Implementierung {auto-animate=true}
+![](./images/implement.svg)
 <!-- :::: {.columns}
 ::: {.column width="30%" .incremental}
 :::
@@ -187,7 +187,8 @@ Analysephase
 :::
 ::::
 
-# Fazit ![](./images/fazit.svg) {.orange auto-animate=true}
+# Fazit {auto-animate=true}
+![](./images/fazit.svg) {.orange auto-animate=true}
 
 ## {auto-animate=true}
 :::: {.columns}

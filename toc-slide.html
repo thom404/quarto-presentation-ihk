@@ -1,0 +1,17 @@
+<section id="$idprefix$TOC">
+    <div class="toc">
+        <div class="toc-txt">
+            <nav role="doc-toc">
+                $if(toc-title)$
+                <h2 class="orange" id="$idprefix$toc-title">$toc-title$</h2>
+                $endif$
+                $table-of-contents$
+            </nav>
+        </div>
+        $if(toc-img)$
+        <div class="toc-img">
+            <img src="$toc-img$" alt="">
+        </div>
+        $endif$
+    </div>
+</section>
