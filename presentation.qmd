@@ -1,84 +1,99 @@
-# Ablauf {.orange auto-animate=true}
-:::: {.columns height="100%"}
-::: {.column width="40%"}
-:::
-::: {.column width="60%"}
-![](./images/toc.svg)
-:::
-::: {.column width="0%"}
-:::
-::::
+# Ablauf ![](./images/toc.svg) {auto-animate=true}
 
-## {auto-animate=true}
+## {.orange auto-animate=true}
+
 :::: {.columns}
+
+::: {.column width="5%"}
+:::
+
 ::: {.column width="40%" .incremental}
+
 1. Vorstellung
 1. Einführung in das Projekt
 1. Analysephase
 1. Entwurfsphase
 1. Implementierungsphase
 1. Fazit
-:::
-::: {.column width="50%"}
-![](./images/toc.svg)
-:::
-::: {.column width="10%"}
-:::
-::::
-::: footer
-Ablauf
+
 :::
 
-# Vorstellung {.orange auto-animate=true}
-:::: columns
-::: {.column width="30%"}
+:::{.column width="10%"}
 :::
-::: {.column width="60%"}
-![](./images/vorstellung.svg){.image1 width="100%"}
+
+::: {.column width="40%"}
+
+![](./images/toc.svg)
+
 :::
-::: {.column width="10%"}
+
+::: {.column width="5%"}
 :::
+
 ::::
+
+# Vorstellung ![](./images/vorstellung.svg) {auto-animate=true}
 
 ## Auszubildender {auto-animate=true}
 :::: {.columns}
+
 ::: {.column width="40%" .incremental}
 - Geboren am 02.10.1990 in Bückeburg
 - Ausbildung seit 01.08.2021
 :::
-::: {.column width="50%"}
-![](./images/aboutMe.svg)
+
+:::{.column width="10%"}
 :::
+
+::: {.column width="40%"}
+![](./images/vorstellung.svg)
+:::
+
 ::: {.column width="10%"}
 :::
+
 ::::
 
-
-::: footer
+<!-- ::: footer
 Vorstellung
+::: -->
+
+## Ausbildungsbetrieb {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%" .incremental}
+- Gründung 2002
+- 14 Mitarbeiter
+- Standort Hannover
+- Daten-Migrationen
+- Individual-Software
 :::
 
-## Betrieb {auto-animate=true}
-:::: {.columns}
-::: {.column width="40%" .incremental}
-- xx Mitarbeiter
-- Standort xxx
-- Dienstleistungen
-- ...
+:::{.column width="10%"}
 :::
-::: {.column width="50%"}
+
+::: {.column width="40%"}
 ![](./images/meetTheTeam.svg)
 :::
+
 ::: {.column width="10%"}
 :::
+
 ::::
 
-::: footer
-Vorstellung
+::: {.notes}
+- Standort Hannover
+    - Linden
+    - Deisterplatz
+- Daten-Migrationen
+    - Software Migration
+    - Email Migration
 :::
 
-# Einführung in das Projekt {.orange auto-animate=true}
-:::: {.columns}
+# Projekteinführung ![](./images/einfuehrung.svg) {auto-animate=true} 
+
+<!-- :::: {.columns}
 ::: {.column width="30%" .incremental}
 :::
 ::: {.column width="60%"}
@@ -86,7 +101,7 @@ Vorstellung
 :::
 ::: {.column width="10%"}
 :::
-::::
+:::: -->
 
 ## {auto-animate=true}
 :::: {.columns}
@@ -102,8 +117,8 @@ Vorstellung
 Einführung
 :::
 
-# Analysephase {.orange auto-animate=true}
-:::: {.columns}
+# Analyse ![](./images/analyse.svg) {auto-animate=true}
+<!-- :::: {.columns}
 ::: {.column width="30%" .incremental}
 :::
 ::: {.column width="60%"}
@@ -111,7 +126,7 @@ Einführung
 :::
 ::: {.column width="10%"}
 :::
-::::
+:::: -->
 
 ## {auto-animate=true}
 :::: {.columns}
@@ -124,12 +139,12 @@ Einführung
 :::
 ::::
 
-::: footer
+<!-- ::: footer
 Analysephase
-:::
+::: -->
 
-# Entwurfsphase {.orange auto-animate=true}
-:::: {.columns}
+# Entwurf ![](./images/prototype.svg) {auto-animate=true}
+<!-- :::: {.columns}
 ::: {.column width="30%" .incremental}
 :::
 ::: {.column width="60%"}
@@ -137,7 +152,7 @@ Analysephase
 :::
 ::: {.column width="10%"}
 :::
-::::
+:::: -->
 
 ## {auto-animate=true}
 :::: {.columns}
@@ -150,12 +165,8 @@ Analysephase
 :::
 ::::
 
-::: footer
-Entwurfsphase
-:::
-
-# Implementierungsphase {.orange auto-animate=true}
-:::: {.columns}
+# Implementierung ![](./images/implement.svg) {auto-animate=true}
+<!-- :::: {.columns}
 ::: {.column width="30%" .incremental}
 :::
 ::: {.column width="60%"}
@@ -163,7 +174,7 @@ Entwurfsphase
 :::
 ::: {.column width="10%"}
 :::
-::::
+:::: -->
 
 ## {auto-animate=true}
 :::: {.columns}
@@ -176,20 +187,7 @@ Entwurfsphase
 :::
 ::::
 
-::: footer
-Implementierungsphase
-:::
-
-# Fazit {.orange auto-animate=true}
-:::: {.columns}
-::: {.column width="40%" .incremental}
-:::
-::: {.column width="50%"}
-![](./images/fazit.svg)
-:::
-::: {.column width="10%"}
-:::
-::::
+# Fazit ![](./images/fazit.svg) {.orange auto-animate=true}
 
 ## {auto-animate=true}
 :::: {.columns}
@@ -201,7 +199,3 @@ Implementierungsphase
 ::: {.column width="10%"}
 :::
 ::::
-
-::: footer
-Fazit
-:::
