@@ -1,4 +1,4 @@
-# Ablauf ![](./images/toc.svg) {auto-animate=true}
+# Ablauf ![]($toc-img$) {auto-animate=true}
 
 ## {.orange auto-animate=true}
 
@@ -23,7 +23,7 @@
 
 ::: {.column width="40%"}
 
-![](./images/toc.svg)
+![]($toc-img$)
 
 :::
 

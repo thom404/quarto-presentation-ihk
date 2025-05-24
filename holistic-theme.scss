@@ -19,11 +19,12 @@ $presentation-heading-color: $txtgrey !default;
 // colorize h1 and h2 if .orange
 .reveal .slides h1, .reveal .slides h2 {
   color: $holisticorange
+
 }
 
-.reveal .slides h2 {
-  font-size: 1em;
-}
+// .reveal .slides h2 {
+//   font-size: 1.em;
+// }
 
 
 $font-family-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -147,8 +148,14 @@ nav[role="doc-toc"] ul li::before {
 // subheader
 .subheader {
   font-size: 1.5em;
+  color: $holisticorange;
 }
 
 .secure-layout>*{
   height: 500px
+}
+
+// center div content
+.center {
+  text-align: center;
 }

@@ -1,0 +1,19 @@
+# Header {.center auto-animate=true}
+:::{.center}
+![](./images/title-svgs/.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Title
+:::
+
+:::: {.columns}
+:::{.column width="40%" .incremental}
+Change me
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/.svg)
+:::
+::::
