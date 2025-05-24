@@ -349,7 +349,7 @@ Datenmodell
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="40%"}
 - Neue Entitäten:
   - `Announcement`
   - `AnnouncementImage`
