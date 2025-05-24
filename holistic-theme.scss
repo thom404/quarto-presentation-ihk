@@ -17,8 +17,12 @@ $link-color: $holisticorange !default;
 $presentation-heading-color: $txtgrey !default;
 
 // colorize h1 and h2 if .orange
-.reveal .slides h1, .reveal .slides .orange h2 {
+.reveal .slides h1, .reveal .slides h2 {
   color: $holisticorange
+}
+
+.reveal .slides h2 {
+  font-size: 1em;
 }
 
 
@@ -137,4 +141,14 @@ nav[role="doc-toc"] ul li::before {
   position: absolute;
   left: 0;
   color: $holisticorange;
+}
+
+//// Slides
+// subheader
+.subheader {
+  font-size: 1.5em;
+}
+
+.secure-layout>*{
+  height: 500px
 }

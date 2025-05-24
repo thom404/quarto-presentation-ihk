@@ -1,51 +1,44 @@
-
-
-
-# Vorstellung {auto-animate=true}
+<!-- SECTION: Vorstellung -->
+# Vorstellung {.center auto-animate=true}
 ![](./images/vorstellung.svg)
 
-## Auszubildender {auto-animate=true}
-:::: {.columns}
+<!-- SLIDE: Azubi -->
+## Vorstellung {auto-animate=true}
+:::{.subheader data-id="vorstellung-subheader"}
+Auszubildender
+:::
 
-::: {.column width="40%" .incremental}
+:::: {.columns}
+:::{.column width="40%" .incremental}
 - Geboren am 02.10.1990 in Bückeburg
 - Ausbildung seit 01.08.2021
 :::
 
-:::{.column width="10%"}
+:::{.column .r-stretch}
+![](./images/aboutMe.svg)
 :::
-
-::: {.column width="40%"}
-![](./images/vorstellung.svg)
-:::
-
-::: {.column width="10%"}
-:::
-
 ::::
 
-## Ausbildungsbetrieb {auto-animate=true}
+<!-- SLIDE: Betrieb -->
+## Vorstellung {auto-animate=true}
+:::{.subheader data-id="vorstellung-subheader"}
+Ausbildungsbetrieb
+:::
 
 :::: {.columns}
-
 ::: {.column width="40%" .incremental}
 - Gründung 2002
 - 14 Mitarbeiter
 - Standort Hannover
-- Daten-Migrationen
-- Individual-Software
+- Kerngeschäft
+  - Daten-Migrationen
+  - Individual-Software
+- Webanwendung: **Holistic Project Tracking (HPT)**
 :::
 
-:::{.column width="10%"}
-:::
-
-::: {.column width="40%"}
+::: {.column .secure-layout}
 ![](./images/meetTheTeam.svg)
 :::
-
-::: {.column width="10%"}
-:::
-
 ::::
 
 ::: {.notes}
@@ -57,43 +50,122 @@
     - Email Migration
 :::
 
-# Projekteinführung {auto-animate=true} 
+<!-- SECTION: Einführung -->
+# Einführung {auto-animate=true data-id="intro-title"} 
 ![](./images/einfuehrung.svg)
 
-## Was ist HPT? {auto-animate=true}
+<!-- SLIDE: Einführung -->
+## Einführung {auto-animate=true data-id="intro-title"}
+<!-- :::{.subheader}
+Wunsch der Geschäftsführung
+::: -->
+
+:::: {.columns}
+::: {.column width="50%" .incremental}
+- Wunsch der Geschäftsführung
+- Announcement Funktion
+- Mitarbeitende intern Informieren
+- Geschäftsleitung kann Announcements erstellen
+- Ausschließlich Backend-Erweiterung teil dieser Abschlussarbeit
+:::
+
+::: {.column width="50%" .secure-layout data-id="intro-img"}
+![](./images/einfuehrung.svg)
+:::
+::::
+
+<!-- SECTION: Analyse -->
+# Analyse {auto-animate=true data-id="intro-title"} 
+![](./images/analyse.svg)
+
+<!-- SLIDE: IST -->
+## Analyse {auto-animate=true data-id="intro-title"}
+:::{.subheader}
+IST-Zustand
+:::
+
+:::: {.columns}
+::: {.column width="50%" .incremental}
+- viele verschiedene Kommunikationswege
+- unübersichtlich
+- Informationsverlust
+:::
+
+::: {.column width="50%" .secure-layout data-id="intro-img"}
+![](./images/ausgangslage.svg)
+:::
+::::
+
+<!-- SLIDE: SOLL -->
+## Analyse {auto-animate=true data-id="intro-title"}
+:::{.subheader}
+Soll-Zustand
+:::
+:::: {.columns}
+
+::: {.column width="50%" .incremental}
+- zentralisierte Ablage für Ankündigungen
+    - CRUD Funktionen
+    - Rollenverwaltung
+- Eingliederung in vorhande Software HPT
+:::
+
+::: {.column width="50%" .secure-layout data-id="intro-img"}
+![](./images/ziel.svg)
+:::
+::::
+
+<!-- SLIDE: HPT -->
+## Analyse {auto-animate=true}
+:::{.subheader data-id="sub-title"}
+Was ist HPT? 
+:::
 :::: {.columns}
 ::: {.column width="50%" .incremental}
 - Holistic Project Tracking
 - Webanwendung für internes Projektmanagement
 :::
 
-::: {.column width="50%"}
-:::{.r-stack}
-![](./images/einfuehrung.svg){.fragment .fade-out}
-
-![](./images/hpt-fe/HPT_Main.png){.fragment}
+::: {.column width="50%" .secure-layout data-id="intro-img"}
+![](./images/einfuehrung.svg)
 :::
-:::
-
 ::::
 
-## {auto-animate=true}
+<!-- SLIDE: HPT UI -->
+## Analyse {auto-animate=true}
+:::{.subheader data-id="sub-title"}
+HPT: Das User Interface
+:::
+
+![](./images/hpt-fe/HPT_Main.png){.r-fit}
+
+<!-- SLIDE: HPT UI Zoom -->
+## Analyse {auto-animate=true}
+
+![](./images/hpt-fe/HPT_Main.png){.r-fit}
+
+<!-- SLIDE: HPT IST -->
+## Analyse {auto-animate=true}
+:::{.subheader data-id="sub-title"}
+HPT: Die bisherigen Funktionen
+:::
 :::: {.columns}
-::: {.column width="100%"}
-![](./images/hpt-fe/HPT_Main.png){}
+::: {.column width="50%" .incremental}
+- Projekte
+- Akquise
+- Präsentationsmodus
+:::
+
+::: {.column width="50%"}
+![](./images/hpt-fe/HPT_Main.png)
 :::
 ::::
 
-::: {.notes}
-- Projekte
-    - Projektbezogene Informationen
-    - Projekthistorie
-- Aquise
-- Präsentationsmodus
-    - Kommentare hinterlassen
+<!-- SLIDE: HPT SOLL -->
+## Analyse {auto-animate=true}
+:::{.subheader data-id="sub-title"}
+HPT: Die neuen Funktionen
 :::
-
-## Die neue Funktion {auto-animate=true}
 :::: {.columns}
 ::: {.column width="50%" .incremental}
 - Ankündigungen
@@ -103,55 +175,63 @@
 :::
 
 ::: {.column width="50%"}
-:::{.r-stack}
-![](./images/hpt-fe/HPT_Main.png){}
+![](./images/hpt-fe/HPT_Main.png)
 :::
-:::
-
 ::::
 
-# Analyse {auto-animate=true}
-![](./images/analyse.svg)
-
-## {auto-animate=true}
+<!-- SLIDE: Wirtschaftlichkeit -->
+<!-- ## Analyse {auto-animate=true}
+:::{.subheader data-id="sub-title"}
+Wirtschaftlichkeit
+:::
 :::: {.columns}
-::: {.column width="40%" .incremental}
+::: {.column width="50%" .incremental}
+- Rechnung einfügen
 :::
+
 ::: {.column width="50%"}
-![](./images/analyse.svg)
-:::
-::: {.column width="10%"}
-:::
-::::
-
-
-
-## {auto-animate=true}
-:::: {.columns}
-::: {.column width="40%" .incremental}
-:::
-::: {.column width="50%"}
-![](./images/analyse.svg)
-:::
-::: {.column width="10%"}
-:::
-::::
-
-<!-- ::: footer
-Analysephase
-::: -->
-
-# Entwurf {auto-animate=true}
-![](./images/prototype.svg) 
-<!-- :::: {.columns}
-::: {.column width="30%" .incremental}
-:::
-::: {.column width="60%"}
-![](./images/prototype.svg)
-:::
-::: {.column width="10%"}
+![](./images/finance.svg)
 :::
 :::: -->
+
+<!-- SECTION: Planung -->
+<!-- # Planung {auto-animate=true}
+![](./images/.svg) -->
+
+<!-- SLIDE: Zeitplanung -->
+<!-- ## Planung {auto-animate=true}
+:::{.subheader data-id="sub-title"}
+Zeitplanung
+:::
+
+:::: {.columns}
+::: {.column width="50%" .incremental}
+- xyz
+:::
+
+::: {.column width="50%"}
+![](./images/.svg)
+:::
+:::: -->
+
+<!-- SLIDE: Entwurf -->
+<!-- ## Planung {auto-animate=true}
+:::{.subheader data-id="sub-title"}
+Entwurf
+:::
+
+:::: {.columns}
+::: {.column width="50%" .incremental}
+- xyz
+:::
+
+::: {.column width="50%"}
+![](./images/.svg)
+:::
+:::: -->
+
+<!-- # Entwurf {auto-animate=true}
+![](./images/prototype.svg) 
 
 ## {auto-animate=true}
 :::: {.columns}
@@ -166,15 +246,6 @@ Analysephase
 
 # Implementierung {auto-animate=true}
 ![](./images/implement.svg)
-<!-- :::: {.columns}
-::: {.column width="30%" .incremental}
-:::
-::: {.column width="60%"}
-![](./images/implement.svg)
-:::
-::: {.column width="10%"}
-:::
-:::: -->
 
 ## {auto-animate=true}
 :::: {.columns}
@@ -199,4 +270,4 @@ Analysephase
 :::
 ::: {.column width="10%"}
 :::
-::::
+:::: -->
