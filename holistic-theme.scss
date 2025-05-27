@@ -21,9 +21,11 @@ $presentation-heading-color: $txtgrey !default;
 // colorize h1 and h2 if .orange
 .reveal .slides h1, .reveal .slides h2 {
   color: $holisticorange
-
 }
 
+// .reveal .slides p:has(img){
+//   line-height: 0;
+// }
 
 // .reveal .slides h2 {
   //   font-size: 1.em;
