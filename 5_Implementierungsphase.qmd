@@ -1,0 +1,684 @@
+# Implementierungsphase {.center}
+:::{.center .secure-layout}
+![](./images/title-svgs/implement.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+Datenstrukturen
+:::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="entity-Announcement" .fragment}
+`Announcement`
+::::::
+::::::{data-id="entity-AnnouncementImage" .fragment}
+`AnnouncementImage`
+::::::
+::::::{data-id="entity-AnnouncementStatus" .fragment}
+`AnnouncementStatus`
+::::::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_maintenance_rjtm.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+`Announcement`
+:::
+
+```{.cs}
+public class Announcement
+{
+    public int Id { get; set; } // Primary key
+    public DateTime CreationDate { get; set; }
+    public DateTime? PublishedDate { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
+
+    // Foreign key for Status ( Each Announcement has one Status )
+    public int AnnouncementStatusId { get; set; }
+    public AnnouncementStatus AnnouncementStatus { get; set; } = null!;
+
+    // Foreign key for Image
+    public int? AnnouncementImageId { get; set; }
+    public AnnouncementImage? AnnouncementImage { get; set; }
+}
+```
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+`Announcement`
+:::
+
+```{.cs code-line-numbers="3|4-7|10-11|14-15"}
+public class Announcement
+{
+    public int Id { get; set; } // Primary key
+    public DateTime CreationDate { get; set; }
+    public DateTime? PublishedDate { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
+
+    // Foreign key for Status ( Each Announcement has one Status )
+    public int AnnouncementStatusId { get; set; }
+    public AnnouncementStatus AnnouncementStatus { get; set; } = null!;
+
+    // Foreign key for Image
+    public int? AnnouncementImageId { get; set; }
+    public AnnouncementImage? AnnouncementImage { get; set; }
+}
+```
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+Datenstrukturen
+:::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="entity-Announcement" .done}
+`Announcement`
+::::::
+::::::{data-id="entity-AnnouncementImage"}
+`AnnouncementImage`
+::::::
+::::::{data-id="entity-AnnouncementStatus"}
+`AnnouncementStatus`
+::::::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_maintenance_rjtm.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-AnnouncementImage"}
+`AnnouncementImage`
+:::
+
+```{.cs code-line-numbers="1-10|3|6-7|9-10"}
+public class AnnouncementImage
+{
+    public int Id { get; set; }
+
+    // Foreign Key of Announcement (Each Announcement can have one AnnouncementImage)
+    public int AnnouncementId { get; set; }
+    public Announcement Announcement { get; set; } = null!;
+
+    public string Image { get; set; } = null;
+    public string Thumbnail { get; set; } = null;
+}
+
+
+```
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+Datenstrukturen
+:::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="entity-Announcement" .done}
+`Announcement`
+::::::
+::::::{data-id="entity-AnnouncementImage" .done}
+`AnnouncementImage`
+::::::
+::::::{data-id="entity-AnnouncementStatus"}
+`AnnouncementStatus`
+::::::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_maintenance_rjtm.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-AnnouncementStatus"}
+`AnnouncementStatus`
+:::
+
+```{.cs code-line-numbers="1-8|3|5|7"}
+public class AnnouncementStatus
+{
+    public int Id { get; set; }
+    // Navigation Property: One status can have multible Announcements
+    public ICollection<Announcement> Announcements { get; set; } = [];
+
+    public string Name { get; set; } = string.Empty;
+}
+
+```
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+Datenstrukturen
+:::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="entity-Announcement" .done}
+`Announcement`
+::::::
+::::::{data-id="entity-AnnouncementImage" .done}
+`AnnouncementImage`
+::::::
+::::::{data-id="entity-AnnouncementStatus" .done}
+`AnnouncementStatus`
+::::::
+::::::{data-id="entity-DataContext" .fragment}
+`DataContext`
+::::::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_maintenance_rjtm.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-DataContext"}
+`DataContext`
+:::
+
+```{.cs code-line-numbers="1-24|4-6|8-24|12-16|18-22"}
+public class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
+{
+    ...
+    public DbSet<Announcement> Announcement { get; set; }
+    public DbSet<AnnouncementImage> AnnouncementImage { get; set; }
+    public DbSet<AnnouncementStatus> AnnouncementStatus { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        ...
+        //If status deleted, Announcement should keep the status
+        modelBuilder.Entity<AnnouncementStatus>()
+            .HasMany(aS => aS.Announcements)
+            .WithOne(a => a.AnnouncementStatus)
+            .HasForeignKey(a => a.AnnouncementStatusId)
+            .OnDelete(DeleteBehavior.Restrict);
+        //If Announcement is deleted, delete the image
+        modelBuilder.Entity<AnnouncementImage>()
+        .HasOne(aI => aI.Announcement)
+        .WithOne(a => a.AnnouncementImage)
+        .HasForeignKey<Announcement>(a => a.AnnouncementImageId)
+        .OnDelete(DeleteBehavior.Cascade);
+    }
+}
+```
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Unit-Tests
+:::
+
+::::{.columns}
+:::::{.column width="40%"}
+:::{data-id="tests" .fragment}
+`ImageServiceTests`
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_fixing-bugs_13mt.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="tests"}
+Unit-Tests
+:::
+::: {.r-stack}
+```{.cs code-line-numbers="1|3-4|6-10|12-23|15-16|18-19|21-22"}
+public class ImageServiceTests
+{
+    private readonly Mock<IFileService> _fileServiceMock;
+    private readonly ImageService _imageService;
+
+    public ImageServiceTests()
+    {
+        _fileServiceMock = new Mock<IFileService>();
+        _imageService = new ImageService(_fileServiceMock.Object);
+    }
+
+    [Fact]
+    public void DeleteAnnouncementImageFiles_ShouldNotCallDelete_WhenAnnouncementImageIsNull()
+    {
+        // Arrange
+        var announcement = new Announcement { AnnouncementImage = null };
+
+        // Act
+        _imageService.DeleteAnnouncementImageFiles(announcement);
+
+        // Assert
+        _fileServiceMock.Verify(x => x.DeleteFile(It.IsAny<string>()), Times.Never);
+    }
+}
+```
+::::{.fragment}
+![](./images/code_and_tests/unit-test-result.png){.fragment .grow}
+::::
+:::
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .fragment .orange}
+DTOs
+:::
+:::{data-id="services" .fragment .orange}
+Services
+:::
+:::{data-id="auth" .fragment .orange}
+Autorisierung
+:::
+:::{data-id="api" .fragment .orange}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="dto"}
+DTOs
+:::
+
+```{.cs code-line-numbers="1-10|12-18|20-26|28-32|34-37"}	
+public class ReadAnnouncementDto
+{
+    public int Id { get; set; }
+    public DateTime CreationDate { get; set; }
+    public DateTime? PublishedDate { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+    public AnnouncementStatusDto AnnouncementStatus { get; set; }
+    public AnnouncementImageDto Image { get; set; }
+}
+
+public class CreateAnnouncementDto
+{
+    public string Title { get; set; }
+    public AnnouncementStatusDto Status { get; set; }
+    public string Content { get; set; }
+    public IFormFile UploadedFile { get; set; }
+}
+
+public class UpdateAnnouncementDto : CreateAnnouncementDto
+{
+    [Required]
+    public int Id { get; set; }
+
+    public bool DeletePreviousImage { get; set; }
+}
+
+public class AnnouncementImageDto
+{
+    public string Image { get; set; }
+    public string Thumbnail { get; set; }
+}
+
+public class AnnouncementStatusDto
+{
+    public string Name { get; set; }
+}
+```
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .done}
+DTOs
+:::
+:::{data-id="service" .orange}
+Services
+:::
+:::{data-id="auth" .orange}
+Autorisierung
+:::
+:::{data-id="api" .orange}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="service"}
+Services
+:::
+
+**Auszug aus ImageService**
+
+```{.cs code-line-numbers="1|3-7|11|13|15-16"}
+public class ImageService(IFileService fileService)
+{
+    private const string _fileRootPath = "wwwroot/ImageFiles/";
+    private const string _AnnouncementThumbnailRelativePath = "Announcements/Thumbnails/";
+    private const string _AnnouncementImageRelativePath = "Announcements/";
+
+    private readonly IFileService _fileService = fileService;
+
+    ...
+
+    public void DeleteAnnouncementImageFiles(Announcement announcement)
+    {
+        if (announcement.AnnouncementImage == null) return;
+
+        _fileService.DeleteFile(announcement.AnnouncementImage.Thumbnail);
+        _fileService.DeleteFile(announcement.AnnouncementImage.Image);
+    }
+
+    ...
+}
+```
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .done}
+DTOs
+:::
+:::{data-id="service" .done}
+Services
+:::
+:::{data-id="auth" .orange}
+Autorisierung
+:::
+:::{data-id="api" .orange}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="auth"}
+Autorisierung
+:::
+
+![](./images/code_and_tests/AzureScopes.png)
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .done}
+DTOs
+:::
+:::{data-id="service" .done}
+Services
+:::
+:::{data-id="auth" .done}
+Autorisierung
+:::
+:::{data-id="api" .orange}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="controller"}
+API-Methoden
+:::
+
+```{.cs code-line-numbers="1-6|12-25|27-41|43-58|60-81|83-96|98-111|113-126"}
+[Authorize]
+public class AnnouncementController(
+    IUnitOfWork unitOfWork, 
+    IMapper mapper, 
+    ImageService imageService
+    ) : ControllerBase
+{
+    private readonly IUnitOfWork _unitOfWork = unitOfWork;
+    private readonly IMapper _mapper = mapper;
+    private readonly ImageService _imageService = imageService;
+
+    [HttpGet("{announcementId}")]
+    public async Task<ActionResult<ReadAnnouncementDto>> GetById(int announcementId)
+    {
+        // Ensure that the user has the necessary permissions to call this method.
+        VerifyUserScopes(Scopes.General);
+
+        // Retrieve the Announcement object with the given ID.
+        Announcement announcement = await GetAnnouncementAsync(announcementId);
+        if (announcement.AnnouncementStatus.Name != "published")
+            // Check Permission to read unpublished Announcements
+            VerifyUserScopes(Scopes.Announcements); 
+
+        return Ok(MapToReadAnnouncementDto(announcement));
+    }
+
+    [HttpGet()]
+    public async Task<ActionResult<List<ReadAnnouncementDto>>> GetAllAnnouncements(
+        int? order, 
+        string? statusFilter
+        )
+    {
+        // Ensure that the user has the necessary permissions to call this method.
+        VerifyUserScopes(Scopes.General);
+        ValidateParameters(order, statusFilter);
+
+        var announcements = await GetFilteredAnnouncementsAsync(statusFilter);
+        var dtos = announcements.ConvertAll(MapToReadAnnouncementDto);
+
+        return Ok(SortAnnouncements(dtos, order));
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<CreateAnnouncementDto>> CreateAnnouncement(
+        CreateAnnouncementDto announcementDTO
+        )
+    {
+        VerifyUserScopes(Scopes.General, Scopes.Announcements);
+        ValidateModelState();
+
+        var announcement = MapToAnnouncement(announcementDTO);
+        await ProcessAnnouncementImageAsync(announcement, announcementDTO.UploadedFile);
+
+        await _unitOfWork.Announcement.CreateAnnouncementAsync(announcement);
+        await _unitOfWork.CompleteAsync();
+
+        return Ok(MapToReadAnnouncementDto(announcement));
+    }
+
+    [HttpPut]
+    public async Task<ActionResult<UpdateAnnouncementDto>> UpdateAnnouncement(
+        UpdateAnnouncementDto announcementDTO
+        )
+    {
+        VerifyUserScopes(Scopes.General, Scopes.Announcements);
+        ValidateModelState();
+        ValidateStatus(announcementDTO.Status.Name);
+        // Fetch entity from id
+        var announcement = await GetAnnouncementAsync(announcementDTO.Id);
+        // Map properties
+        announcement = await MapToAnnouncement(announcement, announcementDTO);
+        // Conditionally update image, status and date properties
+        announcement = await UpdateAnnouncementProperties(announcementDTO, announcement); 
+        // Update db and save changes
+        _unitOfWork.Announcement.Update(announcement);
+        await _unitOfWork.CompleteAsync();
+
+        // return dto
+        var readAnnouncementDTO = MapToReadAnnouncementDto(announcement);
+        return Ok(readAnnouncementDTO);
+    }
+
+    [HttpDelete]
+    public async Task<ActionResult> DeleteAnnouncement(int announcementId)
+    {
+        VerifyUserScopes(Scopes.General, Scopes.Announcements);
+
+        var announcement = await GetAnnouncementAsync(announcementId);
+        _imageService.DeleteAnnouncementImageFiles(announcement);
+
+        var success = await _unitOfWork.Announcement.DeleteAsync(announcementId);
+        if (!success) throw new TimeoutException(Resources.NoSqlResponseDeleteError);
+
+        await _unitOfWork.CompleteAsync();
+        return Ok();
+    }
+
+    [HttpGet("{id}/thumbnail")]
+    public async Task<IActionResult> GetThumbnail(int id)
+    {
+        VerifyUserScopes(Scopes.General);
+        var announcement = await GetAnnouncementAsync(id);
+
+        if (announcement.AnnouncementStatus.Name != "published")
+            VerifyUserScopes(Scopes.Announcements);
+
+        return announcement.AnnouncementImage == null ? NotFound() : GetImageFileResult(
+            announcement
+            .AnnouncementImage
+            .Thumbnail);
+    }
+
+    [HttpGet("{id}/image")]
+    public async Task<IActionResult> GetImage(int id)
+    {
+        VerifyUserScopes(Scopes.General);
+        var announcement = await GetAnnouncementAsync(id);
+
+        if (announcement.AnnouncementStatus.Name != "published")
+            VerifyUserScopes(Scopes.Announcements);
+
+        return announcement.AnnouncementImage == null ? NotFound() : GetImageFileResult(
+            announcement
+            .AnnouncementImage
+            .Image);
+    }
+}
+```
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .done}
+DTOs
+:::
+:::{data-id="service" .done}
+Services
+:::
+:::{data-id="auth" .done}
+Autorisierung
+:::
+:::{data-id="api" .done}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::

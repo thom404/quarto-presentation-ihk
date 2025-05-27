@@ -10,12 +10,12 @@ Projektumfeld
 
 :::: {.columns}
 :::{.column width="40%" .incremental}
-- holistic-net GmbH: Softwarehaus mit Fokus auf MS365 und HCL Notes
+- holistic-net GmbH
 - Standort Hannover
 - Gründung 2002
 - 14 Mitarbeitende
 - Kerngeschäft
-  - Daten-Migrationen
+  - Migrationen
   - Individual-Software
 :::
 
@@ -315,23 +315,46 @@ Analysephase
 Analysephase
 :::
 
-# Entwurf & Umsetzung {.center}
+# Entwurfsphase {.center}
 :::{.center .secure-layout}
-![](./images/title-svgs/implement.svg)
+![](./images/title-svgs/prototype.svg)
 :::
-<!-- background-image="./images/backgrounds/chatgpt16-9.png" background-opacity="0.5" -->
 
 ## {auto-animate=true}
 :::{.subheader}
-Architektur
+Ziel-Plattform
+:::
+
+:::: {.columns}
+:::{.column width="50%" .incremental}
+- C#
+- ASP.NET Core
+- EF Core
+- xUnit & FluentAssertions
+- OpenAPI
+- MSSQL
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/undraw_server_9eix.svg)
+:::
+::::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Architekturdesign
 :::
 
 :::: {.columns}
 :::{.column width="50%" .incremental}
 - Client-Server-Prinzip
-  - **Backend**: ASP.NET Core Web API
-  - **Frontend**: Angular
+  - **Backend**: ASP.NET Core Web API + EF Core
   - **Datenbank**: MSSQL
+  - **Frontend**: Angular
 :::
 
 :::{.column .r-stretch .center}
@@ -340,13 +363,10 @@ Architektur
 architecture-beta
     group hpt(internet)[HPT Schichten]
 
-    %% group be(server)[Backend] in hpt
-    %% group fe(server)[Frontend] in hpt
-
-    service presentation(server)[Praesentation] in hpt
-    service business(server)[Geschaeftslogik] in hpt
-    service persitence(server)[Persistenz] in hpt
-    service db(database)[Datenbank] in hpt
+    service presentation(server)[Angular as Presentation Layer] in hpt
+    service business(server)[NET as Business Layer] in hpt
+    service persitence(server)[NET with EFC as Persistence Layer] in hpt
+    service db(database)[MSSQL as Data Layer] in hpt
 
     presentation:R <--> L :business
     business:B <--> T:persitence
@@ -356,7 +376,7 @@ architecture-beta
 ::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
 ::: {.notes}
@@ -377,19 +397,15 @@ Entwurf & Umsetzung
 :::
 
 ## {auto-animate=true .center}
-
 :::{.r-stretch .zoom-in}
 ```{mermaid}
 architecture-beta
     group hpt(internet)[HPT Schichten]
 
-    %% group be(server)[Backend] in hpt
-    %% group fe(server)[Frontend] in hpt
-
-    service presentation(server)[Praesentation] in hpt
-    service business(server)[Geschaeftslogik] in hpt
-    service persitence(server)[Persistenz] in hpt
-    service db(database)[Datenbank] in hpt
+    service presentation(server)[Angular as Presentation Layer] in hpt
+    service business(server)[NET as Business Layer] in hpt
+    service persitence(server)[NET with EFC as Persistence Layer] in hpt
+    service db(database)[MSSQL as Data Layer] in hpt
 
     presentation:R <--> L :business
     business:B <--> T:persitence
@@ -398,7 +414,7 @@ architecture-beta
 :::
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
 ##
@@ -417,7 +433,7 @@ UI-Mockup
 :::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
 ## {auto-animate=true}
@@ -436,14 +452,14 @@ UI-Mockup
 :::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
 ## {auto-animate=true}
 ![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
 ## {auto-animate=true}
@@ -462,14 +478,14 @@ UI-Mockup
 :::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
 ## {auto-animate=true}
 ![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
 ## {auto-animate=true}
@@ -478,12 +494,18 @@ Datenmodell
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="40%"}
 **Neue Entitäten:**
 
-- `Announcement`
-- `AnnouncementImage`
-- `AnnouncementStatus`
+:::::{data-id="entity-Announcement" .fragment}
+`Announcement`
+:::::
+:::::{data-id="entity-AnnouncementImage" .fragment}
+`AnnouncementImage`
+:::::
+:::::{data-id="entity-AnnouncementStatus" .fragment}
+`AnnouncementStatus`
+:::::
 :::
 
 :::{.column .r-stretch .center}
@@ -492,7 +514,7 @@ Datenmodell
 ::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
 ## {auto-animate=true .center}
@@ -508,9 +530,15 @@ Datenmodell
 :::{.column width="40%"}
 **Neue Entitäten:**
 
-- `Announcement`
-- `AnnouncementImage`
-- `AnnouncementStatus`
+:::::{data-id="entity-Announcement"}
+`Announcement`
+:::::
+:::::{data-id="entity-AnnouncementImage"}
+`AnnouncementImage`
+:::::
+:::::{data-id="entity-AnnouncementStatus"}
+`AnnouncementStatus`
+:::::
 :::
 
 :::{.column .r-stretch .center}
@@ -519,883 +547,341 @@ Datenmodell
 ::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Entwurfsphase
 :::
 
-##
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+:::{.center"}
+```{mermaid}
+flowchart TD
+
+    %% Komponenten
+    Controller["AnnouncementController"]:::component
+    UnitOfWork["UnitOfWork"]:::component
+    ImageService["ImageService"]:::component
+    Database["SQL SERVER"]:::db
+
+    %% Interfaces
+    UoWInterface["<<interface>> IUnitOfWork"]:::component
+    MapperInterface["<<interface>> IMapper"]:::component
+    ImageServiceInterface["<<interface>> ImageService"]:::component
+    AnnouncementRepo["<<interface>> IAnnouncementRepository"]:::component
+    ImageRepo["<<interface>> IAnnouncementImageRepository"]:::component
+
+    %% Externe Abhängigkeiten
+    Auth["Microsoft Identity (Scope Validation)"]:::ext
+    FileSystem["File Storage"]:::ext
+
+    %% Beziehungen
+    Controller --> UoWInterface
+    Controller --> MapperInterface
+    Controller --> ImageServiceInterface
+    Controller --> Auth
+
+    UoWInterface --> UnitOfWork
+    UnitOfWork --> AnnouncementRepo
+    UnitOfWork --> ImageRepo
+
+    AnnouncementRepo --> Database
+    ImageRepo --> Database
+
+    ImageServiceInterface --> ImageService
+    ImageService --> FileSystem
+```
+:::
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Qualitätssicherung
+:::
+:::{.incremental}
+- Test-Driven-Development (TDD)
+  - Unit-Tests mit xUnit & FluentAssertions
+  - Implementierung von Tests vor der eigentlichen Logik
+:::
+:::{.footer}
+Entwurfsphase
+:::
+
+# Implementierungsphase {.center}
+:::{.center .secure-layout}
+![](./images/title-svgs/implement.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+Datenstrukturen
+:::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="entity-Announcement" .fragment}
+`Announcement`
+::::::
+::::::{data-id="entity-AnnouncementImage" .fragment}
+`AnnouncementImage`
+::::::
+::::::{data-id="entity-AnnouncementStatus" .fragment}
+`AnnouncementStatus`
+::::::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_maintenance_rjtm.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
 :::{.subheader data-id="entity-Announcement"}
 `Announcement`
 :::
 
-```{.csharp code-line-numbers="5-20|7|14-19|8-11|"}
-using System;
-
-namespace hpt.core.Models.Entities
+```{.cs}
+public class Announcement
 {
-    public class Announcement
-    {
-        public int Id { get; set; } // Primary key
-        public DateTime CreationDate { get; set; }
-        public DateTime? PublishedDate { get; set; }
-        public string Title { get; set; } = string.Empty;
-        public string Content { get; set; } = string.Empty;
+    public int Id { get; set; } // Primary key
+    public DateTime CreationDate { get; set; }
+    public DateTime? PublishedDate { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
 
-        // Foreign key for Status ( Each Announcement has one Status )
-        public int AnnouncementStatusId { get; set; }
-        public AnnouncementStatus AnnouncementStatus { get; set; } = null!;
+    // Foreign key for Status ( Each Announcement has one Status )
+    public int AnnouncementStatusId { get; set; }
+    public AnnouncementStatus AnnouncementStatus { get; set; } = null!;
 
-        // Foreign key for Image
-        public int? AnnouncementImageId { get; set; }
-        public AnnouncementImage? AnnouncementImage { get; set; }
-    }
+    // Foreign key for Image
+    public int? AnnouncementImageId { get; set; }
+    public AnnouncementImage? AnnouncementImage { get; set; }
 }
 ```
 
 :::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
-##
-:::{.subheader}
-Datenmodell
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+`Announcement`
 :::
 
-:::: {.columns}
-:::{.column width="40%"}
-**Neue Entitäten:**
+```{.cs code-line-numbers="3|4-7|10-11|14-15"}
+public class Announcement
+{
+    public int Id { get; set; } // Primary key
+    public DateTime CreationDate { get; set; }
+    public DateTime? PublishedDate { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
 
-- `Announcement`✅
-- `AnnouncementImage`
-- `AnnouncementStatus`
+    // Foreign key for Status ( Each Announcement has one Status )
+    public int AnnouncementStatusId { get; set; }
+    public AnnouncementStatus AnnouncementStatus { get; set; } = null!;
+
+    // Foreign key for Image
+    public int? AnnouncementImageId { get; set; }
+    public AnnouncementImage? AnnouncementImage { get; set; }
+}
+```
+
+:::{.footer}
+Implementierungsphase
 :::
 
-:::{.column .r-stretch .center}
-![](./images/diagramme/ERM.png)
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+Datenstrukturen
 :::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="entity-Announcement" .done}
+`Announcement`
+::::::
+::::::{data-id="entity-AnnouncementImage"}
+`AnnouncementImage`
+::::::
+::::::{data-id="entity-AnnouncementStatus"}
+`AnnouncementStatus`
+::::::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_maintenance_rjtm.svg)
+:::::
 ::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
-##
+## {auto-animate=true}
 :::{.subheader data-id="entity-AnnouncementImage"}
-AnnouncementImage
+`AnnouncementImage`
 :::
 
-```{.csharp code-line-numbers="3-14"}
-namespace hpt.core.Models.Entities
+```{.cs code-line-numbers="1-10|3|6-7|9-10"}
+public class AnnouncementImage
 {
-    public class AnnouncementImage
-    {
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        // Foreign Key of Announcement (Each Announcement can have one AnnouncementImage)
-        public int AnnouncementId { get; set; }
+    // Foreign Key of Announcement (Each Announcement can have one AnnouncementImage)
+    public int AnnouncementId { get; set; }
+    public Announcement Announcement { get; set; } = null!;
 
-        public Announcement Announcement { get; set; } = null!;
-
-        public string Image { get; set; } = null;
-        public string Thumbnail { get; set; } = null;
-    }
+    public string Image { get; set; } = null;
+    public string Thumbnail { get; set; } = null;
 }
+
 
 ```
 :::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
-##
-:::{.subheader}
-Datenmodell
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+Datenstrukturen
 :::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="entity-Announcement" .done}
+`Announcement`
+::::::
+::::::{data-id="entity-AnnouncementImage" .done}
+`AnnouncementImage`
+::::::
+::::::{data-id="entity-AnnouncementStatus"}
+`AnnouncementStatus`
+::::::
+:::::
 
-:::: {.columns}
-:::{.column width="40%"}
-**Neue Entitäten:**
-
-- `Announcement`✅
-- `AnnouncementImage`✅
-- `AnnouncementStatus`
-:::
-
-:::{.column .r-stretch .center}
-![](./images/diagramme/ERM.png)
-:::
+:::::{.column .center}
+![](./images/title-svgs/undraw_maintenance_rjtm.svg)
+:::::
 ::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
-##
+## {auto-animate=true}
 :::{.subheader data-id="entity-AnnouncementStatus"}
 `AnnouncementStatus`
 :::
 
-```{.csharp code-line-numbers="5-12"}
-using System.Collections.Generic;
-
-namespace hpt.core.Models.Entities
+```{.cs code-line-numbers="1-8|3|5|7"}
+public class AnnouncementStatus
 {
-    public class AnnouncementStatus
-    {
-        public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
+    public int Id { get; set; }
+    // Navigation Property: One status can have multible Announcements
+    public ICollection<Announcement> Announcements { get; set; } = [];
 
-        // Navigation Property: One status can have multible Announcements
-        public ICollection<Announcement> Announcements { get; set; } = [];
-    }
+    public string Name { get; set; } = string.Empty;
 }
 
 ```
-
 :::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
-##
-:::{.subheader}
-Datenmodell
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+Datenstrukturen
 :::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="entity-Announcement" .done}
+`Announcement`
+::::::
+::::::{data-id="entity-AnnouncementImage" .done}
+`AnnouncementImage`
+::::::
+::::::{data-id="entity-AnnouncementStatus" .done}
+`AnnouncementStatus`
+::::::
+::::::{data-id="entity-DataContext" .fragment}
+`DataContext`
+::::::
+:::::
 
-:::: {.columns}
-:::{.column width="40%"}
-**Neue Entitäten:**
-
-- `Announcement`✅
-- `AnnouncementImage`✅
-- `AnnouncementStatus`✅
-
-:::{.incremental}
-- `DataContext`
-:::
-
-:::
-
-:::{.column .r-stretch .center}
-![](./images/diagramme/ERM.png)
-:::
+:::::{.column .center}
+![](./images/title-svgs/undraw_maintenance_rjtm.svg)
+:::::
 ::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
-##
-:::{.subheader}
-DataContext
+## {auto-animate=true}
+:::{.subheader data-id="entity-DataContext"}
+`DataContext`
 :::
 
-```{.csharp code-line-numbers="5-10|12|16-20|22-26"}
-using Microsoft.EntityFrameworkCore;
-
-namespace hpt.core.Models.Entities
+```{.cs code-line-numbers="1-24|4-6|8-24|12-16|18-22"}
+public class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
 {
-    public class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
+    ...
+    public DbSet<Announcement> Announcement { get; set; }
+    public DbSet<AnnouncementImage> AnnouncementImage { get; set; }
+    public DbSet<AnnouncementStatus> AnnouncementStatus { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         ...
-        public DbSet<Announcement> Announcement { get; set; }
-        public DbSet<AnnouncementImage> AnnouncementImage { get; set; }
-        public DbSet<AnnouncementStatus> AnnouncementStatus { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            ...
-            //If status deleted, Announcement should keep the status
-            modelBuilder.Entity<AnnouncementStatus>()
-                .HasMany(aS => aS.Announcements)
-                .WithOne(a => a.AnnouncementStatus)
-                .HasForeignKey(a => a.AnnouncementStatusId)
-                .OnDelete(DeleteBehavior.Restrict);
-            //If Announcement is deleted, delete the image
-            modelBuilder.Entity<AnnouncementImage>()
-            .HasOne(aI => aI.Announcement)
-            .WithOne(a => a.AnnouncementImage)
-            .HasForeignKey<Announcement>(a => a.AnnouncementImageId)
-            .OnDelete(DeleteBehavior.Cascade);
-        }
+        //If status deleted, Announcement should keep the status
+        modelBuilder.Entity<AnnouncementStatus>()
+            .HasMany(aS => aS.Announcements)
+            .WithOne(a => a.AnnouncementStatus)
+            .HasForeignKey(a => a.AnnouncementStatusId)
+            .OnDelete(DeleteBehavior.Restrict);
+        //If Announcement is deleted, delete the image
+        modelBuilder.Entity<AnnouncementImage>()
+        .HasOne(aI => aI.Announcement)
+        .WithOne(a => a.AnnouncementImage)
+        .HasForeignKey<Announcement>(a => a.AnnouncementImageId)
+        .OnDelete(DeleteBehavior.Cascade);
     }
 }
 ```
 
 :::{.footer}
-Entwurf & Umsetzung
-:::
-
-##
-:::{.subheader}
-Geschhäftslogik
-:::
-
-
-:::: {.columns}
-:::{.column width="40%" .incremental}
-
-**Ablauf**
-
-1. Data Transfer Objects (DTOs)
-2. Controller
-3. Testgetriebenes Entwickeln (TDD)
-4. Service Klassen
-
-:::
-
-:::{.column .center .save-layout}
-![](./images/title-svgs/implement.svg)
-:::
-::::
-
-:::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
 ## {auto-animate=true}
 :::{.subheader}
-Data Transfer Objects (DTOs)
+Unit-Tests
 :::
 
-```{.csharp code-line-numbers="7-16|18-24|26-32|34-38|40-43"}	
-using Microsoft.AspNetCore.Http;
-using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace hpt.core.Models.DTOs
-{
-    public class ReadAnnouncementDto
-    {
-        public int Id { get; set; }
-        public DateTime CreationDate { get; set; }
-        public DateTime? PublishedDate { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public AnnouncementStatusDto AnnouncementStatus { get; set; }
-        public AnnouncementImageDto Image { get; set; }
-    }
-
-    public class CreateAnnouncementDto
-    {
-        public string Title { get; set; }
-        public AnnouncementStatusDto Status { get; set; }
-        public string Content { get; set; }
-        public IFormFile UploadedFile { get; set; }
-    }
-
-    public class UpdateAnnouncementDto : CreateAnnouncementDto
-    {
-        [Required]
-        public int Id { get; set; }
-
-        public bool DeletePreviousImage { get; set; }
-    }
-
-    public class AnnouncementImageDto
-    {
-        public string Image { get; set; }
-        public string Thumbnail { get; set; }
-    }
-
-    public class AnnouncementStatusDto
-    {
-        public string Name { get; set; }
-    }
-}
-```
-
-:::{.footer}
-Entwurf & Umsetzung
+::::{.columns}
+:::::{.column width="40%"}
+:::{data-id="tests" .fragment}
+`ImageServiceTests`
 :::
+:::::
 
-##
-:::{.subheader}
-Geschhäftslogik
-:::
-
-
-:::: {.columns}
-:::{.column width="40%"}
-
-**Ablauf**
-
-1. Data Transfer Objects (DTOs) ✅
-2. Controller
-3. Testgetriebenes Entwickeln (TDD)
-4. Service Klassen
-
-:::
-
-:::{.column .center .save-layout}
-![](./images/title-svgs/implement.svg)
-:::
+:::::{.column .center}
+![](./images/title-svgs/undraw_fixing-bugs_13mt.svg)
+:::::
 ::::
 
 :::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
 ## {auto-animate=true}
-:::{.subheader}
-Controller
+:::{.subheader data-id="tests"}
+Unit-Tests
 :::
-
-```{.cs code-line-numbers="34-43|61-74|108-122|140-155|166-187|204-217|233-246|262-274"}
-using AutoMapper;
-using hpt.core;
-using hpt.core.ErrorHandling.Exceptions;
-using hpt.core.Models.DTOs;
-using hpt.core.Models.Entities;
-using hpt.core.Models.Graph;
-using hpt.core.Repositories.Interfaces;
-using hpt.core.Services;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Web.Resource;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace holistic_project_tracking.Controllers
-{
-    /// <summary>
-    /// CRUD for Announcements
-    /// </summary>
-    /// <param name="unitOfWork">Unit Of Work</param>
-    /// <param name="mapper">Automapper</param>
-    /// <param name="imageService">Service for imagehandling</param>
-    [Route("api/[controller]")]
-    [ApiController]
-#if !RELEASE
-    [EnableCors("CorsPolicy")]
-#endif
-    [Authorize]
-    public class AnnouncementController(
-      IUnitOfWork unitOfWork, 
-      IMapper mapper, 
-      ImageService imageService
-      ) : ControllerBase
-    {
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
-        private readonly ImageService _imageService = imageService;
-
-        /// <summary>
-        /// Retrieves an announcement by its unique ID.
-        /// </summary>
-        /// <param name="announcementId">The unique identifier of the announcement to retrieve.</param>
-        /// <returns>
-        /// Returns the details of the requested announcement.
-        /// - **200 OK**: Successfully retrieved the announcement.
-        /// - **403 Forbidden**: Access denied if the user lacks the required permissions.
-        /// - **404 Not Found**: No announcement found with the given ID.
-        /// </returns>
-        /// <remarks>
-        /// - The user must have the necessary permissions to access this endpoint.
-        /// - This method retrieves both **draft** and **published** announcements.
-        /// - Draft announcements require additional authorization.
-        /// - Dates are converted to UTC for consistency.
-        /// </remarks>
-        [HttpGet("{announcementId}")]
-        public async Task<ActionResult<ReadAnnouncementDto>> GetById(int announcementId)
-        {
-            // Ensure that the user has the necessary permissions to call this method.
-            VerifyUserScopes(Scopes.General);
-
-            // Retrieve the Announcement object with the given ID.
-            Announcement announcement = await GetAnnouncementAsync(announcementId);
-            if (announcement.AnnouncementStatus.Name != "published")
-                // Check Permission to read unpublished Announcements
-                VerifyUserScopes(Scopes.Announcements); 
-
-            return Ok(MapToReadAnnouncementDto(announcement));
-        }
-
-        /// <summary>
-        /// Retrieves a list of all announcements with optional filtering and sorting.
-        /// </summary>
-        /// <param name="order">
-        /// An optional sorting parameter:
-        /// - **0 or null**: No specific order (default).
-        /// - **1**: Sort by published date (ascending).
-        /// - **2**: Sort by published date (descending).
-        /// - **3**: Sort by creation date (ascending).
-        /// - **4**: Sort by creation date (descending).
-        /// </param>
-        /// <param name="statusFilter">
-        /// An optional filter parameter:
-        /// - **"published"**: Retrieve only published announcements.
-        /// - **"draft"**: Retrieve only draft announcements (requires additional permissions).
-        /// - **null or empty**: Retrieve all announcements (requires additional permissions).
-        /// </param>
-        /// <returns>
-        /// Returns a list of announcements based on the applied filters and sorting.
-        /// - **200 OK**: Announcements successfully retrieved.
-        /// - **400 Bad Request**: Invalid filter or sorting parameter.
-        /// - **403 Forbidden**: Access denied if filtering for drafts or all announcements without proper permissions.
-        /// - **404 Not Found**: No announcements found based on the given criteria.
-        /// </returns>
-        /// <remarks>
-        /// - The user must have the necessary permissions to access announcements.
-        /// - Draft announcements or retrieving all announcements require additional authorization.
-        /// - Dates are converted to UTC format for consistency.
-        /// - Sorting is applied based on the provided order parameter.
-        /// </remarks>
-#nullable enable
-
-        [HttpGet()]
-        public async Task<ActionResult<List<ReadAnnouncementDto>>> GetAllAnnouncements(
-          int? order, 
-          string? statusFilter
-          )
-        {
-            // Ensure that the user has the necessary permissions to call this method.
-            VerifyUserScopes(Scopes.General);
-            ValidateParameters(order, statusFilter);
-
-            var announcements = await GetFilteredAnnouncementsAsync(statusFilter);
-            var dtos = announcements.ConvertAll(MapToReadAnnouncementDto);
-
-            return Ok(SortAnnouncements(dtos, order));
-        }
-
-        /// <summary>
-        /// Creates a new announcement.
-        /// </summary>
-        /// <param name="announcementDTO">The announcement data transfer object containing the necessary details.</param>
-        /// <returns>
-        /// Returns the created announcement with its generated ID and associated details.
-        /// - **200 OK**: Announcement successfully created.
-        /// - **400 Bad Request**: Validation error or invalid status parameter.
-        /// - **403 Forbidden**: Access denied if the user lacks the required permissions.
-        /// </returns>
-        /// <remarks>
-        /// - The user must have the necessary permissions to create an announcement.
-        /// - The announcement status must be either **"draft"** or **"published"**.
-        /// - If an image is uploaded, it will be processed, resized, and stored.
-        /// - If the announcement is **"published"**, the published date is set to UTC now.
-        /// </remarks>
-        [HttpPost]
-        public async Task<ActionResult<CreateAnnouncementDto>> CreateAnnouncement(
-          CreateAnnouncementDto announcementDTO
-          )
-        {
-            VerifyUserScopes(Scopes.General, Scopes.Announcements);
-            ValidateModelState();
-
-            var announcement = MapToAnnouncement(announcementDTO);
-            await ProcessAnnouncementImageAsync(announcement, announcementDTO.UploadedFile);
-
-            await _unitOfWork.Announcement.CreateAnnouncementAsync(announcement);
-            await _unitOfWork.CompleteAsync();
-
-            return Ok(MapToReadAnnouncementDto(announcement));
-        }
-
-        /// <summary>
-        /// Updates an existing announcement.
-        /// </summary>
-        /// <param name="announcementDTO">The updated announcement details.</param>
-        /// <returns>The updated announcement.</returns>
-        /// <response code="200">Returns the updated announcement.</response>
-        /// <response code="400">If the request is invalid.</response>
-        /// <response code="403">If the user does not have the required permissions.</response>
-        /// <response code="404">If the announcement is not found.</response>
-        [HttpPut]
-        public async Task<ActionResult<UpdateAnnouncementDto>> UpdateAnnouncement(
-          UpdateAnnouncementDto announcementDTO
-          )
-        {
-            VerifyUserScopes(Scopes.General, Scopes.Announcements);
-            ValidateModelState();
-            ValidateStatus(announcementDTO.Status.Name);
-            // Fetch entity from id
-            var announcement = await GetAnnouncementAsync(announcementDTO.Id);
-            // Map properties
-            announcement = await MapToAnnouncement(announcement, announcementDTO);
-            // Conditionally update image, status and date properties
-            announcement = await UpdateAnnouncementProperties(announcementDTO, announcement); 
-            // Update db and save changes
-            _unitOfWork.Announcement.Update(announcement);
-            await _unitOfWork.CompleteAsync();
-
-            // return dto
-            var readAnnouncementDTO = MapToReadAnnouncementDto(announcement);
-            return Ok(readAnnouncementDTO);
-        }
-
-        /// <summary>
-        /// Deletes an announcement by its unique identifier, including its associated images.
-        /// </summary>
-        /// <param name="announcementId">The unique identifier of the announcement to delete.</param>
-        /// <returns>
-        /// - **200 OK**: Announcement deleted successfully.
-        /// - **404 Not Found**: No announcement found with the specified ID.
-        /// - **400 Bad Request**: Invalid input parameters.
-        /// - **500 Internal Server Error**: An error occurred during the deletion process.
-        /// </returns>
-        /// <remarks>
-        /// - The method will delete both the announcement and its associated images (thumbnail and image) from the server's file system.
-        /// - The user must have the necessary permissions to delete the announcement.
-        /// - If the deletion is unsuccessful, an error is thrown.
-        /// </remarks>
-        [HttpDelete]
-        public async Task<ActionResult> DeleteAnnouncement(int announcementId)
-        {
-            VerifyUserScopes(Scopes.General, Scopes.Announcements);
-
-            var announcement = await GetAnnouncementAsync(announcementId);
-            _imageService.DeleteAnnouncementImageFiles(announcement);
-
-            var success = await _unitOfWork.Announcement.DeleteAsync(announcementId);
-            if (!success) throw new TimeoutException(Resources.NoSqlResponseDeleteError);
-
-            await _unitOfWork.CompleteAsync();
-            return Ok();
-        }
-
-        /// <summary>
-        /// Retrieves the thumbnail image of a specific announcement based on its ID.
-        /// </summary>
-        /// <param name="id">The unique ID of the announcement.</param>
-        /// <returns>
-        /// Returns the announcement thumbnail as a file stream if available.
-        /// - **200 OK**: Thumbnail successfully retrieved.
-        /// - **404 Not Found**: Announcement or thumbnail not found.
-        /// - **403 Forbidden**: Access denied if the announcement is in draft status and the user lacks permissions.
-        /// </returns>
-        /// <remarks>
-        /// - The user must have the necessary permissions to access this endpoint.
-        /// - If the announcement is in **"draft"** status, additional permissions are required.
-        /// </remarks>
-        [HttpGet("{id}/thumbnail")]
-        public async Task<IActionResult> GetThumbnail(int id)
-        {
-            VerifyUserScopes(Scopes.General);
-            var announcement = await GetAnnouncementAsync(id);
-
-            if (announcement.AnnouncementStatus.Name != "published")
-                VerifyUserScopes(Scopes.Announcements);
-
-            return announcement.AnnouncementImage == null ? NotFound() : GetImageFileResult(
-              announcement
-              .AnnouncementImage
-              .Thumbnail);
-        }
-
-        /// <summary>
-        /// Retrieves the image of a specific announcement based on its ID.
-        /// </summary>
-        /// <param name="id">The unique ID of the announcement.</param>
-        /// <returns>
-        /// Returns the announcement image as a file stream if available.
-        /// - **200 OK**: Image successfully retrieved.
-        /// - **404 Not Found**: Announcement or image not found.
-        /// - **403 Forbidden**: Access denied if the announcement is in draft status and the user lacks permissions.
-        /// </returns>
-        /// <remarks>
-        /// - The user must have the necessary permissions to access this endpoint.
-        /// - If the announcement is in **"draft"** status, additional permissions are required.
-        /// </remarks>
-        [HttpGet("{id}/image")]
-        public async Task<IActionResult> GetImage(int id)
-        {
-            VerifyUserScopes(Scopes.General);
-            var announcement = await GetAnnouncementAsync(id);
-
-            if (announcement.AnnouncementStatus.Name != "published")
-                VerifyUserScopes(Scopes.Announcements);
-
-            return announcement.AnnouncementImage == null ? NotFound() : GetImageFileResult(
-              announcement
-              .AnnouncementImage
-              .Image);
-        }
-
-        #region Helper Methods
-
-        /// <summary>
-        /// Verifies that the user has the required scopes.
-        /// </summary>
-        /// <param name="scopes">Array of scopes to verify</param>
-        private void VerifyUserScopes(params string[][] scopes)
-        {
-            foreach (var scope in scopes)
-                HttpContext.VerifyUserHasAnyAcceptedScope(scope);
-        }
-
-        /// <summary>
-        /// Maps an announcement entity to a read announcement DTO.
-        /// </summary>
-        /// <param name="announcement">The announcement entity to map.</param>
-        /// <returns>The mapped read announcement DTO.</returns>
-        private ReadAnnouncementDto MapToReadAnnouncementDto(Announcement announcement)
-        {
-            var dto = _mapper.Map<ReadAnnouncementDto>(announcement);
-            dto.AnnouncementStatus = _mapper.Map<AnnouncementStatusDto>(announcement.AnnouncementStatus);
-            dto.Image = _mapper.Map<AnnouncementImageDto>(announcement.AnnouncementImage);
-            return dto;
-        }
-
-        /// <summary>
-        /// This method returns the AnnouncementStatus entity with matching name property
-        /// </summary>
-        /// <param name="statusName">String which represents the status of an announcemnt</param>
-        /// <returns>AnnouncementStatus</returns>
-        /// <exception cref="NoSuchResultException"></exception>
-        private async Task<AnnouncementStatus> GetAnnouncementStatus(string statusName)
-        {
-            return await _unitOfWork.Announcement.GetAnnouncementStatusFromName(statusName)
-                ?? throw new NoSuchResultException(Resources.NotFoundGetError);
-        }
-
-        /// <summary>
-        /// Retrieves an announcement by its unique ID.
-        /// </summary>
-        /// <param name="id">The unique ID of the announcement.</param>
-        /// <returns>The announcement entity.</returns>
-        private async Task<Announcement> GetAnnouncementAsync(int id)
-        {
-            return await _unitOfWork.Announcement.GetAnnouncementAsync(id) ?? throw new NoSuchResultException(Resources.NotFoundGetError);
-        }
-
-        /// <summary>
-        /// Maps a create announcement DTO to an announcement entity.
-        /// </summary>
-        /// <param name="dto">The create announcement DTO to map.</param>
-        /// <returns>The mapped announcement entity.</returns>
-        private Announcement MapToAnnouncement(CreateAnnouncementDto dto)
-        {
-            var announcement = _mapper.Map<Announcement>(dto);
-            announcement.AnnouncementStatus = _mapper.Map<AnnouncementStatus>(dto.Status);
-            return announcement;
-        }
-
-        /// <summary>
-        /// Maps the updated announcement DTO to the existing announcement entity.
-        /// </summary>
-        /// <param name="announcement">The existing announcement entity.</param>
-        /// <param name="announcementDTO">The updated announcement data transfer object.</param>
-        /// <returns>The mapped announcement entity.</returns>
-        /// <exception cref="NoSuchResultException">Thrown if the announcement is not found.</exception>
-        private async Task<Announcement> MapToAnnouncement(Announcement announcement, UpdateAnnouncementDto announcementDTO)
-        {
-            if (announcement == null) throw new NoSuchResultException(Resources.NotFoundGetError);
-            _mapper.Map(announcementDTO, announcement);
-            announcement.AnnouncementStatus = await GetAnnouncementStatus(announcementDTO.Status.Name);
-            return announcement;
-        }
-
-        /// <summary>
-        /// Updates the properties of an announcement, including image processing and status-based modifications.
-        /// </summary>
-        /// <param name="announcementDTO">The updated announcement data transfer object.</param>
-        /// <param name="announcement">The existing announcement entity.</param>
-        /// <returns>The updated announcement entity.</returns>
-        private async Task<Announcement> UpdateAnnouncementProperties(UpdateAnnouncementDto announcementDTO, Announcement announcement)
-        {
-            bool hasNewUpload = announcementDTO.UploadedFile != null;
-
-            // Deletes old file
-            if (announcementDTO.DeletePreviousImage || hasNewUpload)
-            {
-                _imageService.DeleteAnnouncementImageFiles(announcement);
-            }
-
-            // Save new File
-
-            if (announcementDTO.UploadedFile != null)
-            {
-                var imageFile = announcementDTO.UploadedFile;
-                announcement = await ProcessAnnouncementImageAsync(announcement, imageFile);
-            }
-
-            // Delete ImageEntity
-            if (announcementDTO.DeletePreviousImage && announcement.AnnouncementImage != null)
-            {
-                await _unitOfWork.AnnouncementImage.DeleteAsync(announcement.AnnouncementImage.Id);
-                announcement.AnnouncementImage = null;
-            }
-
-            // Set Published Date
-            announcement.PublishedDate = announcement.AnnouncementStatus.Name == "published" ? DateTime.UtcNow : null;
-
-            return announcement;
-        }
-        /// <summary>
-        /// Processes and saves an uploaded announcement image, generating a scaled image and thumbnail.
-        /// </summary>
-        /// <param name="announcement">The announcement entity to associate the image with.</param>
-        /// <param name="uploadedFile">The uploaded image file.</param>
-        /// <returns>The updated announcement entity with the processed image.</returns>
-        /// <exception cref="ValidationException">Thrown if the uploaded file is null.</exception>
-        private async Task<Announcement> ProcessAnnouncementImageAsync(Announcement announcement, IFormFile uploadedFile)
-        {
-            if (uploadedFile != null)
-            {
-                var scaledImage = await ImageService.ConvertToScaledByteArray(uploadedFile); // Scale Image
-                var thumbnail = await ImageService.ConvertToScaledByteArrayThumbnail(uploadedFile); // Scale Thumbnail
-                announcement.AnnouncementImage ??= new AnnouncementImage(); // Create new if null
-                announcement.AnnouncementImage.Thumbnail = await _imageService.SaveAnnouncementThumbnailToFile(thumbnail);
-                announcement.AnnouncementImage.Image = await _imageService.SaveAnnouncementImageToFileAsync(scaledImage);
-
-                return announcement;
-            }
-            throw new ValidationException(Resources.Error_NotFound);
-        }
-
-        /// <summary>
-        /// Retrieves an image file as a result based on the provided image path.
-        /// </summary>
-        /// <param name="imagePath">The relative path to the image file.</param>
-        /// <returns>
-        /// An <see cref="IActionResult"/> containing the image file if found,
-        /// or a 404 Not Found response if the file does not exist.
-        /// </returns>
-        private IActionResult GetImageFileResult(string imagePath)
-        {
-            if (string.IsNullOrEmpty(imagePath))
-                return NotFound();
-
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), imagePath);
-            if (!System.IO.File.Exists(filePath))
-                return NotFound();
-
-            var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            return File(fileStream, "image/jpeg");
-        }
-
-        /// <summary>
-        /// Validates the provided order and status filter parameters.
-        /// </summary>
-        /// <param name="order">The sorting order parameter.</param>
-        /// <param name="statusFilter">The status filter parameter.</param>
-        /// <exception cref="ValidationException">
-        /// Thrown if the order or status filter is not within the allowed values.
-        /// </exception>
-        private static void ValidateParameters(int? order, string? statusFilter)
-        {
-            int?[] sortingOptions = [0, 1, 2, 3, 4, null];
-            string?[] filterOptions = ["draft", "published", "", null];
-
-            if (!sortingOptions.Contains(order))
-                throw new ValidationException(Resources.Error_Announcement_Sort_Parameter_Not_Valid);
-
-            if (!filterOptions.Contains(statusFilter))
-                throw new ValidationException(Resources.Error_Announcement_Filter_Parameter_Not_Valid);
-        }
-
-        private static void ValidateStatus(string? statusFilter)
-        {
-            string?[] filterOptions = ["draft", "published"];
-
-            if (!filterOptions.Contains(statusFilter))
-                throw new ValidationException(Resources.Error_Announcement_Filter_Parameter_Not_Valid);
-        }
-
-        /// <summary>
-        /// Retrieves a filtered list of announcements based on the provided status filter.
-        /// </summary>
-        /// <param name="statusFilter">The status filter to apply (e.g., "published").</param>
-        /// <returns>A list of announcements matching the filter criteria.</returns>
-        /// <exception cref="NoSuchResultException">
-        /// Thrown if no announcements are found matching the given filter.
-        /// </exception>
-        private async Task<List<Announcement>> GetFilteredAnnouncementsAsync(string? statusFilter)
-        {
-            // Verify user scopes
-            if (statusFilter != "published" || string.IsNullOrEmpty(statusFilter))
-            {
-                VerifyUserScopes(Scopes.Announcements);
-            }
-
-            return await _unitOfWork.Announcement.GetAllAnnouncementsAsync(statusFilter) ?? throw new NoSuchResultException(Resources.NotFoundGetError);
-        }
-
-        /// <summary>
-        /// Sorts a list of announcements based on the specified order.
-        /// </summary>
-        /// <param name="dtos">The list of announcements to be sorted.</param>
-        /// <param name="order">The sorting order:
-        /// <list type="bullet">
-        /// <item><description>1 - Ascending by published date</description></item>
-        /// <item><description>2 - Descending by published date</description></item>
-        /// <item><description>3 - Ascending by creation date</description></item>
-        /// <item><description>4 - Descending by creation date</description></item>
-        /// <item><description>Any other value - No sorting applied</description></item>
-        /// </list>
-        /// </param>
-        /// <returns>A sorted list of announcements.</returns>
-        private static List<ReadAnnouncementDto> SortAnnouncements(List<ReadAnnouncementDto> dtos, int? order)
-        {
-            return order switch
-            {
-                1 => [.. dtos.OrderBy(p => p.PublishedDate)],
-                2 => [.. dtos.OrderByDescending(p => p.PublishedDate)],
-                3 => [.. dtos.OrderBy(p => p.CreationDate)],
-                4 => [.. dtos.OrderByDescending(p => p.CreationDate)],
-                _ => dtos
-            };
-        }
-
-        /// <summary>
-        /// Validates the model state and throws an exception if it is invalid.
-        /// </summary>
-        /// <exception cref="ValidationException">
-        /// Thrown if the model state is not valid.
-        /// </exception>
-        private void ValidateModelState()
-        {
-            if (!ModelState.IsValid)
-                throw new ValidationException(Resources.ValidationError);
-        }
-
-        #endregion Helper Methods
-    }
-}
-```
-
-:::{.footer}
-Entwurf & Umsetzung
-:::
-
-##
-:::{.subheader}
-Geschhäftslogik
-:::
-
-
-:::: {.columns}
-:::{.column width="40%"}
-
-**Ablauf**
-
-1. Data Transfer Objects (DTOs) ✅
-2. Controller ✅
-3. Testgetriebenes Entwickeln (TDD)
-4. Service Klassen
-
-:::
-
-:::{.column .center .save-layout}
-![](./images/title-svgs/implement.svg)
-:::
-::::
-
-:::{.footer}
-Entwurf & Umsetzung
-:::
-
-## {auto-animate=true}
-:::{.subheader}
-Testgetriebenes Entwickeln (TDD)
-:::
-
-**Beispiel eines Unit-Tests:**
-
 ::: {.r-stack}
 ```{.cs code-line-numbers="1|3-4|6-10|12-23|15-16|18-19|21-22"}
 public class ImageServiceTests
@@ -1427,97 +913,588 @@ public class ImageServiceTests
 ![](./images/code_and_tests/unit-test-result.png){.fragment .grow}
 ::::
 :::
-
 :::{.footer}
-Entwurf & Umsetzung
-:::
-
-## {auto-animation=true}
-:::{.subheader}
-Geschhäftslogik
-:::
-
-
-:::: {.columns}
-:::{.column width="40%"}
-
-**Ablauf**
-
-1. Data Transfer Objects (DTOs)✅
-2. Controller✅
-3. Testgetriebenes Entwickeln (TDD)✅
-4. Service Klassen
-
-:::
-
-:::{.column .center .save-layout}
-![](./images/title-svgs/implement.svg)
-:::
-::::
-
-:::{.footer}
-Entwurf & Implementierung
+Implementierungsphase
 :::
 
 ## {auto-animate=true}
 :::{.subheader}
-Service Klassen
+Geschäftslogik
 :::
 
-**Auszug aus ImageService:**
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .fragment .orange}
+DTOs
+:::
+:::{data-id="services" .fragment .orange}
+Services
+:::
+:::{data-id="auth" .fragment .orange}
+Autorisierung
+:::
+:::{data-id="api" .fragment .orange}
+API-Methoden
+:::
+:::::
 
-```{.cs code-line-numbers="3|5-9|20|22|24-25"}
-namespace hpt.core.Services
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="dto"}
+DTOs
+:::
+
+```{.cs code-line-numbers="1-10|12-18|20-26|28-32|34-37"}	
+public class ReadAnnouncementDto
 {
-    public class ImageService(IFileService fileService)
+    public int Id { get; set; }
+    public DateTime CreationDate { get; set; }
+    public DateTime? PublishedDate { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+    public AnnouncementStatusDto AnnouncementStatus { get; set; }
+    public AnnouncementImageDto Image { get; set; }
+}
+
+public class CreateAnnouncementDto
+{
+    public string Title { get; set; }
+    public AnnouncementStatusDto Status { get; set; }
+    public string Content { get; set; }
+    public IFormFile UploadedFile { get; set; }
+}
+
+public class UpdateAnnouncementDto : CreateAnnouncementDto
+{
+    [Required]
+    public int Id { get; set; }
+
+    public bool DeletePreviousImage { get; set; }
+}
+
+public class AnnouncementImageDto
+{
+    public string Image { get; set; }
+    public string Thumbnail { get; set; }
+}
+
+public class AnnouncementStatusDto
+{
+    public string Name { get; set; }
+}
+```
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .done}
+DTOs
+:::
+:::{data-id="service" .orange}
+Services
+:::
+:::{data-id="auth" .orange}
+Autorisierung
+:::
+:::{data-id="api" .orange}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="service"}
+Services
+:::
+
+**Auszug aus ImageService**
+
+```{.cs code-line-numbers="1|3-7|11|13|15-16"}
+public class ImageService(IFileService fileService)
+{
+    private const string _fileRootPath = "wwwroot/ImageFiles/";
+    private const string _AnnouncementThumbnailRelativePath = "Announcements/Thumbnails/";
+    private const string _AnnouncementImageRelativePath = "Announcements/";
+
+    private readonly IFileService _fileService = fileService;
+
+    ...
+
+    public void DeleteAnnouncementImageFiles(Announcement announcement)
     {
-        private const string _fileRootPath = "wwwroot/ImageFiles/";
-        private const string _AnnouncementThumbnailRelativePath = "Announcements/Thumbnails/";
-        private const string _AnnouncementImageRelativePath = "Announcements/";
+        if (announcement.AnnouncementImage == null) return;
 
-        private readonly IFileService _fileService = fileService;
-
-        ...
-
-        /// <summary>
-        /// Deletes the image files associated with the specified announcement, including the thumbnail and the image.
-        /// </summary>
-        /// <param name="announcement">The announcement containing the image files to be deleted.</param>
-        /// <remarks>
-        /// This method will delete both the thumbnail and the full-size image if they are present.
-        /// </remarks>
-        public void DeleteAnnouncementImageFiles(Announcement announcement)
-        {
-            if (announcement.AnnouncementImage == null) return;
-
-            _fileService.DeleteFile(announcement.AnnouncementImage.Thumbnail);
-            _fileService.DeleteFile(announcement.AnnouncementImage.Image);
-        }
-        ...
+        _fileService.DeleteFile(announcement.AnnouncementImage.Thumbnail);
+        _fileService.DeleteFile(announcement.AnnouncementImage.Image);
     }
+
+    ...
 }
 ```
 
 :::{.footer}
-Entwurf & Umsetzung
+Implementierungsphase
 :::
 
-<!-- ## {auto-animate=true}
-:::{.subheader} 
-Die neuen API-Endpunkte
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
 :::
 
-:::: {.columns}
-:::{.column width="40%" .incremental}
-- `GET /api/Announcement` &rarr; Liste aller Ankündigungen
-- `GET /api/Announcement/id` &rarr; Details einer Ankündigung
-- `GET /api/Announcement/id/thumbnail` &rarr; Thumbnail der Ankündigung
-- `POST /api/Announcement` &rarr; Ankündigung erstellen
-- `PUT /api/Announcement` &rarr; Ankündigung aktualisieren
-- `DELETE /api/Announcement` &rarr; Ankündigung löschen
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .done}
+DTOs
+:::
+:::{data-id="service" .done}
+Services
+:::
+:::{data-id="auth" .orange}
+Autorisierung
+:::
+:::{data-id="api" .orange}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
 :::
 
-:::{.column .r-stretch .center}
-![](./images/diagramme/ERM.png)
+## {auto-animate=true}
+:::{.subheader data-id="auth"}
+Autorisierung
 :::
-:::: -->
+
+![](./images/code_and_tests/AzureScopes.png)
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .done}
+DTOs
+:::
+:::{data-id="service" .done}
+Services
+:::
+:::{data-id="auth" .done}
+Autorisierung
+:::
+:::{data-id="api" .orange}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="controller"}
+API-Methoden
+:::
+
+```{.cs code-line-numbers="1-6|12-25|27-41|43-58|60-81|83-96|98-111|113-126"}
+[Authorize]
+public class AnnouncementController(
+    IUnitOfWork unitOfWork, 
+    IMapper mapper, 
+    ImageService imageService
+    ) : ControllerBase
+{
+    private readonly IUnitOfWork _unitOfWork = unitOfWork;
+    private readonly IMapper _mapper = mapper;
+    private readonly ImageService _imageService = imageService;
+
+    [HttpGet("{announcementId}")]
+    public async Task<ActionResult<ReadAnnouncementDto>> GetById(int announcementId)
+    {
+        // Ensure that the user has the necessary permissions to call this method.
+        VerifyUserScopes(Scopes.General);
+
+        // Retrieve the Announcement object with the given ID.
+        Announcement announcement = await GetAnnouncementAsync(announcementId);
+        if (announcement.AnnouncementStatus.Name != "published")
+            // Check Permission to read unpublished Announcements
+            VerifyUserScopes(Scopes.Announcements); 
+
+        return Ok(MapToReadAnnouncementDto(announcement));
+    }
+
+    [HttpGet()]
+    public async Task<ActionResult<List<ReadAnnouncementDto>>> GetAllAnnouncements(
+        int? order, 
+        string? statusFilter
+        )
+    {
+        // Ensure that the user has the necessary permissions to call this method.
+        VerifyUserScopes(Scopes.General);
+        ValidateParameters(order, statusFilter);
+
+        var announcements = await GetFilteredAnnouncementsAsync(statusFilter);
+        var dtos = announcements.ConvertAll(MapToReadAnnouncementDto);
+
+        return Ok(SortAnnouncements(dtos, order));
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<CreateAnnouncementDto>> CreateAnnouncement(
+        CreateAnnouncementDto announcementDTO
+        )
+    {
+        VerifyUserScopes(Scopes.General, Scopes.Announcements);
+        ValidateModelState();
+
+        var announcement = MapToAnnouncement(announcementDTO);
+        await ProcessAnnouncementImageAsync(announcement, announcementDTO.UploadedFile);
+
+        await _unitOfWork.Announcement.CreateAnnouncementAsync(announcement);
+        await _unitOfWork.CompleteAsync();
+
+        return Ok(MapToReadAnnouncementDto(announcement));
+    }
+
+    [HttpPut]
+    public async Task<ActionResult<UpdateAnnouncementDto>> UpdateAnnouncement(
+        UpdateAnnouncementDto announcementDTO
+        )
+    {
+        VerifyUserScopes(Scopes.General, Scopes.Announcements);
+        ValidateModelState();
+        ValidateStatus(announcementDTO.Status.Name);
+        // Fetch entity from id
+        var announcement = await GetAnnouncementAsync(announcementDTO.Id);
+        // Map properties
+        announcement = await MapToAnnouncement(announcement, announcementDTO);
+        // Conditionally update image, status and date properties
+        announcement = await UpdateAnnouncementProperties(announcementDTO, announcement); 
+        // Update db and save changes
+        _unitOfWork.Announcement.Update(announcement);
+        await _unitOfWork.CompleteAsync();
+
+        // return dto
+        var readAnnouncementDTO = MapToReadAnnouncementDto(announcement);
+        return Ok(readAnnouncementDTO);
+    }
+
+    [HttpDelete]
+    public async Task<ActionResult> DeleteAnnouncement(int announcementId)
+    {
+        VerifyUserScopes(Scopes.General, Scopes.Announcements);
+
+        var announcement = await GetAnnouncementAsync(announcementId);
+        _imageService.DeleteAnnouncementImageFiles(announcement);
+
+        var success = await _unitOfWork.Announcement.DeleteAsync(announcementId);
+        if (!success) throw new TimeoutException(Resources.NoSqlResponseDeleteError);
+
+        await _unitOfWork.CompleteAsync();
+        return Ok();
+    }
+
+    [HttpGet("{id}/thumbnail")]
+    public async Task<IActionResult> GetThumbnail(int id)
+    {
+        VerifyUserScopes(Scopes.General);
+        var announcement = await GetAnnouncementAsync(id);
+
+        if (announcement.AnnouncementStatus.Name != "published")
+            VerifyUserScopes(Scopes.Announcements);
+
+        return announcement.AnnouncementImage == null ? NotFound() : GetImageFileResult(
+            announcement
+            .AnnouncementImage
+            .Thumbnail);
+    }
+
+    [HttpGet("{id}/image")]
+    public async Task<IActionResult> GetImage(int id)
+    {
+        VerifyUserScopes(Scopes.General);
+        var announcement = await GetAnnouncementAsync(id);
+
+        if (announcement.AnnouncementStatus.Name != "published")
+            VerifyUserScopes(Scopes.Announcements);
+
+        return announcement.AnnouncementImage == null ? NotFound() : GetImageFileResult(
+            announcement
+            .AnnouncementImage
+            .Image);
+    }
+}
+```
+:::{.footer}
+Implementierungsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+
+::::{.columns}
+:::::{.column width="50%"}
+:::{data-id="dto" .done}
+DTOs
+:::
+:::{data-id="service" .done}
+Services
+:::
+:::{data-id="auth" .done}
+Autorisierung
+:::
+:::{data-id="api" .done}
+API-Methoden
+:::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/implement.svg)
+:::::
+::::
+
+:::{.footer}
+Implementierungsphase
+:::
+
+# Dokumentation {.center}
+:::{.center .secure-layout}
+![](./images/title-svgs/undraw_my-documents_ltqk.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+API-Dokumentation
+:::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="xml" .fragment .orange}
+XML-Beispiel
+::::::
+::::::{data-id="o-api" .fragment .orange}
+OpenAPI-Dokumentation
+::::::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_my-documents_ltqk.svg)
+:::::
+::::
+
+:::{.footer}
+Dokumentation
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="xml"}
+XML-Beispiel
+:::
+```{.cs code-line-numbers="1-30|1-3|4-11|18-24|25-30|32-43"}
+    /// <summary>
+    /// Retrieves a list of all announcements with optional filtering and sorting.
+    /// </summary>
+    /// <param name="order">
+    /// An optional sorting parameter:
+    /// - **0 or null**: No specific order (default).
+    /// - **1**: Sort by published date (ascending).
+    /// - **2**: Sort by published date (descending).
+    /// - **3**: Sort by creation date (ascending).
+    /// - **4**: Sort by creation date (descending).
+    /// </param>
+    /// <param name="statusFilter">
+    /// An optional filter parameter:
+    /// - **"published"**: Retrieve only published announcements.
+    /// - **"draft"**: Retrieve only draft announcements (requires additional permissions).
+    /// - **null or empty**: Retrieve all announcements (requires additional permissions).
+    /// </param>
+    /// <returns>
+    /// Returns a list of announcements based on the applied filters and sorting.
+    /// - **200 OK**: Announcements successfully retrieved.
+    /// - **400 Bad Request**: Invalid filter or sorting parameter.
+    /// - **403 Forbidden**: Access denied if filtering for drafts or all announcements without proper permissions.
+    /// - **404 Not Found**: No announcements found based on the given criteria.
+    /// </returns>
+    /// <remarks>
+    /// - The user must have the necessary permissions to access announcements.
+    /// - Draft announcements or retrieving all announcements require additional authorization.
+    /// - Dates are converted to UTC format for consistency.
+    /// - Sorting is applied based on the provided order parameter.
+    /// </remarks>
+
+    [HttpGet()]
+    public async Task<ActionResult<List<ReadAnnouncementDto>>> GetAllAnnouncements(int? order, string? statusFilter)
+    {
+        // Ensure that the user has the necessary permissions to call this method.
+        VerifyUserScopes(Scopes.General);
+        ValidateParameters(order, statusFilter);
+
+        var announcements = await GetFilteredAnnouncementsAsync(statusFilter);
+        var dtos = announcements.ConvertAll(MapToReadAnnouncementDto);
+
+        return Ok(SortAnnouncements(dtos, order));
+    }
+```
+
+:::{.footer}
+Dokumentation
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="entity-Announcement"}
+API-Dokumentation
+:::
+::::{.columns}
+:::::{.column width="40%"}
+::::::{data-id="xml" .done}
+XML-Beispiel
+::::::
+::::::{data-id="o-api" .orange}
+OpenAPI-Dokumentation
+::::::
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_my-documents_ltqk.svg)
+:::::
+::::
+
+:::{.footer}
+Dokumentation
+:::
+
+## {auto-animate=true}
+:::{.subheader data-id="o-api"}
+OpenAPI-Dokumentation
+:::
+:::{.r-stack}
+::::{.fragment .center}
+![](./images/code_and_tests/Swagger.png)
+::::
+::::{.fragment .center}
+![](./images/code_and_tests/SwaggerDetailed.png)
+::::
+:::
+:::{.footer}
+Dokumentation
+:::
+
+# Abnahme {.center}
+:::{.center .secure-layout}
+![](./images/title-svgs/undraw_code-review_ept3.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Codeabnahme
+:::
+::::{.columns}
+:::::{.column width="40%" .incremental}
+- Vorbereitet durch TDD
+- Manuelle Code-Reviews
+- Abnahmeprotokoll
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_code-review_ept3.svg)
+:::::
+::::
+
+:::{.footer}
+Abnahme
+:::
+
+# Fazit {.center}
+:::{.center .secure-layout}
+![](./images/title-svgs/undraw_personal-file_81l0.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Lessons Learned
+:::
+::::{.columns}
+:::::{.column width="50%" .incremental}
+- Relevanz detaillierter Planung
+- Zugriffskontrolle mit MS Scopes
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_personal-file_81l0.svg)
+:::::
+::::
+
+:::{.footer}
+Fazit
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Ausblick
+:::
+::::{.columns}
+:::::{.column width="50%" .incremental}
+- Anpassungen am Frontend
+- Rollout
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_personal-file_81l0.svg)
+:::::
+::::
+
+:::{.footer}
+Fazit
+:::
+
+## Ende {.center}
+::::{.columns}
+:::::{.column width="50%" .incremental}
+Vielen Dank für Ihre Aufmerksamkeit!
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_omega_aj2q.svg)
+:::::
+::::
+
+## Bildquellen
+[https://undraw.com](https://undraw.com)
+
+[https://mermaid.js.org](https://mermaid.js.org)

@@ -1,0 +1,307 @@
+# Entwurfsphase {.center}
+:::{.center .secure-layout}
+![](./images/title-svgs/prototype.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Ziel-Plattform
+:::
+
+:::: {.columns}
+:::{.column width="50%" .incremental}
+- C#
+- ASP.NET Core
+- EF Core
+- xUnit & FluentAssertions
+- OpenAPI
+- MSSQL
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/undraw_server_9eix.svg)
+:::
+::::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Architekturdesign
+:::
+
+:::: {.columns}
+:::{.column width="50%" .incremental}
+- Client-Server-Prinzip
+  - **Backend**: ASP.NET Core Web API + EF Core
+  - **Datenbank**: MSSQL
+  - **Frontend**: Angular
+:::
+
+:::{.column .r-stretch .center}
+<!-- ![](./images/title-svgs/undraw_building_burz.svg) -->
+```{mermaid}
+architecture-beta
+    group hpt(internet)[HPT Schichten]
+
+    service presentation(server)[Angular as Presentation Layer] in hpt
+    service business(server)[NET as Business Layer] in hpt
+    service persitence(server)[NET with EFC as Persistence Layer] in hpt
+    service db(database)[MSSQL as Data Layer] in hpt
+
+    presentation:R <--> L :business
+    business:B <--> T:persitence
+    persitence:L <--> R:db
+```
+:::
+::::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+::: {.notes}
+**Client-Server-Prinzip**
+- Trennung von Frontend und Backend
+- strukturierte Aufgabenverteilung 
+- wartungsfreundliche Architektur
+
+**Backend**
+- RESTful API für CRUD-Operationen
+- Authentifizierung via Microsoft Entra ID
+
+**Frontend**
+- Interaktion mit Backend über HTTP-Requests
+
+**Datenbank**
+- Speicherung von Ankündigungen, Bild-URL und Status
+:::
+
+## {auto-animate=true .center}
+:::{.r-stretch .zoom-in}
+```{mermaid}
+architecture-beta
+    group hpt(internet)[HPT Schichten]
+
+    service presentation(server)[Angular as Presentation Layer] in hpt
+    service business(server)[NET as Business Layer] in hpt
+    service persitence(server)[NET with EFC as Persistence Layer] in hpt
+    service db(database)[MSSQL as Data Layer] in hpt
+
+    presentation:R <--> L :business
+    business:B <--> T:persitence
+    persitence:L <--> R:db
+```
+:::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+##
+:::{.subheader}
+UI-Mockup
+:::
+:::::{.columns}
+::::{.center}
+:::{.column}
+![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
+:::
+:::{.column}
+![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
+:::
+::::
+:::::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+UI-Mockup
+:::
+:::::{.columns}
+::::{.center}
+:::{.column}
+![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
+:::
+:::{.column}
+![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
+:::
+::::
+:::::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+UI-Mockup
+:::
+:::::{.columns}
+::::{.center}
+:::{.column}
+![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
+:::
+:::{.column}
+![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
+:::
+::::
+:::::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Datenmodell
+:::
+
+:::: {.columns}
+:::{.column width="40%"}
+**Neue Entitäten:**
+
+:::::{data-id="entity-Announcement" .fragment}
+`Announcement`
+:::::
+:::::{data-id="entity-AnnouncementImage" .fragment}
+`AnnouncementImage`
+:::::
+:::::{data-id="entity-AnnouncementStatus" .fragment}
+`AnnouncementStatus`
+:::::
+:::
+
+:::{.column .r-stretch .center}
+![](./images/diagramme/ERM.png)
+:::
+::::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true .center}
+
+![](./images/diagramme/ERM.png)
+
+## {auto-animate=true .incremental}
+:::{.subheader}
+Datenmodell
+:::
+
+:::: {.columns}
+:::{.column width="40%"}
+**Neue Entitäten:**
+
+:::::{data-id="entity-Announcement"}
+`Announcement`
+:::::
+:::::{data-id="entity-AnnouncementImage"}
+`AnnouncementImage`
+:::::
+:::::{data-id="entity-AnnouncementStatus"}
+`AnnouncementStatus`
+:::::
+:::
+
+:::{.column .r-stretch .center}
+![](./images/diagramme/ERM.png)
+:::
+::::
+
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Geschäftslogik
+:::
+:::{.center"}
+```{mermaid}
+flowchart TD
+
+    %% Komponenten
+    Controller["AnnouncementController"]:::component
+    UnitOfWork["UnitOfWork"]:::component
+    ImageService["ImageService"]:::component
+    Database["SQL SERVER"]:::db
+
+    %% Interfaces
+    UoWInterface["<<interface>> IUnitOfWork"]:::component
+    MapperInterface["<<interface>> IMapper"]:::component
+    ImageServiceInterface["<<interface>> ImageService"]:::component
+    AnnouncementRepo["<<interface>> IAnnouncementRepository"]:::component
+    ImageRepo["<<interface>> IAnnouncementImageRepository"]:::component
+
+    %% Externe Abhängigkeiten
+    Auth["Microsoft Identity (Scope Validation)"]:::ext
+    FileSystem["File Storage"]:::ext
+
+    %% Beziehungen
+    Controller --> UoWInterface
+    Controller --> MapperInterface
+    Controller --> ImageServiceInterface
+    Controller --> Auth
+
+    UoWInterface --> UnitOfWork
+    UnitOfWork --> AnnouncementRepo
+    UnitOfWork --> ImageRepo
+
+    AnnouncementRepo --> Database
+    ImageRepo --> Database
+
+    ImageServiceInterface --> ImageService
+    ImageService --> FileSystem
+```
+:::
+:::{.footer}
+Entwurfsphase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Qualitätssicherung
+:::
+:::{.incremental}
+- Test-Driven-Development (TDD)
+  - Unit-Tests mit xUnit & FluentAssertions
+  - Implementierung von Tests vor der eigentlichen Logik
+:::
+:::{.footer}
+Entwurfsphase
+:::
+
+
+<!-- ## {auto-animate=true}
+:::{.subheader data-id="api"}
+Planung der API-Schnittstellen
+:::
+:::{.incremental}
+- `GET /api/Announcement` &rarr; Liste aller Ankündigungen
+- `GET /api/Announcement/id` &rarr; Details einer Ankündigung
+- `GET /api/Announcement/id/thumbnail` &rarr; Thumbnail der Ankündigung
+- `POST /api/Announcement` &rarr; Ankündigung erstellen
+- `PUT /api/Announcement` &rarr; Ankündigung aktualisieren
+- `DELETE /api/Announcement` &rarr; Ankündigung löschen
+::: -->

@@ -1,0 +1,58 @@
+# Fazit {.center}
+:::{.center .secure-layout}
+![](./images/title-svgs/undraw_personal-file_81l0.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Lessons Learned
+:::
+::::{.columns}
+:::::{.column width="50%" .incremental}
+- Relevanz detaillierter Planung
+- Zugriffskontrolle mit MS Scopes
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_personal-file_81l0.svg)
+:::::
+::::
+
+:::{.footer}
+Fazit
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Ausblick
+:::
+::::{.columns}
+:::::{.column width="50%" .incremental}
+- Anpassungen am Frontend
+- Rollout
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_personal-file_81l0.svg)
+:::::
+::::
+
+:::{.footer}
+Fazit
+:::
+
+# Ende {.center}
+::::{.columns}
+:::::{.column width="50%" .incremental}
+Vielen Dank für Ihre Aufmerksamkeit!
+:::::
+
+:::::{.column .center}
+![](./images/title-svgs/undraw_omega_aj2q.svg)
+:::::
+::::
+
+## Bildquellen
+[https://undraw.com](https://undraw.com)
+
+[https://mermaid.js.org](https://mermaid.js.org)
