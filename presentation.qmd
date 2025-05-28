@@ -5,11 +5,11 @@
 
 ##
 :::{.subheader}
-Projektumfeld
+Ausbildungsbetrieb
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="40%"}
 - holistic-net GmbH
 - Standort Hannover
 - Gründung 2002
@@ -25,7 +25,7 @@ Projektumfeld
 ::::
 
 :::{.footer}
-Projekteinführung
+© {{<meta name>}} | Projekteinführung
 :::
 
 ##
@@ -34,7 +34,7 @@ Projektziel
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="50%"}
 - Backend-Erweiterung von HPT
   - Verwaltung interner Ankündigungen
   - autorisierte Nutzer: Ankündigungen erstellen/ändern
@@ -47,7 +47,7 @@ Projektziel
 ::::
 
 :::{.footer}
-Projekteinführung
+© {{<meta name>}} | Projekteinführung
 :::
 
 ## {auto-animate=true}
@@ -56,8 +56,8 @@ Ausgangssituation
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
-- Bisherige keine zentrale Plattform für Ankündigungen
+:::{.column width="50%"}
+- keine zentrale Plattform für Ankündigungen
 - Wunsch: 
   - Zentrale, nachvollziehbare Informationsplattform
 - HPT bereits im Einsatz: Ressourcen- & Projektverwaltung
@@ -69,7 +69,7 @@ Ausgangssituation
 ::::
 
 :::{.footer}
-Projekteinführung
+© {{<meta name>}} | Projekteinführung
 :::
 
 ## {auto-animate=true}
@@ -78,9 +78,12 @@ Einführung HPT
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="40%"}
 - Holistic Project Tracking
-- Interne Webanwendung für Projektmanagement
+- Intern genutzt
+- Webanwendung
+- Projektmanagement
+- Kundenakquise
 :::
 
 :::{.column .r-stretch .center}
@@ -89,7 +92,7 @@ Einführung HPT
 ::::
 
 :::{.footer}
-Projekteinführung
+© {{<meta name>}} | Projekteinführung
 :::
 
 ## {.center auto-animate=true}
@@ -101,7 +104,7 @@ HPT: Funktionen
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="40%"}
 - Projekte
 - Akquise
 - Präsentationsmodus
@@ -113,7 +116,7 @@ HPT: Funktionen
 ::::
 
 :::{.footer}
-Projekteinführung
+© {{<meta name>}} | Projekteinführung
 :::
 
 # Projektplanung {.center}
@@ -127,7 +130,7 @@ Projektphasen
 :::
 
 :::: {.columns}
-:::{.column width="50%" .incremental}
+:::{.column width="50%"}
 | Phase            | Zeit (80h) |
 |------------------|------|
 | Analyse          | 5 h  |
@@ -143,7 +146,7 @@ Projektphasen
 ::::
 
 :::{.footer}
-Projektplanung
+© {{<meta name>}} | Projektplanung
 :::
 
 ## {.center auto-animate=true}
@@ -155,17 +158,8 @@ Projektplanung
 Vorgehensmodell
 :::
 
-:::: {.columns}
-:::{.column width="40%" .incremental}
-- Wasserfallmodell mit Rückkopplung
-  - sequenziell
-  - Rückkehr zu vorherigen Phasen möglich
-:::
-
-:::{.column .r-stretch .center}
 ![](./images/diagramme/erw_Wasserfalldiagramm.drawio.svg)
-:::
-::::
+
 
 :::{.notes}
 **Wasserfallmodell mit Rückkopplung**
@@ -174,10 +168,10 @@ Vorgehensmodell
 :::
 
 :::{.footer}
-Projektplanung
+© {{<meta name>}} | Projektplanung
 :::
 
-# Analysephase {.center auto-animate=true}
+# Analysephase {.center}
 :::{.center}
 ![](./images/title-svgs/analyse.svg)
 :::
@@ -188,7 +182,7 @@ IST-Analyse
 :::
 
 :::: {.columns}
-:::{.column width="50%" .incremental}
+:::{.column width="50%"}
 - Plattformen: 
   - E-Mail 
   - MS Teams
@@ -202,7 +196,7 @@ IST-Analyse
 ::::
 
 :::{.footer}
-Analysephase
+© {{<meta name>}} | Analysephase
 :::
 
 ##
@@ -211,7 +205,7 @@ Technischer Überblick HPT
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="50%"}
 - **Backend**: .NET 8, ASP.NET Core, C#, EFCore
 - **Frontend**: Angular (nicht Teil des Projekts)
 - **DB**: MSSQL 2022, Code-First
@@ -224,7 +218,7 @@ Technischer Überblick HPT
 ::::
 
 :::{.footer}
-Analysephase
+© {{<meta name>}} | Analysephase
 :::
 
 ## {auto-animate=true}
@@ -237,7 +231,7 @@ Wirtschaftlichkeitsanalyse
 :::
 
 :::{.footer}
-Analysephase
+© {{<meta name>}} | Analysephase
 :::
 
 ## {auto-animate=true}
@@ -246,7 +240,7 @@ Make-or-Buy-Entscheidung
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="40%"}
 - **Kontrolle** über die Software
 - **Integration** in bestehende Software
 - Kosten **extern > intern**
@@ -258,20 +252,20 @@ Make-or-Buy-Entscheidung
 ::::
 
 :::{.footer}
-Analysephase
+© {{<meta name>}} | Analysephase
 :::
 
 ##
 :::{.subheader}
-Kostenbrechnung
+Kostenberechnung
 :::
 
 :::: {.columns}
-:::{.column width="45%" .incremental}
+:::{.column width="45%"}
 - Azubi: 80h × 42 € = 3.360 €
 - Berater: 5h × 90 € = 450 €
 
-:::{.center .fragment}
+:::{.center}
 &rarr; **Gesamt: 3.810 €**
 :::
 :::
@@ -282,7 +276,7 @@ Kostenbrechnung
 ::::
 
 :::{.footer}
-Analysephase
+© {{<meta name>}} | Analysephase
 :::
 
 ## {auto-animate=true}
@@ -291,7 +285,7 @@ Anforderungsanalyse
 :::
 
 :::: {.columns}
-:::{.column width="45%" .incremental}
+:::{.column width="45%"}
 - **CRUD-Funktionen**
   - Ankündigung erstellen / bearbeiten / löschen (berechtigte Nutzer)
   - Ankündigungen anzeigen (alle Nutzer)
@@ -305,7 +299,7 @@ Anforderungsanalyse
 ::::
 
 :::{.footer}
-Analysephase
+© {{<meta name>}} | Analysephase
 :::
 
 ## {auto-animate=true .center}
@@ -315,7 +309,7 @@ Analysephase
 :::
 
 :::{.footer}
-Analysephase
+© {{<meta name>}} | Analysephase
 :::
 
 # Entwurfsphase {.center}
@@ -329,7 +323,7 @@ Ziel-Plattform
 :::
 
 :::: {.columns}
-:::{.column width="50%" .incremental}
+:::{.column width="50%"}
 - C#
 - ASP.NET Core
 - EF Core
@@ -344,7 +338,7 @@ Ziel-Plattform
 ::::
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ## {auto-animate=true}
@@ -353,7 +347,7 @@ Architekturdesign
 :::
 
 :::: {.columns}
-:::{.column width="50%" .incremental}
+:::{.column width="50%"}
 - Client-Server-Prinzip
   - **Backend**: ASP.NET Core Web API + EF Core
   - **Datenbank**: MSSQL
@@ -379,7 +373,7 @@ architecture-beta
 ::::
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ::: {.notes}
@@ -405,10 +399,10 @@ Entwurfsphase
 architecture-beta
     group hpt(internet)[HPT Schichten]
 
-    service presentation(server)[Angular as Presentation Layer] in hpt
-    service business(server)[NET as Business Layer] in hpt
-    service persitence(server)[NET with EFC as Persistence Layer] in hpt
-    service db(database)[MSSQL as Data Layer] in hpt
+    service presentation(server)[Angular as presentation layer] in hpt
+    service business(server)[NET as business layer] in hpt
+    service persitence(server)[NET with EF Core as persistence layer] in hpt
+    service db(database)[MSSQL as data layer] in hpt
 
     presentation:R <--> L :business
     business:B <--> T:persitence
@@ -417,7 +411,7 @@ architecture-beta
 :::
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ##
@@ -436,7 +430,7 @@ UI-Mockup
 :::::
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ## {auto-animate=true}
@@ -455,14 +449,14 @@ UI-Mockup
 :::::
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ## {auto-animate=true}
 ![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ## {auto-animate=true}
@@ -481,50 +475,17 @@ UI-Mockup
 :::::
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ## {auto-animate=true}
 ![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ## {auto-animate=true}
-:::{.subheader}
-Datenmodell
-:::
-
-:::: {.columns}
-:::{.column width="40%"}
-**Neue Entitäten:**
-
-:::::{data-id="entity-Announcement" .fragment}
-`Announcement`
-:::::
-:::::{data-id="entity-AnnouncementImage" .fragment}
-`AnnouncementImage`
-:::::
-:::::{data-id="entity-AnnouncementStatus" .fragment}
-`AnnouncementStatus`
-:::::
-:::
-
-:::{.column .r-stretch .center}
-![](./images/diagramme/ERM.png)
-:::
-::::
-
-:::{.footer}
-Entwurfsphase
-:::
-
-## {auto-animate=true .center}
-
-![](./images/diagramme/ERM.png)
-
-## {auto-animate=true .incremental}
 :::{.subheader}
 Datenmodell
 :::
@@ -550,7 +511,40 @@ Datenmodell
 ::::
 
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
+:::
+
+## {auto-animate=true .center}
+
+![](./images/diagramme/ERM.png)
+
+## {auto-animate=true}
+:::{.subheader}
+Datenmodell
+:::
+
+:::: {.columns}
+:::{.column width="40%"}
+**Neue Entitäten:**
+
+:::::{data-id="entity-Announcement"}
+`Announcement`
+:::::
+:::::{data-id="entity-AnnouncementImage"}
+`AnnouncementImage`
+:::::
+:::::{data-id="entity-AnnouncementStatus"}
+`AnnouncementStatus`
+:::::
+:::
+
+:::{.column .r-stretch .center}
+![](./images/diagramme/ERM.png)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ## {auto-animate=true}
@@ -596,20 +590,20 @@ flowchart TD
 ```
 :::
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 ## {auto-animate=true}
 :::{.subheader}
 Qualitätssicherung
 :::
-:::{.incremental}
+:::}
 - Test-Driven-Development (TDD)
   - Unit-Tests mit xUnit & FluentAssertions
   - Implementierung von Tests vor der eigentlichen Logik
 :::
 :::{.footer}
-Entwurfsphase
+© {{<meta name>}} | Entwurfsphase
 :::
 
 # Implementierungsphase {.center}
@@ -623,13 +617,13 @@ Datenstrukturen
 :::
 ::::{.columns}
 :::::{.column width="40%"}
-::::::{data-id="entity-Announcement" .fragment}
+::::::{data-id="entity-Announcement"}
 `Announcement`
 ::::::
-::::::{data-id="entity-AnnouncementImage" .fragment}
+::::::{data-id="entity-AnnouncementImage"}
 `AnnouncementImage`
 ::::::
-::::::{data-id="entity-AnnouncementStatus" .fragment}
+::::::{data-id="entity-AnnouncementStatus"}
 `AnnouncementStatus`
 ::::::
 :::::
@@ -640,7 +634,7 @@ Datenstrukturen
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -668,7 +662,7 @@ public class Announcement
 ```
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -696,7 +690,7 @@ public class Announcement
 ```
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -722,7 +716,7 @@ Datenstrukturen
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -746,7 +740,7 @@ public class AnnouncementImage
 
 ```
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -772,7 +766,7 @@ Datenstrukturen
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -792,7 +786,7 @@ public class AnnouncementStatus
 
 ```
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -810,7 +804,7 @@ Datenstrukturen
 ::::::{data-id="entity-AnnouncementStatus" .done}
 `AnnouncementStatus`
 ::::::
-::::::{data-id="entity-DataContext" .fragment}
+::::::{data-id="entity-DataContext"}
 `DataContext`
 ::::::
 :::::
@@ -821,7 +815,7 @@ Datenstrukturen
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -857,7 +851,7 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
 ```
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -867,7 +861,7 @@ Unit-Tests
 
 ::::{.columns}
 :::::{.column width="40%"}
-:::{data-id="tests" .fragment}
+:::{data-id="tests"}
 `ImageServiceTests`
 :::
 :::::
@@ -878,7 +872,7 @@ Unit-Tests
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -917,7 +911,7 @@ public class ImageServiceTests
 ::::
 :::
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -927,16 +921,16 @@ Geschäftslogik
 
 ::::{.columns}
 :::::{.column width="50%"}
-:::{data-id="dto" .fragment .orange}
+:::{data-id="dto" .orange}
 DTOs
 :::
-:::{data-id="services" .fragment .orange}
+:::{data-id="services" .orange}
 Services
 :::
-:::{data-id="auth" .fragment .orange}
+:::{data-id="auth" .orange}
 Autorisierung
 :::
-:::{data-id="api" .fragment .orange}
+:::{data-id="api" .orange}
 API-Methoden
 :::
 :::::
@@ -947,7 +941,7 @@ API-Methoden
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -1021,7 +1015,7 @@ API-Methoden
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -1055,7 +1049,7 @@ public class ImageService(IFileService fileService)
 ```
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -1085,7 +1079,7 @@ API-Methoden
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -1096,7 +1090,7 @@ Autorisierung
 ![](./images/code_and_tests/AzureScopes.png)
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -1126,7 +1120,7 @@ API-Methoden
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -1264,7 +1258,7 @@ public class AnnouncementController(
 }
 ```
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 ## {auto-animate=true}
@@ -1294,7 +1288,7 @@ API-Methoden
 ::::
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Implementierungsphase
 :::
 
 # Dokumentation {.center}
@@ -1308,10 +1302,10 @@ API-Dokumentation
 :::
 ::::{.columns}
 :::::{.column width="40%"}
-::::::{data-id="xml" .fragment .orange}
+::::::{data-id="xml" .orange}
 XML-Beispiel
 ::::::
-::::::{data-id="o-api" .fragment .orange}
+::::::{data-id="o-api" .orange}
 OpenAPI-Dokumentation
 ::::::
 :::::
@@ -1322,7 +1316,7 @@ OpenAPI-Dokumentation
 ::::
 
 :::{.footer}
-Dokumentation
+© {{<meta name>}} | Dokumentation
 :::
 
 ## {auto-animate=true}
@@ -1376,7 +1370,7 @@ XML-Beispiel
 ```
 
 :::{.footer}
-Dokumentation
+© {{<meta name>}} | Dokumentation
 :::
 
 ## {auto-animate=true}
@@ -1399,7 +1393,7 @@ OpenAPI-Dokumentation
 ::::
 
 :::{.footer}
-Dokumentation
+© {{<meta name>}} | Dokumentation
 :::
 
 ## {auto-animate=true}
@@ -1407,15 +1401,16 @@ Dokumentation
 OpenAPI-Dokumentation
 :::
 :::{.r-stack}
-::::{.fragment .center}
+::::{.center}
 ![](./images/code_and_tests/Swagger.png)
 ::::
-::::{.fragment .center}
+::::{.center}
 ![](./images/code_and_tests/SwaggerDetailed.png)
 ::::
 :::
+
 :::{.footer}
-Dokumentation
+© {{<meta name>}} | Dokumentation
 :::
 
 # Abnahme {.center}
@@ -1428,7 +1423,7 @@ Dokumentation
 Codeabnahme
 :::
 ::::{.columns}
-:::::{.column width="40%" .incremental}
+:::::{.column width="40%"}
 - Vorbereitet durch TDD
 - Manuelle Code-Reviews
 - Abnahmeprotokoll
@@ -1440,7 +1435,7 @@ Codeabnahme
 ::::
 
 :::{.footer}
-Abnahme
+© {{<meta name>}} | Abnahme
 :::
 
 # Fazit {.center}
@@ -1453,7 +1448,7 @@ Abnahme
 Lessons Learned
 :::
 ::::{.columns}
-:::::{.column width="50%" .incremental}
+:::::{.column width="50%"}
 - Relevanz detaillierter Planung
 - Zugriffskontrolle mit MS Scopes
 :::::
@@ -1464,7 +1459,7 @@ Lessons Learned
 ::::
 
 :::{.footer}
-Fazit
+© {{<meta name>}} | Fazit
 :::
 
 ## {auto-animate=true}
@@ -1472,7 +1467,7 @@ Fazit
 Ausblick
 :::
 ::::{.columns}
-:::::{.column width="50%" .incremental}
+:::::{.column width="50%"}
 - Anpassungen am Frontend
 - Rollout
 :::::
@@ -1483,12 +1478,12 @@ Ausblick
 ::::
 
 :::{.footer}
-Fazit
+© {{<meta name>}} | Fazit
 :::
 
 ## Ende {.center}
 ::::{.columns}
-:::::{.column width="50%" .incremental}
+:::::{.column width="50%"}
 Vielen Dank für Ihre Aufmerksamkeit!
 :::::
 

@@ -4,7 +4,7 @@ https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/revealj
 https://quarto.org/docs/journals/templates.html#revealjs-partials
 //--!>
 
-<section id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
+<section data-footer="false" id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
   <h1 class="title">$title$</h1>
 $if(subtitle)$
   <p class="subtitle">$subtitle$</p>
