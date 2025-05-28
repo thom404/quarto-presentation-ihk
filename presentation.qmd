@@ -189,8 +189,11 @@ IST-Analyse
 
 :::: {.columns}
 :::{.column width="40%" .incremental}
-- Bisherige Ankündigungen: E-Mail & MS Teams
-  - unübersichtlich & flüchtig
+- Plattformen: 
+  - E-Mail 
+  - MS Teams
+  - ündlich
+- unübersichtlich & flüchtig
 :::
 
 :::{.column .r-stretch .center}
