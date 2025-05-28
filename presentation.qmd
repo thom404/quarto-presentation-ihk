@@ -188,11 +188,11 @@ IST-Analyse
 :::
 
 :::: {.columns}
-:::{.column width="40%" .incremental}
+:::{.column width="50%" .incremental}
 - Plattformen: 
   - E-Mail 
   - MS Teams
-  - ündlich
+  - mündlich
 - unübersichtlich & flüchtig
 :::
 
@@ -215,7 +215,7 @@ Technischer Überblick HPT
 - **Backend**: .NET 8, ASP.NET Core, C#, EFCore
 - **Frontend**: Angular (nicht Teil des Projekts)
 - **DB**: MSSQL 2022, Code-First
-- Authentifizierung: **Microsoft Entra ID**
+- **Authentifizierung**: Microsoft Entra ID
 :::
 
 :::{.column .r-stretch .center}

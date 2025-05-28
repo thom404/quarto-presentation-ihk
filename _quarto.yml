@@ -14,6 +14,15 @@ ihk-logo: ./images/ihk/ihk_logo.jpg
 toc-img: ./images/title-svgs/toc.svg
 lang: de
 format:
+  # ------------------> HTML <----------------
+  # html:
+  #   # theme: [default, holistic-theme.scss]
+  #   toc: true
+  # ------------------> Beamer <----------------
+  # beamer:
+  #   # theme: [default, holistic-theme.scss]
+  #   toc: true
+  # ------------------> reveal <----------------
   revealjs:
     # theme: white
     toc: true
@@ -35,4 +44,3 @@ format:
       - toc-slide.html
     title-slide-attributes:
       data-background-color: "#fefbf8"
-    # include-after-body: toc-fragments.js
