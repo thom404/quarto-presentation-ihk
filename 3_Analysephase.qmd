@@ -1,0 +1,140 @@
+# Analysephase {.center}
+:::{.center}
+![](./images/title-svgs/analyse.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+IST-Analyse
+:::
+
+:::: {.columns}
+:::{.column width="50%"}
+- Plattformen: 
+  - E-Mail 
+  - MS Teams
+  - mündlich
+- unübersichtlich & flüchtig
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/analyse.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Analysephase
+:::
+
+##
+:::{.subheader}
+Technischer Überblick HPT
+:::
+
+:::: {.columns}
+:::{.column width="50%"}
+- **Backend**: .NET 8, ASP.NET Core, C#, EFCore
+- **Frontend**: Angular (nicht Teil des Projekts)
+- **DB**: MSSQL 2022, Code-First
+- **Authentifizierung**: Microsoft Entra ID
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/analyse.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Analysephase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Wirtschaftlichkeitsanalyse
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/finance.svg)
+:::
+
+:::{.footer}
+© {{<meta name>}} | Analysephase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Make-or-Buy-Entscheidung
+:::
+
+:::: {.columns}
+:::{.column width="40%"}
+- **Kontrolle** über die Software
+- **Integration** in bestehende Software
+- Kosten **extern > intern**
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/finance.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Analysephase
+:::
+
+##
+:::{.subheader}
+Kostenberechnung
+:::
+
+:::: {.columns}
+:::{.column width="45%"}
+- Azubi: 80h × 42 € = 3.360 €
+- Berater: 5h × 90 € = 450 €
+
+:::{.center}
+&rarr; **Gesamt: 3.810 €**
+:::
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/undraw_calculator_21hp.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Analysephase
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Anforderungsanalyse
+:::
+
+:::: {.columns}
+:::{.column width="45%"}
+- **CRUD-Funktionen**
+  - Ankündigung erstellen / bearbeiten / löschen (berechtigte Nutzer)
+  - Ankündigungen anzeigen (alle Nutzer)
+- Optional: Titelbild & Status(z. B. „draft, published“)
+
+:::
+
+:::{.column .r-stretch .center}
+![](./images/diagramme/usecase_puml.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Analysephase
+:::
+
+## {auto-animate=true .center}
+
+:::{.r-stretch}
+![](./images/diagramme/usecase_puml.svg)
+:::
+
+:::{.footer}
+© {{<meta name>}} | Analysephase
+:::

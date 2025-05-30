@@ -1,0 +1,51 @@
+# Projektplanung {.center}
+:::{.center}
+![](./images/title-svgs/undraw_scrum-board_uqku.svg)
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Projektphasen
+:::
+
+:::: {.columns}
+:::{.column width="50%"}
+| Phase            | Zeit (80h) |
+|------------------|------|
+| Analyse          | 5 h  |
+| Entwurf          | 8 h  |
+| Implementierung  | 39 h |
+| Abnahme          | 5 h  |
+| Dokumentation    | 23 h |
+:::
+
+:::{.column .r-stretch .center}
+![](./images/diagramme/gantt_to_pdf-1.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Projektplanung
+:::
+
+## {.center auto-animate=true}
+![](./images/diagramme/gantt_to_pdf-1.svg)
+
+
+##
+:::{.subheader}
+Vorgehensmodell
+:::
+
+![](./images/diagramme/erw_Wasserfalldiagramm.drawio.svg)
+
+
+:::{.notes}
+**Wasserfallmodell mit Rückkopplung**
+- sequenzielle Abarbeitung der Projektphasen
+- Möglichkeit, bei Bedarf zu vorherigen Phasen zurückzukehren
+:::
+
+:::{.footer}
+© {{<meta name>}} | Projektplanung
+:::

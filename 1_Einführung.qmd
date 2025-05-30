@@ -1,0 +1,101 @@
+# Projekteinführung
+:::{.center}
+![](./images/title-svgs/einfuehrung.svg)
+:::
+
+##
+:::{.subheader}
+Ausbildungsbetrieb
+:::
+
+:::: {.columns}
+:::{.column width="40%"}
+- holistic-net GmbH
+- Standort Hannover
+- Gründung 2002
+- 14 Mitarbeitende
+- Kerngeschäft
+  - Migrationen
+  - Individual-Software
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/meetTheTeam.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Projekteinführung
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Einführung HPT
+:::
+
+:::: {.columns}
+:::{.column width="40%"}
+- Holistic Project Tracking
+- eigene Entwicklung
+- Webanwendung im Intranet
+- Anwendung im Jour Fixe
+- Präsentationsmodus
+- Projektstatus/Kundenakquise dokumentieren
+:::
+
+:::{.column .r-stretch .center}
+![](./images/hpt-fe/HPT_Main.png)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Projekteinführung
+:::
+
+## {.center auto-animate=true}
+![](./images/hpt-fe/HPT_Main.png)
+
+
+##
+:::{.subheader}
+Projektziel
+:::
+
+:::: {.columns}
+:::{.column width="50%"}
+- Backend-Erweiterung von HPT
+  - Verwaltung interner Ankündigungen
+  - autorisierte Nutzer: Ankündigungen erstellen/ändern
+- Verbesserung interner Kommunikation & Informationsverteilung
+:::
+
+:::{.column .r-stretch .center .secure-layout}
+![](./images/title-svgs/ziel.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Projekteinführung
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Ausgangssituation
+:::
+
+:::: {.columns}
+:::{.column width="50%"}
+- keine zentrale Plattform für Ankündigungen
+- Wunsch: 
+  - Zentrale, nachvollziehbare Informationsplattform
+- HPT bereits im Einsatz: Ressourcen- & Projektverwaltung
+:::
+
+:::{.column .r-stretch .center}
+![](./images/title-svgs/ausgangssituation.svg)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Projekteinführung
+:::
