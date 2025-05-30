@@ -14,7 +14,7 @@ ihk-header: Präsentation zur betrieblichen Projektarbeit
 ihk-logo: ./images/ihk/ihk_logo.jpg
 toc-img: ./images/title-svgs/toc.svg
 lang: de
-output-dir: docs
+# output-file: PRESENTATION.html
 format:
   # # ------------------> HTML <----------------
   # html:

@@ -9,18 +9,25 @@ Projektphasen
 :::
 
 :::: {.columns}
-:::{.column width="50%"}
-| Phase            | Zeit (80h) |
-|------------------|------|
+:::{.column}
+| Phase            | Zeit  |
+|------------------|------:|
 | Analyse          | 5 h  |
 | Entwurf          | 8 h  |
 | Implementierung  | 39 h |
 | Abnahme          | 5 h  |
 | Dokumentation    | 23 h |
+| **Gesamt**       | **80 h** |
 :::
 
-:::{.column .r-stretch .center}
-![](./images/diagramme/gantt_to_pdf-1.svg)
+:::{.column}
+```{mermaid}
+pie title
+    "Analyse" : 5
+    "Entwurf" : 8
+    "Implementierung" : 39
+    "Abnahme" : 5
+```
 :::
 ::::
 
@@ -28,16 +35,14 @@ Projektphasen
 © {{<meta name>}} | Projektplanung
 :::
 
-## {.center auto-animate=true}
-![](./images/diagramme/gantt_to_pdf-1.svg)
-
-
 ##
 :::{.subheader}
 Vorgehensmodell
 :::
 
-![](./images/diagramme/erw_Wasserfalldiagramm.drawio.svg)
+:::{.center style="display: flex; height:90%;"}
+![](./images/diagramme/erw_Wasserfalldiagramm.drawio.svg){style="height: 90%;"}
+:::
 
 
 :::{.notes}

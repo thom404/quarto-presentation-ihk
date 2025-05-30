@@ -9,7 +9,7 @@ Ausbildungsbetrieb
 :::
 
 :::: {.columns}
-:::{.column width="40%"}
+:::{.column width="50%"}
 - holistic-net GmbH
 - Standort Hannover
 - Gründung 2002
@@ -29,13 +29,13 @@ Ausbildungsbetrieb
 :::
 
 ## {auto-animate=true}
-:::{.subheader}
-Einführung HPT
+:::{.subheader data-id="subheader"}
+Einführung hpt
 :::
 
 :::: {.columns}
-:::{.column width="40%"}
-- Holistic Project Tracking
+:::{.column width="50%"}
+- holistic project tracking
 - eigene Entwicklung
 - Webanwendung im Intranet
 - Anwendung im Jour Fixe
@@ -52,9 +52,42 @@ Einführung HPT
 © {{<meta name>}} | Projekteinführung
 :::
 
-## {.center auto-animate=true}
-![](./images/hpt-fe/HPT_Main.png)
+## {auto-animate=true}
+:::{.subheader}
+Einführung hpt
+:::
 
+::: {.center style="display: flex; height:90%;"}
+![](./images/hpt-fe/HPT_Main.png){style="height: 100%;"}
+:::
+
+:::{.footer}
+© {{<meta name>}} | Projekteinführung
+:::
+
+## {auto-animate=true}
+:::{.subheader}
+Einführung hpt
+:::
+
+:::: {.columns}
+:::{.column width="50%"}
+- holistic project tracking
+- eigene Entwicklung
+- Webanwendung im Intranet
+- Anwendung im Jour Fixe
+- Präsentationsmodus
+- Projektstatus/Kundenakquise dokumentieren
+:::
+
+:::{.column .r-stretch .center}
+![](./images/hpt-fe/HPT_Main.png)
+:::
+::::
+
+:::{.footer}
+© {{<meta name>}} | Projekteinführung
+:::
 
 ##
 :::{.subheader}
@@ -63,7 +96,7 @@ Projektziel
 
 :::: {.columns}
 :::{.column width="50%"}
-- Backend-Erweiterung von HPT
+- Backend-Erweiterung von hpt
   - Verwaltung interner Ankündigungen
   - autorisierte Nutzer: Ankündigungen erstellen/ändern
 - Verbesserung interner Kommunikation & Informationsverteilung
@@ -86,9 +119,10 @@ Ausgangssituation
 :::: {.columns}
 :::{.column width="50%"}
 - keine zentrale Plattform für Ankündigungen
-- Wunsch: 
-  - Zentrale, nachvollziehbare Informationsplattform
-- HPT bereits im Einsatz: Ressourcen- & Projektverwaltung
+- Wunsch einer Informationsplattform
+  - Zentrale
+  - nachvollziehbare
+  - innerhalb von hpt
 :::
 
 :::{.column .r-stretch .center}
