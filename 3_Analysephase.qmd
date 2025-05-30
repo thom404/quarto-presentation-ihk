@@ -5,16 +5,19 @@
 
 ## {auto-animate=true}
 :::{.subheader}
-IST-Analyse
+**Ist**-Analyse
 :::
 
 :::: {.columns}
-:::{.column width="50%"}
-- Plattformen: 
-  - E-Mail 
-  - MS Teams
-  - mündlich
-- unübersichtlich & flüchtig
+:::{.column}
+###### hpt
+- Keine Ankündigungen
+- Viele Logiken bereits vorhanden
+- Gut erweiterbar
+
+###### Ankündigungs-Plattformen: 
+  - E-Mail / MS Teams / mündlich
+  - Unübersichtlich & flüchtig
 :::
 
 :::{.column .r-stretch .center}
@@ -28,15 +31,18 @@ IST-Analyse
 
 ##
 :::{.subheader}
-Technischer Überblick HPT
+Technischer Überblick hpt
 :::
 
 :::: {.columns}
 :::{.column width="50%"}
-- **Backend**: .NET 8, ASP.NET Core, C#, EFCore
-- **Frontend**: Angular (nicht Teil des Projekts)
-- **DB**: MSSQL 2022, Code-First
-- **Authentifizierung**: Microsoft Entra ID
+- **Backend**: 
+  - Programmiersprache: C#
+  - .NET 8
+  - ASP.NET Core
+  - EFCore
+- **Frontend**: Angular mit Typescript (nicht Teil des Projekts)
+- **Datenbank**: Microsoft SQL Server 2022, Code-First
 :::
 
 :::{.column .r-stretch .center}
@@ -68,9 +74,10 @@ Make-or-Buy-Entscheidung
 
 :::: {.columns}
 :::{.column width="40%"}
+- hpt bereits **intern entwickelt**
 - **Kontrolle** über die Software
-- **Integration** in bestehende Software
-- Kosten **extern > intern**
+- **Integration** in hpt
+- **Wartbarkeit** und **Erweiterbarkeit**
 :::
 
 :::{.column .r-stretch .center}
@@ -88,17 +95,18 @@ Kostenberechnung
 :::
 
 :::: {.columns}
-:::{.column width="45%"}
-- Azubi: 80h × 42 € = 3.360 €
-- Berater: 5h × 90 € = 450 €
-
-:::{.center}
-&rarr; **Gesamt: 3.810 €**
+:::{.column}
+::: {.table-left}
+| Mitarbeiter | Zeit  | Stundensatz | Kosten |
+|-------------|------:|------------:|-------:|
+| Azubi       | 80 h  | 42 €        | 3.360 € |
+| Berater     | 5 h   | 90 €        | 450 €  |
+| **Gesamt**  | **85 h** | - | **3.810 €** |
 :::
 :::
 
-:::{.column .r-stretch .center}
-![](./images/title-svgs/undraw_calculator_21hp.svg)
+:::{.column}
+![](./images/title-svgs/undraw_calculator_21hp.svg){.absolute right=0 width="400"}
 :::
 ::::
 
