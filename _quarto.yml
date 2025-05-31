@@ -31,7 +31,6 @@ format:
     toc-title: Ablauf
     toc-depth: 1
     theme: [default, holistic-theme.scss]
-    # logo: ./images/holistic_logo_row.png
     width: 1280
     height: 720
     # margin: 0.4

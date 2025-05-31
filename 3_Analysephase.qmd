@@ -95,18 +95,16 @@ Kostenberechnung
 :::
 
 :::: {.columns}
-:::{.column}
-::: {.table-left}
+:::{#tab-costs .column}
 | Mitarbeiter | Zeit  | Stundensatz | Kosten |
 |-------------|------:|------------:|-------:|
 | Azubi       | 80 h  | 42 €        | 3.360 € |
 | Berater     | 5 h   | 90 €        | 450 €  |
-| **Gesamt**  | **85 h** | - | **3.810 €** |
-:::
+| **Gesamt**  | **85 h** |   | **3.810 €** |
 :::
 
-:::{.column}
-![](./images/title-svgs/undraw_calculator_21hp.svg){.absolute right=0 width="400"}
+:::{.column width="30rem"}
+![](./images/title-svgs/undraw_calculator_21hp.svg)
 :::
 ::::
 
@@ -120,16 +118,23 @@ Anforderungsanalyse
 :::
 
 :::: {.columns}
-:::{.column width="45%"}
-- **CRUD-Funktionen**
-  - Ankündigung erstellen / bearbeiten / löschen (berechtigte Nutzer)
-  - Ankündigungen anzeigen (alle Nutzer)
-- Optional: Titelbild & Status(z. B. „draft, published“)
+:::{.column}
+**Ankündigungen**
+
+- Erstellen
+- Lesen
+- Bearbeiten 
+- Löschen
+
+**Status**
+
+- Vorlage
+- Veröffentlicht
 
 :::
 
-:::{.column .r-stretch .center}
-![](./images/diagramme/usecase_puml.svg)
+:::{.column .center }
+![](./images/diagramme/usecase.svg)
 :::
 ::::
 
@@ -140,9 +145,18 @@ Anforderungsanalyse
 ## {auto-animate=true .center}
 
 :::{.r-stretch}
-![](./images/diagramme/usecase_puml.svg)
+![](./images/diagramme/usecase.svg)
 :::
 
 :::{.footer}
 © {{<meta name>}} | Analysephase
+:::
+
+::: {.notes}
+**CRUD Erklären**
+
+- Create (Erstellen)
+- Read (Anzeigen)
+- Update (Bearbeiten)
+- Delete (Löschen)
 :::

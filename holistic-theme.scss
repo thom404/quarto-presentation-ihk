@@ -234,6 +234,12 @@ nav[role="doc-toc"] ul li::before {
 }
 
 
-.reveal .table-left table {
+#tab-costs {
+  width: 50rem;
+}
+
+#tab-costs > table {
   margin: 0;
+  white-space: nowrap;
+  width: 50rem;
 }
