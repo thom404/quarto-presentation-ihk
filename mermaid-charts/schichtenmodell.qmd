@@ -1,0 +1,9 @@
+```{mermaid}
+flowchart TD
+    A["Präsentationsschicht (Angular)"] --> B["Geschäftslogikschicht (.NET)"]
+    B --> C["Datenzugriffsschicht (.NET mit EF Core)"]
+    C --> D["Datenschicht (MSSQL)"]
+
+    classDef layer fill:#f9f,stroke:#333,stroke-width:2px;
+    class A,B,C,D layer;
+```

@@ -1,0 +1,25 @@
+```{mermaid}
+erDiagram
+    Announcement ||--o| "AnnouncementImage" : has
+    "Announcement" ||--|{ "AnnouncementStatus" : has
+    "Announcement" {
+        int Id PK
+        int AnnouncementStatusId FK
+        int AnnouncementImageId FK
+        DateTime CreationDate
+        DateTime PublishedDate
+        string Title
+        string Content
+
+    }
+    "AnnouncementImage" {
+        int Id PK
+        int AnnouncementId FK
+        string ImageUrl
+        string ThumbnailUrl
+    }
+    "AnnouncementStatus" {
+        int Id PK
+        string Name
+    }
+```

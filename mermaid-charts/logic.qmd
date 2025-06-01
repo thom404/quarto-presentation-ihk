@@ -1,0 +1,27 @@
+```{mermaid}
+flowchart TD
+
+    %% Komponenten
+    Controller["AnnouncementController"]:::component
+    UnitOfWork["UnitOfWork"]:::component
+    ImageService["ImageService"]:::component
+    Database["SQL SERVER"]:::db
+    EFC["Entity Framework"]:::efc
+
+    %% Externe Abhängigkeiten
+    FileSystem["File Storage"]:::ext
+
+    %% Beziehungen
+    Controller --> UnitOfWork
+    Controller --> ImageService
+
+    UnitOfWork --> AnnouncementRepo
+    UnitOfWork --> ImageRepo
+
+    AnnouncementRepo --> EFC
+    ImageRepo --> EFC
+
+    EFC --> Database
+
+    ImageService --> FileSystem
+```

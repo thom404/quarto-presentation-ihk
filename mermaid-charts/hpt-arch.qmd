@@ -1,0 +1,13 @@
+```{mermaid}
+architecture-beta
+    group hpt(internet)[HPT Schichten]
+
+    service presentation(server)[Angular as Presentation Layer] in hpt
+    service business(server)[NET as Business Layer] in hpt
+    service persitence(server)[NET with EFC as Persistence Layer] in hpt
+    service db(database)[MSSQL as Data Layer] in hpt
+
+    presentation:R <--> L :business
+    business:B <--> T:persitence
+    persitence:L <--> R:db
+```

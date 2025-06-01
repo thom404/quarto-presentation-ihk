@@ -7,6 +7,7 @@ $bgwhite:          #fefbf8 !default;
 $txtgrey:          #5f5f5f !default;
 $holisticorange:   #e77d1a !default;
 $rustred:         #D67752 !default;
+// $secondary:   #1A8FE7 !default;
 
 // Sass variables
 //// Colors
@@ -14,7 +15,7 @@ $body-bg: $bgwhite !default;
 $body-color: $txtgrey !default;
 $link-color: $holisticorange !default;
 $primary: $holisticorange !default;
-$secondary: $holisticorange !default;
+$secondary: $txtgrey !default;
 
 // code
 $code-color: $rustred;
@@ -41,16 +42,19 @@ $presentation-heading-color: $txtgrey !default;
   
   // mermaid colors
   $mermaid-bg-color: $body-bg;
-  $mermaid-edge-color: $secondary;
-  $mermaid-node-fg-color: $body-color;
-  $mermaid-fg-color: $body-color;
-  $mermaid-fg-color--lighter: lighten($body-color, 10%);
-  $mermaid-fg-color--lightest: lighten($body-color, 20%);
+  $mermaid-edge-color: $primary;
+  $mermaid-node-fg-color: $primary;
+  $mermaid-fg-color: $primary;
+  $mermaid-fg-color--lighter: rgba($primary, 0.5);
+  $mermaid-fg-color--lightest: rgba($primary, 0.1);
   $mermaid-font-family: $font-family-sans-serif;
   $mermaid-label-bg-color: $body-bg;
   $mermaid-label-fg-color: $primary;
-  $mermaid-node-bg-color: rgba($primary, 0.1);
-  $mermaid-node-fg-color: $primary;
+  $mermaid-node-bg-color: $body-bg;
+
+  .attributeBoxOdd, .attributeBoxEven {
+    stroke: $primary !important;
+  }
   
   //// title-slide partial
 // presentation header
@@ -209,14 +213,14 @@ nav[role="doc-toc"] ul li::before {
   text-align: center;
 }
 
-.zoom-in {
-  transform: scale(3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // width: 700px;
-  // height: auto;
-}
+// .zoom-in {
+//   transform: scale(3);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // width: 700px;
+//   // height: auto;
+// }
 
 .flex-center {
   display: flex;
@@ -242,4 +246,39 @@ nav[role="doc-toc"] ul li::before {
   margin: 0;
   white-space: nowrap;
   width: 50rem;
+}
+
+#mermaid-schichten svg  {
+  height: 65vh;
+  max-width: none!important;
+
+}
+
+#mermaid-schichten-zoom svg {
+  // width: 100vw;
+  max-width: none!important;
+  width: 100%;
+  margin-top: 15vh;
+}
+
+#mockupImg1, #mockupImg2 {
+  position: relative;
+  top: 0vh;
+  height: 65vh;
+}
+
+#mermaid-erm1 svg {
+  height: 65vh;
+  max-width: none!important;
+
+}
+
+#mermaid-erm2 svg {
+  height: 65vh;
+  max-width: none!important;
+}
+
+#mermaid-logic svg {
+  height: 65vh;
+  max-width: none!important;
 }
