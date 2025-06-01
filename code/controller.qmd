@@ -1,0 +1,43 @@
+```{.cs code-line-numbers="1-41|1-2|5-39|6-8|10-11|13-16|18-22|24-28|30-32|34-38"}
+[Authorize]
+public class AnnouncementController( ... ) : ControlerBase
+{
+    ...
+    [HttpPut]
+    public async Task<ActionResult<UpdateAnnouncementDto>> UpdateAnnouncement(
+        UpdateAnnouncementDto announcementDto
+        )
+    {
+        AnnouncementService.ValidateModelState();
+        AnnouncementService.ValidateStatus(announcementDto.Status.Name);
+
+        // Fetch entity from id
+        var announcement = await AnnouncementService.GetAnnouncementAsync(
+            announcementDto.Id
+            );
+
+        // Map properties
+        announcement = await AnnouncementService.MapToAnnouncement(
+            announcement, 
+            announcementDto
+            );
+
+        // Conditionally update image, status and date properties
+        announcement = await AnnouncementService.UpdateAnnouncementProperties(
+            announcementDto, 
+            announcement
+            );
+
+        // Update db and save changes
+        _unitOfWork.Announcement.Update(announcement);
+        await _unitOfWork.CompleteAsync();
+
+        // return Dto
+        var readAnnouncementDto = AnnouncementService.MapToReadAnnouncementDto(
+            announcement
+            );
+        return Ok(readAnnouncementDto);
+    }
+    ...
+}
+```

@@ -1,0 +1,18 @@
+```{.cs code-line-numbers="3|4-7|10-11|14-15"}
+public class Announcement
+{
+    public int Id { get; set; } // Primary key
+    public DateTime CreationDate { get; set; }
+    public DateTime? PublishedDate { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
+
+    // Foreign key for Status ( Each Announcement has one Status )
+    public int AnnouncementStatusId { get; set; }
+    public AnnouncementStatus AnnouncementStatus { get; set; } = null!;
+
+    // Foreign key for Image
+    public int? AnnouncementImageId { get; set; }
+    public AnnouncementImage? AnnouncementImage { get; set; }
+}
+```

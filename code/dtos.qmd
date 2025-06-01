@@ -1,0 +1,39 @@
+```{.cs code-line-numbers="12-18"}
+public class ReadAnnouncementDto
+{
+    public int Id { get; set; }
+    public DateTime CreationDate { get; set; }
+    public DateTime? PublishedDate { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+    public AnnouncementStatusDto AnnouncementStatus { get; set; }
+    public AnnouncementImageDto Image { get; set; }
+}
+
+public class CreateAnnouncementDto
+{
+    public string Title { get; set; }
+    public AnnouncementStatusDto Status { get; set; }
+    public string Content { get; set; }
+    public IFormFile UploadedFile { get; set; }
+}
+
+public class UpdateAnnouncementDto : CreateAnnouncementDto
+{
+    [Required]
+    public int Id { get; set; }
+
+    public bool DeletePreviousImage { get; set; }
+}
+
+public class AnnouncementImageDto
+{
+    public string Image { get; set; }
+    public string Thumbnail { get; set; }
+}
+
+public class AnnouncementStatusDto
+{
+    public string Name { get; set; }
+}
+```
