@@ -5,7 +5,10 @@
 
 /.quarto/
 
-Presentation.html
+*.html
+!toc-slide.html
+!PRESENTATION.html
+!0_Presentation.html
 temmplate.html
 
 _quarto_internal_scss_error.scss

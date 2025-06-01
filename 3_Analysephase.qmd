@@ -1,26 +1,32 @@
 # Analysephase {.center}
+
 :::{.center}
 ![](./images/title-svgs/analyse.svg)
 :::
 
 ## {auto-animate=true}
+
 :::{.subheader}
-**Ist**-Analyse
+Ist-Analyse
 :::
 
 :::: {.columns}
-:::{.column}
-###### hpt
+:::{.column width="60%"}
+
+### hpt
+
 - Keine Ankündigungen
 - Viele Logiken bereits vorhanden
 - Gut erweiterbar
 
-###### Ankündigungs-Plattformen: 
-  - E-Mail / MS Teams / mündlich
-  - Unübersichtlich & flüchtig
+### Ankündigungs-Plattformen
+
+- E-Mail / MS Teams / mündlich
+- Unübersichtlich & flüchtig
+
 :::
 
-:::{.column .r-stretch .center}
+:::{.column width="40%"}
 ![](./images/title-svgs/analyse.svg)
 :::
 ::::
@@ -29,24 +35,36 @@
 © {{<meta name>}} | Analysephase
 :::
 
-##
+## {background-image="./images/title-svgs/analyse.svg" background-position="right 10% bottom 10%" background-size="70vh"}
+
 :::{.subheader}
 Technischer Überblick hpt
 :::
 
 :::: {.columns}
 :::{.column width="50%"}
-- **Backend**: 
-  - Programmiersprache: C#
-  - .NET 8
-  - ASP.NET Core
-  - EFCore
-- **Frontend**: Angular mit Typescript (nicht Teil des Projekts)
-- **Datenbank**: Microsoft SQL Server 2022, Code-First
+
+### Backend
+
+- Programmiersprache: C#
+- .NET 8
+- ASP.NET Core
+- EFCore
+
+### Frontend
+
+- Angular mit Typescript
+- (nicht Teil des Projekts)
+
 :::
 
-:::{.column .r-stretch .center}
-![](./images/title-svgs/analyse.svg)
+:::{.column width="50%" .center style="text-align: left;"}
+
+### Datenbank
+
+- Microsoft SQL Server 2022
+- Code-First
+
 :::
 ::::
 
@@ -74,10 +92,13 @@ Make-or-Buy-Entscheidung
 
 :::: {.columns}
 :::{.column width="40%"}
+
 - hpt bereits **intern entwickelt**
 - **Kontrolle** über die Software
 - **Integration** in hpt
-- **Wartbarkeit** und **Erweiterbarkeit**
+- **Wartbarkeit**
+- **Erweiterbarkeit**
+
 :::
 
 :::{.column .r-stretch .center}
@@ -90,17 +111,20 @@ Make-or-Buy-Entscheidung
 :::
 
 ##
+
 :::{.subheader}
 Kostenberechnung
 :::
 
 :::: {.columns}
 :::{#tab-costs .column}
+
 | Mitarbeiter | Zeit  | Stundensatz | Kosten |
 |-------------|------:|------------:|-------:|
 | Azubi       | 80 h  | 42 €        | 3.360 € |
 | Berater     | 5 h   | 90 €        | 450 €  |
 | **Gesamt**  | **85 h** |   | **3.810 €** |
+
 :::
 
 :::{.column width="30rem"}
@@ -112,40 +136,10 @@ Kostenberechnung
 © {{<meta name>}} | Analysephase
 :::
 
-## {auto-animate=true}
+## {background-image="./images/diagramme/usecase.svg" background-position="center top 20vh" background-size="72vh"}
+
 :::{.subheader}
 Anforderungsanalyse
-:::
-
-:::: {.columns}
-:::{.column}
-**Ankündigungen**
-
-- Erstellen
-- Lesen
-- Bearbeiten 
-- Löschen
-
-**Status**
-
-- Vorlage
-- Veröffentlicht
-
-:::
-
-:::{.column .center }
-![](./images/diagramme/usecase.svg)
-:::
-::::
-
-:::{.footer}
-© {{<meta name>}} | Analysephase
-:::
-
-## {auto-animate=true .center}
-
-:::{.r-stretch}
-![](./images/diagramme/usecase.svg)
 :::
 
 :::{.footer}
@@ -153,10 +147,14 @@ Anforderungsanalyse
 :::
 
 ::: {.notes}
-**CRUD Erklären**
+
+- **Rollen**
+
+- **CRUD**
 
 - Create (Erstellen)
 - Read (Anzeigen)
 - Update (Bearbeiten)
 - Delete (Löschen)
+
 :::
