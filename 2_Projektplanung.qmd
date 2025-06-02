@@ -10,18 +10,20 @@ Projektphasen
 
 :::: {.columns}
 :::{.column width="40%"}
-| Phase            | Zeit  |
-|------------------|------:|
-| Analyse          | 5 h  |
-| Entwurf          | 8 h  |
-| Implementierung  | 39 h |
-| Abnahme          | 5 h  |
-| Dokumentation    | 23 h |
+
+| Phase            | Zeit     |
+|------------------|---------:|
+| Analyse          | 5 h      |
+| Entwurf          | 8 h      |
+| Implementierung  | 39 h     |
+| Abnahme          | 5 h      |
+| Dokumentation    | 23 h     |
 | **Gesamt**       | **80 h** |
+
 :::
 
 :::{.column width="60%" #mermaid-phasen}
-{{< include ./mermaid-charts/planung-pie.qmd >}}
+{{< include ./mermaid-charts/planung-pie-colorized.qmd >}}
 :::
 ::::
 
@@ -30,19 +32,25 @@ Projektphasen
 :::
 
 ##
+
 :::{.subheader}
-Vorgehensmodell
+Vorgehensmodell: Erweitertes Wasserfallmodell
 :::
 
 :::{.center style="display: flex; height:90%;"}
 ![](./images/diagramme/erw_Wasserfalldiagramm.drawio.svg){style="height: 90%;"}
 :::
 
-
 :::{.notes}
-**Wasserfallmodell mit Rückkopplung**
-- sequenzielle Abarbeitung der Projektphasen
-- Möglichkeit, bei Bedarf zu vorherigen Phasen zurückzukehren
+**Erweitertes Wasserfallmodell**
+
+- lineares Vorgehensmodell
+- Phasen nacheinander
+- Phasen müssen abschließen bevor neue beginnt
+- Weiterentwicklung des klassischen Wasserfallmodells
+- erlaubt Rücksprünge
+- Fehlerkorrektur möglich
+
 :::
 
 :::{.footer}

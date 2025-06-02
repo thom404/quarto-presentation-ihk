@@ -36,7 +36,7 @@ Einführung hpt
 :::: {.columns}
 :::{.column width="50%"}
 - holistic project tracking
-- eigene Entwicklung
+- Eigene Entwicklung
 - Webanwendung im Intranet
 - Anwendung im Jour Fixe
 - Präsentationsmodus
@@ -72,10 +72,12 @@ Projektziel
 
 :::: {.columns}
 :::{.column width="50%"}
+
 - Backend-Erweiterung von hpt
   - Verwaltung interner Ankündigungen
-  - autorisierte Nutzer: Ankündigungen erstellen/ändern
+  - Autorisierte Nutzer: Ankündigungen erstellen/ändern
 - Verbesserung interner Kommunikation & Informationsverteilung
+
 :::
 
 :::{.column .r-stretch .center .secure-layout}
@@ -87,6 +89,15 @@ Projektziel
 © {{<meta name>}} | Projekteinführung
 :::
 
+:::{.notes}
+**Anwendungsbeispiele**
+
+- Neukundenvorstellung
+- Firmenevents
+- Organisatorisches
+
+:::
+
 ## {auto-animate=true}
 :::{.subheader}
 Ausgangssituation
@@ -94,11 +105,12 @@ Ausgangssituation
 
 :::: {.columns}
 :::{.column width="50%"}
-- keine zentrale Plattform für Ankündigungen
-- Wunsch einer Informationsplattform
-  - Zentrale
-  - nachvollziehbare
-  - innerhalb von hpt
+
+- Keine einheitliche Lösung
+- Anforderungen an eine Lösung
+  - Zentral
+  - Übersichtlich
+  - Integration in hpt
 :::
 
 :::{.column .r-stretch .center}

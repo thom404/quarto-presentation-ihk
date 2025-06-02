@@ -1,0 +1,9 @@
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#e77d1a', 'pie2': '#FFFF00', 'pie3': '#00FF00', 'pie4': '#42ddf5', 'pie5': '#f54287' }}}%%
+pie title
+    "Analyse" : 5
+    "Entwurf" : 8
+    "Implementierung" : 39
+    "Abnahme" : 5
+    "Dokumentation" : 23
+```

@@ -17,7 +17,7 @@ Entwicklungsumgebung
 - xUnit
 - OpenAPI
 - SQL Server Management Studio
-- Visual Studo 2022
+- Visual Studio 2022
 
 :::
 
@@ -31,26 +31,16 @@ Entwicklungsumgebung
 :::
 
 ## {auto-animate=true}
+
 :::{.subheader}
 Architekturdesign
 :::
 
-:::: {.columns}
-:::{.column width="70%"}
+:::{#mermaid-schichten-zoom .center}
 
-- Client-Server-Prinzip
-  - **Backend**: ASP.NET Core Web API + EF Core
-  - **Datenbank**: MSSQL
-  - **Frontend**: Angular
+{{< include ./mermaid-charts/schichtenmodell_lr.qmd >}}
 
 :::
-
-:::{.column width="30%" .center #mermaid-schichten}
-
-{{< include ./mermaid-charts/schichtenmodell_td.qmd >}}
-
-:::
-::::
 
 :::{.footer}
 © {{<meta name>}} | Entwurfsphase
@@ -81,61 +71,6 @@ Architekturdesign
 ## {auto-animate=true}
 
 :::{.subheader}
-Architekturdesign
-:::
-
-:::{#mermaid-schichten-zoom .center}
-
-{{< include ./mermaid-charts/schichtenmodell_lr.qmd >}}
-
-:::
-
-:::{.footer}
-© {{<meta name>}} | Entwurfsphase
-:::
-
-##
-
-:::{.subheader}
-UI-Mockup
-:::
-:::::{.columns}
-::::{.center}
-:::{.column}
-![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
-:::
-:::{.column}
-![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
-:::
-::::
-:::::
-
-:::{.footer}
-© {{<meta name>}} | Entwurfsphase
-:::
-
-## {auto-animate=true}
-:::{.subheader}
-UI-Mockup
-:::
-:::::{.columns}
-::::{.center}
-:::{.column}
-![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
-:::
-:::{.column}
-![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
-:::
-::::
-:::::
-
-:::{.footer}
-© {{<meta name>}} | Entwurfsphase
-:::
-
-## {auto-animate=true}
-
-:::{.subheader}
 UI-Mockup
 :::
 
@@ -143,24 +78,13 @@ UI-Mockup
 ![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png){#mockupImg1}
 :::
 
-:::{.footer}
-© {{<meta name>}} | Entwurfsphase
-:::
+::: {.notes}
+**Warum Mockup?**
 
-## {auto-animate=true}
-:::{.subheader}
-UI-Mockup
+- Planung der API-Endpunkte
+- Bessere Kommunikation Frontend & Kunden
+
 :::
-:::::{.columns}
-::::{.center}
-:::{.column}
-![](./images/hpt-fe/hpt-mockup/Mockup_ItemsView.png)
-:::
-:::{.column}
-![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png)
-:::
-::::
-:::::
 
 :::{.footer}
 © {{<meta name>}} | Entwurfsphase
@@ -174,6 +98,14 @@ UI-Mockup
 
 :::{.center}
 ![](./images/hpt-fe/hpt-mockup/Mockup_EditView.png){#mockupImg2}
+:::
+
+::: {.notes}
+**Warum Mockup?**
+
+- Planung der API-Endpunkte
+- Bessere Kommunikation Frontend & Kunden
+
 :::
 
 :::{.footer}
@@ -234,8 +166,8 @@ Qualitätssicherung
 :::
 
 - Test-Driven-Development (TDD)
-  - Testimplementierung **vor Logik**
-  - **Unit-Tests** mit xUnit
+  - Testimplementierung vor Logik
+  - Unit-Tests mit xUnit
     - Whiteboxtests
 :::
 

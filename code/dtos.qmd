@@ -1,4 +1,4 @@
-```{.cs code-line-numbers="12-18"}
+```{.cs code-line-numbers="20-34"}
 public class ReadAnnouncementDto
 {
     public int Id { get; set; }
@@ -18,11 +18,19 @@ public class CreateAnnouncementDto
     public IFormFile UploadedFile { get; set; }
 }
 
-public class UpdateAnnouncementDto : CreateAnnouncementDto
+public class UpdateAnnouncementDto
 {
     [Required]
     public int Id { get; set; }
 
+    public string Title { get; set; }
+    public string Content { get; set; }
+
+    public AnnouncementStatusDto Status { get; set; }
+
+    // Optional: If null, the existing image will not be changed
+    public IFormFile UploadedFile { get; set; }
+    // Optional: If true, the previous image will be deleted
     public bool DeletePreviousImage { get; set; }
 }
 

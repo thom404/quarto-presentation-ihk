@@ -7,12 +7,10 @@ public class Announcement
     public string Title { get; set; } = string.Empty;
     public string Content { get; set; } = string.Empty;
 
-    // Foreign key for Status ( Each Announcement has one Status )
+    // Foreign key for Status
     public int AnnouncementStatusId { get; set; }
-    public AnnouncementStatus AnnouncementStatus { get; set; } = null!;
 
     // Foreign key for Image
     public int? AnnouncementImageId { get; set; }
-    public AnnouncementImage? AnnouncementImage { get; set; }
 }
 ```

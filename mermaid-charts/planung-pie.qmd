@@ -4,4 +4,5 @@ pie title
     "Entwurf" : 8
     "Implementierung" : 39
     "Abnahme" : 5
+    "Dokumentation" : 23
 ```

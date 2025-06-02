@@ -49,12 +49,11 @@ Technischer Überblick hpt
 - Programmiersprache: C#
 - .NET 8
 - ASP.NET Core
-- EFCore
+- EF Core
 
 ### Frontend
 
-- Angular mit Typescript
-- (nicht Teil des Projekts)
+- Angular mit Typescript <br>(Kein Teil des Projekts)
 
 :::
 
@@ -99,11 +98,11 @@ Make-or-Buy-Entscheidung
 :::: {.columns}
 :::{.column width="40%"}
 
-- hpt bereits **intern entwickelt**
-- **Kontrolle** über die Software
-- **Integration** in hpt
-- **Wartbarkeit**
-- **Erweiterbarkeit**
+- hpt bereits intern entwickelt
+- Kontrolle über die Software
+- Integration in hpt
+- Wartbarkeit
+- Erweiterbarkeit
 
 :::
 

@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor "Manager" as admin
+actor "Benutzer" as user
+
+rectangle Ankündigungen {
+  usecase (Ankündigungen erstellen) as UC1
+  usecase (Ankündigungen lesen) as UC2
+  usecase (Ankündigungen bearbeiten) as UC3
+  usecase (Ankündigungen löschen) as UC4
+  usecase (Öffentliche Ankündigungen lesen) as UC5
+}
+
+admin--> (UC1)
+admin--> (UC2)
+admin--> (UC3)
+admin--> (UC4)
+user--> (UC5)
+
+@enduml

@@ -210,10 +210,10 @@ Services
 ::::{.columns}
 :::::{.column width="50%"}
 
-- **Kapselung** von Prozesslogik
-- **Wiederverwendbar**
-- Controller **übersichtlich**
-- **Testbarkeit**
+- Kapselung von Prozesslogik
+- Wiederverwendbar
+- Controller übersichtlich
+- Testbarkeit
 
 :::::
 

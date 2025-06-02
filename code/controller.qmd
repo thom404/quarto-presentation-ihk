@@ -1,6 +1,6 @@
-```{.cs code-line-numbers="1-41|1-2|5-39|6-8|10-11|13-16|18-22|24-28|30-32|34-38"}
+```{.cs code-line-numbers="1-42|1-3|5-40|5-8|10-12|14-17|19-23|25-29|31-33|35-39"}
 [Authorize]
-public class AnnouncementController( ... ) : ControlerBase
+public class AnnouncementController( ... ) : ControllerBase
 {
     ...
     [HttpPut]
@@ -8,6 +8,7 @@ public class AnnouncementController( ... ) : ControlerBase
         UpdateAnnouncementDto announcementDto
         )
     {
+        // Validate announcementDto and model state
         AnnouncementService.ValidateModelState();
         AnnouncementService.ValidateStatus(announcementDto.Status.Name);
 
@@ -41,3 +42,38 @@ public class AnnouncementController( ... ) : ControlerBase
     ...
 }
 ```
+:::{.notes}
+**1-2: Authorize & Controller Definition**
+- *[Authorize]* Authentifizierung
+- *Dependency Injection (...)* Services wie AnnouncementService, _unitOfWork | Evtl weglassen
+
+**5-39: UpdateAnnouncement Methode**
+- Hauptfunktion für das Aktualisieren einer Ankündigung über einen HTTP PUT-Request
+- Rückgabe: ActionResult<UpdateAnnouncementDto> – liefert HTTP-Status + aktualisierte Daten zurück
+
+**6-8: Parameter**
+- *UpdateAnnouncementDto*: Data Transfer Object mit aktualisierten Werten.
+- Erwartet, dass der Client alle nötigen Felder mitsendet (z. B. Id, Status, Bild, etc.).
+
+**10-11: Validierung**
+- *ValidateModelState()*: Prüft, ob das übergebene DTO den Model-Anforderungen entspricht.
+- *ValidateStatus(...)*: Prüft, ob der Status gültig ist
+
+**13-16: Entitär abrufen**
+- *GetAnnouncementAsync(...)*: Holt die zu aktualisierende Ankündigung per Id aus der Datenbank.
+
+**18-22: Eigenschaften zuweisen**
+- *MapToAnnouncement(...)*:  Kopiert relevante Felder vom DTO zur Entität (Titel, Beschreibung, etc.).
+
+**24-28: Spezifische Aktualisierungen**
+- *UpdateAnnouncementProperties(...)*: Aktualisiert bedingte Felder wie Bild, Status und Datum.
+- Beispiel: Wenn das Bild im DTO nicht leer ist, wird es aktualisiert; andernfalls bleibt es unverändert.
+
+**30-32: Datenbank speichern**
+- *Update(...)*: Übergibt die veränderte Entität an die Datenbank-Schicht.
+- *CompleteAsync()*: Speichert die Änderungen in der Datenbank.
+
+**34-38: Rückgabe**
+- *MapToReadAnnouncementDto(...)*: Wandelt die aktualisierte Entität zurück in ein DTO für die Antwort.
+- Gibt das aktualisierte DTO mit HTTP 200 OK zurück, um den Erfolg der Aktualisierung zu signalisieren.
+:::

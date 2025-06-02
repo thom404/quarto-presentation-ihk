@@ -10,7 +10,7 @@ API-Dokumentation
 ::::{.columns}
 :::::{.column width="60%"}
 ::::::{data-id="xml" .orange}
-OpenAPI
+XML-Dokumentation mit OpenAPI
 ::::::
 
 - OpenAPI: Offener Standard für API-Dokumentation
@@ -20,7 +20,7 @@ OpenAPI
 Swagger-UI
 ::::::
 
-- Web Interface für OpenAPI-Dokumentation
+- Web-Interface für OpenAPI-Dokumentation
 
 :::::
 
@@ -35,7 +35,7 @@ Swagger-UI
 
 ## {auto-animate=true}
 :::{.subheader data-id="xml"}
-OpenAPI
+XML-Dokumentation mit OpenAPI
 :::
 
 {{< include ./code/open-api.qmd >}}
@@ -52,7 +52,7 @@ API-Dokumentation
 ::::{.columns}
 :::::{.column width="60%"}
 ::::::{data-id="xml"}
-OpenAPI
+XML-Dokumentation mit OpenAPI
 ::::::
 
 - OpenAPI: Offener Standard für API-Dokumentation
@@ -62,7 +62,7 @@ OpenAPI
 Swagger-UI
 ::::::
 
-- Web Interface für OpenAPI-Dokumentation
+- Web-Interface für OpenAPI-Dokumentation
 
 :::::
 
@@ -87,16 +87,15 @@ Swagger-UI
 
 :::{.r-stack}
 ::::{.fragment .center .swagger #swagger2}
-![](./images/code_and_tests/swagger-detail.png)
+![](./images/code_and_tests/swagger-detail-cut.png)
 ::::
 
-::::{.fragment .center .swagger #swagger3}
+<!-- ::::{.fragment .center .swagger #swagger3}
 ![](./images/code_and_tests/swagger-detail-detail1.png)
 ::::
-
 ::::{.fragment .center .swagger #swagger4}
 ![](./images/code_and_tests/swagger-detail-detail2.png)
-::::
+:::: -->
 
 :::
 
