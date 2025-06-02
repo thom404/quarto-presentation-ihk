@@ -1,4 +1,4 @@
-# Analysephase {.center}
+# Analysephase {.center auto-animate=true}
 
 :::{.center}
 ![](./images/title-svgs/analyse.svg)
@@ -35,7 +35,7 @@ Ist-Analyse
 © {{<meta name>}} | Analysephase
 :::
 
-## {background-image="./images/title-svgs/analyse.svg" background-position="right 10% bottom 10%" background-size="70vh"}
+## {auto-animate=true}
 
 :::{.subheader}
 Technischer Überblick hpt
@@ -64,6 +64,12 @@ Technischer Überblick hpt
 
 - Microsoft SQL Server 2022
 - Code-First
+
+<!-- background-image="./images/title-svgs/analyse.svg" background-position="right 10% bottom 10%" background-size="70vh" -->
+
+:::{#analyse-svg}
+![](./images/title-svgs/analyse.svg)
+:::
 
 :::
 ::::

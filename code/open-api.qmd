@@ -1,0 +1,46 @@
+```{.cs code-line-numbers="1-43|1-3|4|5|6-9"}
+/// <summary>
+/// Updates an existing announcement.
+/// </summary>
+/// <param name="announcementDto">The updated announcement details.</param>
+/// <returns>The updated announcement.</returns>
+/// <response code="200">Returns the updated announcement.</response>
+/// <response code="400">If the request is invalid.</response>
+/// <response code="403">If the user does not have the required permissions.</response>
+/// <response code="404">If the announcement is not found.</response>
+[HttpPut]
+public async Task<ActionResult<UpdateAnnouncementDto>> UpdateAnnouncement(
+    UpdateAnnouncementDto announcementDto
+    )
+{
+    AnnouncementService.ValidateModelState();
+    AnnouncementService.ValidateStatus(announcementDto.Status.Name);
+
+    // Fetch entity from id
+    var announcement = await AnnouncementService.GetAnnouncementAsync(
+        announcementDto.Id
+        );
+
+    // Map properties
+    announcement = await AnnouncementService.MapToAnnouncement(
+        announcement, 
+        announcementDto
+        );
+
+    // Conditionally update image, status and date properties
+    announcement = await AnnouncementService.UpdateAnnouncementProperties(
+        announcementDto, 
+        announcement
+        );
+
+    // Update db and save changes
+    _unitOfWork.Announcement.Update(announcement);
+    await _unitOfWork.CompleteAsync();
+
+    // return Dto
+    var readAnnouncementDto = AnnouncementService.MapToReadAnnouncementDto(
+        announcement
+        );
+    return Ok(readAnnouncementDto);
+}
+```

@@ -104,6 +104,18 @@ Services
 © {{<meta name>}} | Implementierungsphase
 :::
 
+::: {.notes}
+**Dtos**
+
+- Objekte, die Daten zwischen Systemkomponenten transportieren
+- Struktur ähnlich der Entitäten
+- Nur benötigete Daten
+- Minimiert Datenmenge
+- Sicherheit erhöht
+- Wartung und Tests profitieren
+
+:::
+
 ## {auto-animate=true}
 
 :::{.subheader data-id="dto"}
@@ -138,6 +150,16 @@ Services
 
 :::{.footer}
 © {{<meta name>}} | Implementierungsphase
+:::
+
+::: {.notes}
+**Controller**
+
+- Schnittstelle zwischen Nutzeranfragen und Logik
+- Verarbeitet Http-Anfragen
+- Ruft Services auf
+- Gibt Http-Antworten zurück
+
 :::
 
 ## {auto-animate=true}

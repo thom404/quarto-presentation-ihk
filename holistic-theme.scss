@@ -101,7 +101,7 @@ $presentation-heading-color: $txtgrey !default;
   order: 4;
   color: $txtgrey!important;
   // border-bottom: $holisticorange 3px solid;
-  padding-bottom: 1em;
+  // padding-bottom: 1em;
   margin-bottom: 1em;
   font-size: 48px;
 }
@@ -249,7 +249,7 @@ nav[role="doc-toc"] ul li::before {
 }
 
 #mermaid-schichten svg  {
-  height: 65vh;
+  height: 50vh;
   max-width: none!important;
 
 }
@@ -264,21 +264,65 @@ nav[role="doc-toc"] ul li::before {
 #mockupImg1, #mockupImg2 {
   position: relative;
   top: 0vh;
-  height: 65vh;
+  height: 50vh;
 }
 
 #mermaid-erm1 svg {
-  height: 65vh;
+  height: 50vh;
   max-width: none!important;
 
 }
 
 #mermaid-erm2 svg {
-  height: 65vh;
+  height: 50vh;
   max-width: none!important;
 }
 
 #mermaid-logic svg {
-  height: 65vh;
+  height: 50vh;
   max-width: none!important;
+}
+.swagger img{
+  border: solid 2px $txtgrey;
+  border-radius: 10px;
+}
+
+#swagger1 img {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 68vw;
+}
+#swagger2 img {
+  position: absolute;
+  top: 9vh;
+  left: 20%;
+}
+#swagger3 img {
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  height: 60%;
+}
+#swagger4 img {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  height: 100%;
+}
+
+#analyse-svg, #analyse-svg img {
+  height: 30vh;
+}
+
+#mermaid-phasen svg {
+  max-width: none!important;
+  width: 100%;
+}
+
+#mermaid-phasen svg .legend {
+  font-size: 20px;
+}
+#mermaid-phasen svg .legend text{
+  font-size: 20px;
 }

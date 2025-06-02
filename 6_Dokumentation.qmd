@@ -1,4 +1,4 @@
-# Dokumentation {.center}
+# Dokumentation {.center auto-animate=true}
 :::{.center .secure-layout}
 ![](./images/title-svgs/undraw_my-documents_ltqk.svg)
 :::
@@ -8,110 +8,98 @@
 API-Dokumentation
 :::
 ::::{.columns}
-:::::{.column width="40%"}
-::::::{data-id="xml" .fragment .orange}
-XML-Beispiel
+:::::{.column width="60%"}
+::::::{data-id="xml" .orange}
+OpenAPI
 ::::::
-::::::{data-id="o-api" .fragment .orange}
-OpenAPI-Dokumentation
+
+- OpenAPI: Offener Standard für API-Dokumentation
+- XML: Kommentar-Standard in C#-Projekten
+
+::::::{data-id="swagger" .orange}
+Swagger-UI
 ::::::
+
+- Web Interface für OpenAPI-Dokumentation
+
 :::::
 
-:::::{.column .center}
+:::::{.column width=40% .center}
 ![](./images/title-svgs/undraw_my-documents_ltqk.svg)
 :::::
 ::::
 
 :::{.footer}
-Dokumentation
+© {{<meta name>}} | Dokumentation
 :::
 
 ## {auto-animate=true}
 :::{.subheader data-id="xml"}
-XML-Beispiel
+OpenAPI
 :::
-```{.cs code-line-numbers="1-30|1-3|4-11|18-24|25-30|32-43"}
-    /// <summary>
-    /// Retrieves a list of all announcements with optional filtering and sorting.
-    /// </summary>
-    /// <param name="order">
-    /// An optional sorting parameter:
-    /// - **0 or null**: No specific order (default).
-    /// - **1**: Sort by published date (ascending).
-    /// - **2**: Sort by published date (descending).
-    /// - **3**: Sort by creation date (ascending).
-    /// - **4**: Sort by creation date (descending).
-    /// </param>
-    /// <param name="statusFilter">
-    /// An optional filter parameter:
-    /// - **"published"**: Retrieve only published announcements.
-    /// - **"draft"**: Retrieve only draft announcements (requires additional permissions).
-    /// - **null or empty**: Retrieve all announcements (requires additional permissions).
-    /// </param>
-    /// <returns>
-    /// Returns a list of announcements based on the applied filters and sorting.
-    /// - **200 OK**: Announcements successfully retrieved.
-    /// - **400 Bad Request**: Invalid filter or sorting parameter.
-    /// - **403 Forbidden**: Access denied if filtering for drafts or all announcements without proper permissions.
-    /// - **404 Not Found**: No announcements found based on the given criteria.
-    /// </returns>
-    /// <remarks>
-    /// - The user must have the necessary permissions to access announcements.
-    /// - Draft announcements or retrieving all announcements require additional authorization.
-    /// - Dates are converted to UTC format for consistency.
-    /// - Sorting is applied based on the provided order parameter.
-    /// </remarks>
 
-    [HttpGet()]
-    public async Task<ActionResult<List<ReadAnnouncementDto>>> GetAllAnnouncements(int? order, string? statusFilter)
-    {
-        // Ensure that the user has the necessary permissions to call this method.
-        VerifyUserScopes(Scopes.General);
-        ValidateParameters(order, statusFilter);
-
-        var announcements = await GetFilteredAnnouncementsAsync(statusFilter);
-        var dtos = announcements.ConvertAll(MapToReadAnnouncementDto);
-
-        return Ok(SortAnnouncements(dtos, order));
-    }
-```
+{{< include ./code/open-api.qmd >}}
 
 :::{.footer}
-Implementierungsphase
+© {{<meta name>}} | Dokumentation
 :::
 
 ## {auto-animate=true}
-:::{.subheader data-id="entity-Announcement"}
+
+:::{.subheader}
 API-Dokumentation
 :::
 ::::{.columns}
-:::::{.column width="40%"}
-::::::{data-id="xml" .done}
-XML-Beispiel
+:::::{.column width="60%"}
+::::::{data-id="xml"}
+OpenAPI
 ::::::
-::::::{data-id="o-api" .orange}
-OpenAPI-Dokumentation
+
+- OpenAPI: Offener Standard für API-Dokumentation
+- XML: Kommentar-Standard in C#-Projekten
+
+::::::{data-id="swagger" .orange}
+Swagger-UI
 ::::::
+
+- Web Interface für OpenAPI-Dokumentation
+
 :::::
 
-:::::{.column .center}
+:::::{.column width=40% .center}
 ![](./images/title-svgs/undraw_my-documents_ltqk.svg)
 :::::
 ::::
 
 :::{.footer}
-Dokumentation
+© {{<meta name>}} | Dokumentation
 :::
 
 ## {auto-animate=true}
-:::{.subheader data-id="o-api"}
-OpenAPI-Dokumentation
+
+:::{.subheader data-id="swagger"}
+Swagger-UI
 :::
-:::{.r-stack}
-::::{.fragment .center}
+
+::::{.center}
 ![](./images/code_and_tests/Swagger.png)
 ::::
-::::{.fragment .center}
-![](./images/code_and_tests/SwaggerDetailed.png)
+
+:::{.r-stack}
+::::{.fragment .center .swagger #swagger2}
+![](./images/code_and_tests/swagger-detail.png)
 ::::
+
+::::{.fragment .center .swagger #swagger3}
+![](./images/code_and_tests/swagger-detail-detail1.png)
+::::
+
+::::{.fragment .center .swagger #swagger4}
+![](./images/code_and_tests/swagger-detail-detail2.png)
+::::
+
+:::
+
+:::{.footer}
+© {{<meta name>}} | Dokumentation
 :::

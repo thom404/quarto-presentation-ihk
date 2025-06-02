@@ -211,51 +211,6 @@ Datenmodell
 © {{<meta name>}} | Entwurfsphase
 :::
 
-## {auto-animate=true .center}
-
-:::{.subheader}
-Datenmodell
-:::
-
-::: {#mermaid-erm2 .center data-id="erm"}
-{{< include ./mermaid-charts/erm_td.qmd >}}
-:::
-
-:::{.footer}
-© {{<meta name>}} | Entwurfsphase
-:::
-
-## {auto-animate=true}
-
-:::{.subheader}
-Datenmodell
-:::
-
-:::: {.columns}
-:::{.column width="30%"}
-**Neue Entitäten:**
-
-:::::{data-id="entity-Announcement"}
-`Announcement`
-:::::
-:::::{data-id="entity-AnnouncementImage"}
-`AnnouncementImage`
-:::::
-:::::{data-id="entity-AnnouncementStatus"}
-`AnnouncementStatus`
-:::::
-:::
-
-:::{.column width="70%" .center #mermaid-erm1 data-id="erm"}
-{{< include ./mermaid-charts/erm_td.qmd >}}
-
-:::
-::::
-
-:::{.footer}
-© {{<meta name>}} | Entwurfsphase
-:::
-
 ## {auto-animate=true}
 :::{.subheader}
 Geschäftslogik
@@ -287,6 +242,8 @@ Qualitätssicherung
 :::{.column .center}
 ![](./images/title-svgs/undraw_qa-engineers_kgp8.svg)
 :::
+
+::::
 
 :::{.footer}
 © {{<meta name>}} | Entwurfsphase

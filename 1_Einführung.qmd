@@ -65,30 +65,6 @@ Einführung hpt
 © {{<meta name>}} | Projekteinführung
 :::
 
-## {auto-animate=true}
-:::{.subheader}
-Einführung hpt
-:::
-
-:::: {.columns}
-:::{.column width="50%"}
-- holistic project tracking
-- eigene Entwicklung
-- Webanwendung im Intranet
-- Anwendung im Jour Fixe
-- Präsentationsmodus
-- Projektstatus/Kundenakquise dokumentieren
-:::
-
-:::{.column .r-stretch .center}
-![](./images/hpt-fe/HPT_Main.png)
-:::
-::::
-
-:::{.footer}
-© {{<meta name>}} | Projekteinführung
-:::
-
 ##
 :::{.subheader}
 Projektziel

@@ -9,7 +9,7 @@ Projektphasen
 :::
 
 :::: {.columns}
-:::{.column}
+:::{.column width="40%"}
 | Phase            | Zeit  |
 |------------------|------:|
 | Analyse          | 5 h  |
@@ -20,14 +20,8 @@ Projektphasen
 | **Gesamt**       | **80 h** |
 :::
 
-:::{.column}
-```{mermaid}
-pie title
-    "Analyse" : 5
-    "Entwurf" : 8
-    "Implementierung" : 39
-    "Abnahme" : 5
-```
+:::{.column width="60%" #mermaid-phasen}
+{{< include ./mermaid-charts/planung-pie.qmd >}}
 :::
 ::::
 

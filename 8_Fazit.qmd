@@ -1,58 +1,72 @@
 # Fazit {.center}
+
 :::{.center .secure-layout}
 ![](./images/title-svgs/undraw_personal-file_81l0.svg)
 :::
 
 ## {auto-animate=true}
+
 :::{.subheader}
 Lessons Learned
 :::
-::::{.columns}
-:::::{.column width="50%" .incremental}
-- Relevanz detaillierter Planung
-- Zugriffskontrolle mit MS Scopes
-:::::
 
-:::::{.column .center}
+::::{.columns}
+:::::{.column width="60%"}
+
+- Saubere Planung spart spätere Umbauten
+- Automatisierte Tests sind unerlässlich
+- Dokumentation nicht vergessen
+
+:::::
+:::::{.column width="40%" .center}
 ![](./images/title-svgs/undraw_personal-file_81l0.svg)
 :::::
 ::::
 
 :::{.footer}
-Fazit
+© {{<meta name>}} | Fazit
 :::
 
 ## {auto-animate=true}
+
 :::{.subheader}
 Ausblick
 :::
+
 ::::{.columns}
-:::::{.column width="50%" .incremental}
+:::::{.column width="60%"}
+
 - Anpassungen am Frontend
-- Rollout
+- Einbau in hpt-Präsentationsmodus
+- Feedback der Nutzer einholen
+
 :::::
 
-:::::{.column .center}
+:::::{.column width="40%" .center}
 ![](./images/title-svgs/undraw_personal-file_81l0.svg)
 :::::
 ::::
 
 :::{.footer}
-Fazit
+© {{<meta name>}} | Fazit
 :::
 
-# Ende {.center}
+## Ende {.center}
+
 ::::{.columns}
-:::::{.column width="50%" .incremental}
-Vielen Dank für Ihre Aufmerksamkeit!
+
+:::::{.column width="50%"}
+
+**Vielen Dank für Ihre Aufmerksamkeit**
+
 :::::
 
 :::::{.column .center}
 ![](./images/title-svgs/undraw_omega_aj2q.svg)
 :::::
+
 ::::
 
-## Bildquellen
-[https://undraw.com](https://undraw.com)
-
-[https://mermaid.js.org](https://mermaid.js.org)
+:::{.footer}
+**Bildquellen**: [https://undraw.com](https://undraw.com)
+:::

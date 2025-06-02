@@ -1,0 +1,7 @@
+```{mermaid}
+pie title
+    "Analyse" : 5
+    "Entwurf" : 8
+    "Implementierung" : 39
+    "Abnahme" : 5
+```
