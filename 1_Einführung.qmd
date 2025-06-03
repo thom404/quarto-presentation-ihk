@@ -3,10 +3,7 @@
 ![](./images/title-svgs/einfuehrung.svg)
 :::
 
-##
-:::{.subheader}
-Ausbildungsbetrieb
-:::
+## Ausbildungsbetrieb
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -28,13 +25,10 @@ Ausbildungsbetrieb
 © {{<meta name>}} | Projekteinführung
 :::
 
-## {auto-animate=true}
-:::{.subheader data-id="subheader"}
-Einführung hpt
-:::
+## Einführung hpt {auto-animate=true}
 
 :::: {.columns}
-:::{.column width="50%"}
+:::{.column width="60%"}
 - holistic project tracking
 - Eigene Entwicklung
 - Webanwendung im Intranet
@@ -43,7 +37,7 @@ Einführung hpt
 - Projektstatus/Kundenakquise dokumentieren
 :::
 
-:::{.column .r-stretch .center}
+:::{.column width="40%" .r-stretch .center}
 ![](./images/hpt-fe/HPT_Main.png)
 :::
 ::::
@@ -52,10 +46,7 @@ Einführung hpt
 © {{<meta name>}} | Projekteinführung
 :::
 
-## {auto-animate=true}
-:::{.subheader}
-Einführung hpt
-:::
+## Einführung hpt {auto-animate=true}
 
 ::: {.center style="display: flex; height:90%;"}
 ![](./images/hpt-fe/HPT_Main.png){style="height: 100%;"}
@@ -65,13 +56,10 @@ Einführung hpt
 © {{<meta name>}} | Projekteinführung
 :::
 
-##
-:::{.subheader}
-Projektziel
-:::
+## Projektziel
 
 :::: {.columns}
-:::{.column width="50%"}
+:::{.column width="60%"}
 
 - Backend-Erweiterung von hpt
   - Verwaltung interner Ankündigungen
@@ -80,7 +68,7 @@ Projektziel
 
 :::
 
-:::{.column .r-stretch .center .secure-layout}
+:::{.column width="40%" .r-stretch .center}
 ![](./images/title-svgs/ziel.svg)
 :::
 ::::
@@ -98,13 +86,10 @@ Projektziel
 
 :::
 
-## {auto-animate=true}
-:::{.subheader}
-Ausgangssituation
-:::
+## Ausgangssituation {auto-animate=true}
 
 :::: {.columns}
-:::{.column width="50%"}
+:::{.column width="60%"}
 
 - Keine einheitliche Lösung
 - Anforderungen an eine Lösung
@@ -113,7 +98,7 @@ Ausgangssituation
   - Integration in hpt
 :::
 
-:::{.column .r-stretch .center}
+:::{.column width="40%" .r-stretch .center}
 ![](./images/title-svgs/ausgangssituation.svg)
 :::
 ::::

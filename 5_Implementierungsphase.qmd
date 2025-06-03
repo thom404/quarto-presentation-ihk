@@ -1,12 +1,9 @@
-# Implementierungsphase {.center}
-:::{.center .secure-layout}
-![](./images/title-svgs/implement.svg)
-:::
+# Implementierungs-<br>phase
 
-## {auto-animate=true}
-:::{.subheader data-id="entity-Announcement"}
-Datenstrukturen
-:::
+![](./images/title-svgs/implement.svg)
+
+## Datenstrukturen {auto-animate=true}
+
 ::::{.columns}
 :::::{.column width="40%"}
 ::::::{data-id="entity-Announcement"}
@@ -20,7 +17,7 @@ Datenstrukturen
 ::::::
 :::::
 
-:::::{.column .center}
+:::::{.column width="60%" .center}
 ![](./images/title-svgs/undraw_maintenance_rjtm.svg)
 :::::
 ::::
@@ -68,7 +65,7 @@ Datenstrukturen
 ::::::
 :::::
 
-:::::{.column .center}
+:::::{.column width="60%" .center}
 ![](./images/title-svgs/undraw_maintenance_rjtm.svg)
 :::::
 ::::
@@ -83,7 +80,7 @@ Geschäftslogik
 :::
 
 ::::{.columns}
-:::::{.column width="50%"}
+:::::{.column width="40%"}
 :::{data-id="dto" .orange}
 Data Transfer Objects (DTOs)
 :::
@@ -95,7 +92,7 @@ Services
 :::
 :::::
 
-:::::{.column .center}
+:::::{.column width="60%" .center}
 ![](./images/title-svgs/implement.svg)
 :::::
 ::::
@@ -180,7 +177,7 @@ Geschäftslogik
 :::
 
 ::::{.columns}
-:::::{.column width="50%"}
+:::::{.column width="40%"}
 :::{data-id="dto" .done}
 Data Transfer Objects (DTOs)
 :::
@@ -192,7 +189,7 @@ Services
 :::
 :::::
 
-:::::{.column .center}
+:::::{.column width="60%" .center}
 ![](./images/title-svgs/implement.svg)
 :::::
 ::::
@@ -208,7 +205,7 @@ Services
 :::
 
 ::::{.columns}
-:::::{.column width="50%"}
+:::::{.column width="40%"}
 
 - Kapselung von Prozesslogik
 - Wiederverwendbar
@@ -217,7 +214,7 @@ Services
 
 :::::
 
-:::::{.column width="50%" .center}
+:::::{.column width="60%" .center}
 ![](images/title-svgs/undraw_services_dhxj.svg)
 :::::
 ::::
@@ -232,7 +229,7 @@ Geschäftslogik
 :::
 
 ::::{.columns}
-:::::{.column width="50%"}
+:::::{.column width="40%"}
 :::{data-id="dto" .done}
 Data Transfer Objects (DTOs)
 :::
@@ -244,7 +241,7 @@ Services
 :::
 :::::
 
-:::::{.column .center}
+:::::{.column width="60%" .center}
 ![](./images/title-svgs/implement.svg)
 :::::
 ::::

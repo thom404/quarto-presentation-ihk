@@ -1,15 +1,10 @@
-# Projektplanung {.center}
-:::{.center}
+# Projektplanung
 ![](./images/title-svgs/undraw_scrum-board_uqku.svg)
-:::
 
-## {auto-animate=true}
-:::{.subheader}
-Projektphasen
-:::
+## Projektphasen {auto-animate=true}
 
 :::: {.columns}
-:::{.column width="40%"}
+:::{.column width="60%"}
 
 | Phase            | Zeit     |
 |------------------|---------:|
@@ -22,7 +17,7 @@ Projektphasen
 
 :::
 
-:::{.column width="60%" #mermaid-phasen}
+:::{.column width="40%" #mermaid-phasen}
 {{< include ./mermaid-charts/planung-pie-colorized.qmd >}}
 :::
 ::::
@@ -31,15 +26,11 @@ Projektphasen
 © {{<meta name>}} | Projektplanung
 :::
 
-##
+## Vorgehensmodell
 
-:::{.subheader}
-Vorgehensmodell: Erweitertes Wasserfallmodell
-:::
+Erweitertes Wasserfallmodell
 
-:::{.center style="display: flex; height:90%;"}
-![](./images/diagramme/erw_Wasserfalldiagramm.drawio.svg){style="height: 90%;"}
-:::
+![](./images/diagramme/erw_Wasserfalldiagramm.drawio.svg){fig-align="center"}
 
 :::{.notes}
 **Erweitertes Wasserfallmodell**

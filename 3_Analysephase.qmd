@@ -1,14 +1,8 @@
-# Analysephase {.center auto-animate=true}
+# Analysephase {auto-animate=true}
 
-:::{.center}
 ![](./images/title-svgs/analyse.svg)
-:::
 
-## {auto-animate=true}
-
-:::{.subheader}
-Ist-Analyse
-:::
+## Ist-Analyse {auto-animate=true}
 
 :::: {.columns}
 :::{.column width="60%"}
@@ -19,7 +13,7 @@ Ist-Analyse
 - Viele Logiken bereits vorhanden
 - Gut erweiterbar
 
-### Ankündigungs-Plattformen
+### Ankündigungen
 
 - E-Mail / MS Teams / mündlich
 - Unübersichtlich & flüchtig
@@ -35,11 +29,7 @@ Ist-Analyse
 © {{<meta name>}} | Analysephase
 :::
 
-## {auto-animate=true}
-
-:::{.subheader}
-Technischer Überblick hpt
-:::
+## Technischer Überblick hpt {auto-animate=true}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -64,8 +54,6 @@ Technischer Überblick hpt
 - Microsoft SQL Server 2022
 - Code-First
 
-<!-- background-image="./images/title-svgs/analyse.svg" background-position="right 10% bottom 10%" background-size="70vh" -->
-
 :::{#analyse-svg}
 ![](./images/title-svgs/analyse.svg)
 :::
@@ -77,26 +65,18 @@ Technischer Überblick hpt
 © {{<meta name>}} | Analysephase
 :::
 
-## {auto-animate=true}
-:::{.subheader}
-Wirtschaftlichkeitsanalyse
-:::
+## Wirtschaftlichkeitsanalyse {auto-animate=true}
 
-:::{.column .r-stretch .center}
-![](./images/title-svgs/finance.svg)
-:::
+![](./images/title-svgs/finance.svg){fig-align="center"}
 
 :::{.footer}
 © {{<meta name>}} | Analysephase
 :::
 
-## {auto-animate=true}
-:::{.subheader}
-Make-or-Buy-Entscheidung
-:::
+## Make-or-Buy-Entscheidung {auto-animate=true}
 
 :::: {.columns}
-:::{.column width="40%"}
+:::{.column width="60%"}
 
 - hpt bereits intern entwickelt
 - Kontrolle über die Software
@@ -106,7 +86,7 @@ Make-or-Buy-Entscheidung
 
 :::
 
-:::{.column .r-stretch .center}
+:::{.column width="40%" .center}
 ![](./images/title-svgs/finance.svg)
 :::
 ::::
@@ -115,14 +95,8 @@ Make-or-Buy-Entscheidung
 © {{<meta name>}} | Analysephase
 :::
 
-##
+## Kostenberechnung
 
-:::{.subheader}
-Kostenberechnung
-:::
-
-:::: {.columns}
-:::{#tab-costs .column}
 
 | Mitarbeiter | Zeit  | Stundensatz | Kosten |
 |-------------|------:|------------:|-------:|
@@ -130,22 +104,15 @@ Kostenberechnung
 | Berater     | 5 h   | 90 €        | 450 €  |
 | **Gesamt**  | **85 h** |   | **3.810 €** |
 
-:::
-
-:::{.column width="30rem"}
-![](./images/title-svgs/undraw_calculator_21hp.svg)
-:::
-::::
+![](./images/title-svgs/undraw_calculator_21hp.svg){fig-align="right"}
 
 :::{.footer}
 © {{<meta name>}} | Analysephase
 :::
 
-## {background-image="./images/diagramme/usecase.svg" background-position="center top 20vh" background-size="72vh"}
+## Anforderungsanalyse 
 
-:::{.subheader}
-Anforderungsanalyse
-:::
+![](./images/diagramme/usecase.svg){fig-align="center"}
 
 :::{.footer}
 © {{<meta name>}} | Analysephase

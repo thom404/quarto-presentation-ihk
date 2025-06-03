@@ -1,4 +1,4 @@
-```{.cs code-line-numbers="3|4-7|10-11|14-15"}
+```{.cs code-line-numbers="3|4-7|9-10|12-13"}
 public class Announcement
 {
     public int Id { get; set; } // Primary key
@@ -9,10 +9,8 @@ public class Announcement
 
     // Foreign key for Status ( Each Announcement has one Status )
     public int AnnouncementStatusId { get; set; }
-    public AnnouncementStatus AnnouncementStatus { get; set; } = null!;
 
     // Foreign key for Image
     public int? AnnouncementImageId { get; set; }
-    public AnnouncementImage? AnnouncementImage { get; set; }
 }
 ```

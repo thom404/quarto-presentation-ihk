@@ -1,14 +1,8 @@
 # Fazit {.center}
 
-:::{.center .secure-layout}
 ![](./images/title-svgs/undraw_personal-file_81l0.svg)
-:::
 
-## {auto-animate=true}
-
-:::{.subheader}
-Lessons Learned
-:::
+## Lessons Learned {auto-animate=true}
 
 ::::{.columns}
 :::::{.column width="60%"}
@@ -27,11 +21,7 @@ Lessons Learned
 © {{<meta name>}} | Fazit
 :::
 
-## {auto-animate=true}
-
-:::{.subheader}
-Ausblick
-:::
+## Ausblick {auto-animate=true}
 
 ::::{.columns}
 :::::{.column width="60%"}
@@ -55,13 +45,13 @@ Ausblick
 
 ::::{.columns}
 
-:::::{.column width="50%"}
+:::::{.column width="40%"}
 
 **Vielen Dank für Ihre Aufmerksamkeit**
 
 :::::
 
-:::::{.column .center}
+:::::{.column width="60%" .center}
 ![](./images/title-svgs/undraw_omega_aj2q.svg)
 :::::
 

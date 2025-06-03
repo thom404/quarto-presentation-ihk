@@ -31,8 +31,9 @@ format:
     toc-title: Ablauf
     toc-depth: 1
     theme: [default, holistic-theme.scss]
-    width: 1280
-    height: 720
+    # height: 720
+    # width: 1920
+    # height: 1080
     # margin: 0.4
     transition: none
     auto-animate: true

@@ -1,12 +1,9 @@
-# Dokumentation {.center auto-animate=true}
-:::{.center .secure-layout}
-![](./images/title-svgs/undraw_my-documents_ltqk.svg)
-:::
+# Dokumentation {auto-animate=true}
 
-## {auto-animate=true}
-:::{.subheader}
-API-Dokumentation
-:::
+![](./images/title-svgs/undraw_my-documents_ltqk.svg)
+
+## API-Dokumentation {auto-animate=true}
+
 ::::{.columns}
 :::::{.column width="60%"}
 ::::::{data-id="xml" .orange}
