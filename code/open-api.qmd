@@ -5,9 +5,9 @@
 /// <param name="announcementDto">The updated announcement details.</param>
 /// <returns>The updated announcement.</returns>
 /// <response code="200">Returns the updated announcement.</response>
-/// <response code="400">If the request is invalid.</response>
-/// <response code="403">If the user does not have the required permissions.</response>
-/// <response code="404">If the announcement is not found.</response>
+/// <response code="400">Request is invalid.</response>
+/// <response code="403">No permissions.</response>
+/// <response code="404">Announcement is not found.</response>
 [HttpPut]
 public async Task<ActionResult<UpdateAnnouncementDto>> UpdateAnnouncement(
     UpdateAnnouncementDto announcementDto

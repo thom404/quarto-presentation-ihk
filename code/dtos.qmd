@@ -1,4 +1,4 @@
-```{.cs code-line-numbers="20-34"}
+```{.cs code-line-numbers="20-34|22-23|25-28|31|33"}
 public class ReadAnnouncementDto
 {
     public int Id { get; set; }

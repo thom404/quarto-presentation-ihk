@@ -292,11 +292,11 @@ nav[role="doc-toc"] ul li::before {
 #mermaid-erm1 svg {
   // height: 50vh;
   // max-width: none!important;
-  max-width: none !important;
+  max-width: 100% !important;
+  height: 100%;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 65vh;
+  top: 0%;
+  right: -30%;
 
 }
 
@@ -305,15 +305,12 @@ nav[role="doc-toc"] ul li::before {
   max-width: none!important;
 }
 
-#mermaid-logic svg {
-  // height: 50vh;
-  // max-width: none!important;
-  height: 65vh;
-  max-width: none !important;
-  position: absolute;
-  right: 0%;
-  bottom: 0%;
-}
+// #mermaid-logic svg {
+//   height: 100%;
+//   position: absolute;
+//   right: 9%;
+//   top: 0%;
+// }
 .swagger img{
   border: solid 2px $txtgrey;
   border-radius: 10px;
@@ -353,6 +350,7 @@ nav[role="doc-toc"] ul li::before {
   position: absolute;
   top: 10%;
   left: 50%;
+  max-height: 45vh;
 }
 
 // #vorgehensmodell {
