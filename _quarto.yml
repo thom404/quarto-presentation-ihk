@@ -1,7 +1,6 @@
 title: Erweiterung einer REST-API
 subtitle: Für die Webanwendung ‚‚holistic project tracking‘‘ um eine Ankündigungs-Funktion
 author: Thomas Abel
-# institute: holistic-net GmbH
 date: today
 date-format: "DD. MM. YYYY"
 version: 0.0.1
@@ -31,10 +30,6 @@ format:
     toc-title: Ablauf
     toc-depth: 1
     theme: [default, holistic-theme.scss]
-    # height: 720
-    # width: 1920
-    # height: 1080
-    # margin: 0.4
     transition: none
     auto-animate: true
     slide-number: true
