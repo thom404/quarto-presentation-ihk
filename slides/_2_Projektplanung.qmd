@@ -18,7 +18,7 @@
 :::
 
 :::{.column width="40%" #mermaid-phasen}
-{{< include mermaid-charts/planung-pie-colorized.qmd >}}
+{{< include mermaid-charts/_planung-pie-colorized.qmd >}}
 :::
 ::::
 

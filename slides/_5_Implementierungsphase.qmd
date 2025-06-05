@@ -31,7 +31,7 @@
 `Announcement`
 :::
 
-{{< include code/announcement-entity1.qmd >}}
+{{< include code/_announcement-entity1.qmd >}}
 
 :::{.footer}
 © {{<meta name>}} | Implementierungsphase
@@ -42,7 +42,7 @@
 `Announcement`
 :::
 
-{{< include code/announcement-entity2.qmd >}}
+{{< include code/_announcement-entity2.qmd >}}
 
 :::{.footer}
 © {{<meta name>}} | Implementierungsphase
@@ -119,7 +119,7 @@ Services
 Data Transfer Objects (DTOs)
 :::
 
-{{< include code/dtos.qmd >}}
+{{< include code/_dtos.qmd >}}
 
 
 ## {auto-animate=true}
@@ -165,7 +165,7 @@ Services
 Controller
 :::
 
-{{< include code/controller.qmd >}}
+{{< include code/_controller.qmd >}}
 
 :::{.footer}
 © {{<meta name>}} | Implementierungsphase

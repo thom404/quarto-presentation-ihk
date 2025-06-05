@@ -35,7 +35,7 @@ Swagger-UI
 XML-Dokumentation mit OpenAPI
 :::
 
-{{< include code/open-api.qmd >}}
+{{< include code/_open-api.qmd >}}
 
 :::{.footer}
 © {{<meta name>}} | Dokumentation
