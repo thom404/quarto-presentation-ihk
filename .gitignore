@@ -7,6 +7,7 @@
 /_site/
 
 *.html
+!index.html
 !toc-slide.html
 !PRESENTATION.html
 !0_Presentation.html
